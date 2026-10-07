@@ -1,0 +1,144 @@
+{
+  "pdf": "R-figures/Figure4_main.pdf",
+  "auditable": true,
+  "verdict": "REVIEW REQUIRED",
+  "page_count": 1,
+  "visible_text_box_count": 55,
+  "text_trace_count": 29,
+  "stroke_path_count": 49,
+  "filled_region_count": 22,
+  "image_region_count": 0,
+  "summary": {
+    "fail": 0,
+    "warn": 5,
+    "contained_fill_overlays": 24,
+    "contained_image_overlays": 0
+  },
+  "thresholds": {
+    "text_inset_pt": 0.6,
+    "min_overlap_ratio": 0.05,
+    "clipping_tolerance_pt": 0.5
+  },
+  "findings": [
+    {
+      "severity": "WARN",
+      "kind": "text-fill-edge",
+      "page": 1,
+      "message": "Text partially overlaps the edge of 1 filled region(s)",
+      "text": "100%",
+      "text_bbox": [
+        370.625,
+        330.39654541015625,
+        385.1311950683594,
+        337.31488037109375
+      ],
+      "other_text": null,
+      "other_bbox": [
+        383.1090087890625,
+        173.3520050048828,
+        513.01904296875,
+        352.02001953125
+      ],
+      "object_count": 1,
+      "object_indexes": [
+        5000
+      ]
+    },
+    {
+      "severity": "WARN",
+      "kind": "text-fill-edge",
+      "page": 1,
+      "message": "Text partially overlaps the edge of 1 filled region(s)",
+      "text": "50",
+      "text_bbox": [
+        413.390625,
+        325.7086181640625,
+        419.5043640136719,
+        331.9566955566406
+      ],
+      "other_text": null,
+      "other_bbox": [
+        407.7340087890625,
+        208.38299560546875,
+        508.03900146484375,
+        326.3949890136719
+      ],
+      "object_count": 1,
+      "object_indexes": [
+        43000
+      ]
+    },
+    {
+      "severity": "WARN",
+      "kind": "text-fill-edge",
+      "page": 1,
+      "message": "Text partially overlaps the edge of 1 filled region(s)",
+      "text": "100",
+      "text_bbox": [
+        437.50396728515625,
+        325.7086181640625,
+        446.61297607421875,
+        331.9566955566406
+      ],
+      "other_text": null,
+      "other_bbox": [
+        407.7340087890625,
+        208.38299560546875,
+        508.03900146484375,
+        326.3949890136719
+      ],
+      "object_count": 1,
+      "object_indexes": [
+        43000
+      ]
+    },
+    {
+      "severity": "WARN",
+      "kind": "text-fill-edge",
+      "page": 1,
+      "message": "Text partially overlaps the edge of 1 filled region(s)",
+      "text": "TRACE-PSI",
+      "text_bbox": [
+        474.7308349609375,
+        192.56402587890625,
+        505.20465087890625,
+        198.47860717773438
+      ],
+      "other_text": null,
+      "other_bbox": [
+        407.7340087890625,
+        189.3159942626953,
+        504.7380065917969,
+        201.80799865722656
+      ],
+      "object_count": 1,
+      "object_indexes": [
+        57000
+      ]
+    },
+    {
+      "severity": "WARN",
+      "kind": "text-fill-edge",
+      "page": 1,
+      "message": "Text partially overlaps the edge of 1 filled region(s)",
+      "text": "200",
+      "text_bbox": [
+        488.734375,
+        325.7086181640625,
+        497.8433837890625,
+        331.9566955566406
+      ],
+      "other_text": null,
+      "other_bbox": [
+        407.7340087890625,
+        208.38299560546875,
+        508.03900146484375,
+        326.3949890136719
+      ],
+      "object_count": 1,
+      "object_indexes": [
+        43000
+      ]
+    }
+  ]
+}

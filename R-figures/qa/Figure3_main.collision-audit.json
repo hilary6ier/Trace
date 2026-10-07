@@ -1,0 +1,48 @@
+{
+  "pdf": "R-figures/Figure3_main.pdf",
+  "auditable": true,
+  "verdict": "REVIEW REQUIRED",
+  "page_count": 1,
+  "visible_text_box_count": 58,
+  "text_trace_count": 25,
+  "stroke_path_count": 55,
+  "filled_region_count": 29,
+  "image_region_count": 1,
+  "summary": {
+    "fail": 0,
+    "warn": 1,
+    "contained_fill_overlays": 38,
+    "contained_image_overlays": 0
+  },
+  "thresholds": {
+    "text_inset_pt": 0.6,
+    "min_overlap_ratio": 0.05,
+    "clipping_tolerance_pt": 0.5
+  },
+  "findings": [
+    {
+      "severity": "WARN",
+      "kind": "text-fill-edge",
+      "page": 1,
+      "message": "Text partially overlaps the edge of 1 filled region(s)",
+      "text": "0.5",
+      "text_bbox": [
+        51.89453125,
+        295.7518615722656,
+        60.177310943603516,
+        302.3356018066406
+      ],
+      "other_text": null,
+      "other_bbox": [
+        52.277000427246094,
+        281.6719970703125,
+        257.2770080566406,
+        307.03900146484375
+      ],
+      "object_count": 1,
+      "object_indexes": [
+        18000
+      ]
+    }
+  ]
+}

@@ -1,128 +1,172 @@
 suppressPackageStartupMessages({
-  library(data.table)
   library(ggplot2)
   library(patchwork)
+  library(data.table)
   library(scales)
-  library(ragg)
 })
 
-options(stringsAsFactors = FALSE)
+if (!exists("SCRIPT_DIR")) {
+  stop("SCRIPT_DIR must be defined before sourcing _figure_common.R")
+}
+if (!exists("REPO_ROOT")) {
+  REPO_ROOT <- normalizePath(file.path(SCRIPT_DIR, ".."), mustWork = TRUE)
+}
 
-FIG_WIDTH_IN <- 183 / 25.4
-FONT_FAMILY <- "Arial"
+OUT_DIR <- file.path(REPO_ROOT, "R-figures")
+SOURCE_DIR <- file.path(OUT_DIR, "plot_source")
+QA_DIR <- file.path(OUT_DIR, "qa")
+dir.create(SOURCE_DIR, recursive = TRUE, showWarnings = FALSE)
+dir.create(QA_DIR, recursive = TRUE, showWarnings = FALSE)
 
-COL <- c(
-  ink = "#172B3A",
-  muted = "#607381",
-  grid = "#D9E1E5",
-  light = "#EEF2F4",
-  BID = "#2468A2",
-  BACS = "#D97824",
-  ELAP = "#2A8F6A",
-  TRACE = "#2468A2",
-  context = "#D99A2B",
-  provenance = "#8A6B8F",
-  breadth = "#8A989F",
-  residual = "#C45D4A",
-  observed = "#B33D4A"
+# Fontconfig needs a writable cache in the restricted cloud runtime.
+FONT_CACHE <- file.path(tempdir(), "trace-font-cache")
+dir.create(FONT_CACHE, recursive = TRUE, showWarnings = FALSE)
+Sys.setenv(XDG_CACHE_HOME = FONT_CACHE)
+
+# Generic sans is used in grobs so the alignment probe's base-PDF device remains
+# portable; svglite explicitly maps it to Liberation Sans below.
+FONT_FAMILY <- "sans"
+
+TRACE_COLORS <- c(
+  ink = "#252A30",
+  neutral_dark = "#676D73",
+  neutral_mid = "#9AA0A6",
+  neutral_light = "#D6D9DC",
+  neutral_pale = "#F1F3F5",
+  HEK293T = "#31688E",
+  HeLa = "#C75B7A",
+  BID = "#D07A2D",
+  BACS = "#3F7EA6",
+  ELAP = "#7A5AA6",
+  DRS = "#2A9D8F",
+  P0_breadth = "#9AA0A6",
+  P1_provenance = "#8F6BAE",
+  A_context_only = "#2A9D8F",
+  P2_TRACEpsi = "#245B8A"
 )
 
-theme_manuscript <- function(base_size = 8) {
+MODEL_LABELS <- c(
+  P0_breadth = "P0: Breadth",
+  P1_provenance = "P1: Provenance",
+  A_context_only = "Context-only",
+  P2_TRACEpsi = "TRACE-PSI"
+)
+
+theme_trace <- function(base_size = 6.6) {
   theme_classic(base_size = base_size, base_family = FONT_FAMILY) +
     theme(
-      plot.title = element_text(size = base_size + 1.2, face = "bold", colour = COL["ink"], hjust = 0),
-      plot.subtitle = element_text(size = base_size - 0.4, colour = COL["muted"], margin = margin(b = 4)),
-      axis.title = element_text(size = base_size, colour = COL["ink"]),
-      axis.text = element_text(size = base_size - 0.5, colour = COL["ink"]),
-      axis.line = element_line(linewidth = 0.35, colour = COL["ink"]),
-      axis.ticks = element_line(linewidth = 0.3, colour = COL["ink"]),
-      axis.ticks.length = unit(1.6, "mm"),
-      strip.background = element_rect(fill = COL["light"], colour = NA),
-      strip.text = element_text(size = base_size, face = "bold", colour = COL["ink"], margin = margin(3, 3, 3, 3)),
-      legend.title = element_text(size = base_size - 0.3, face = "bold"),
-      legend.text = element_text(size = base_size - 0.5),
-      legend.key.height = unit(3.4, "mm"),
-      legend.key.width = unit(4.2, "mm"),
-      plot.margin = margin(5, 6, 5, 5)
+      axis.line = element_line(linewidth = 0.32, colour = TRACE_COLORS[["ink"]]),
+      axis.ticks = element_line(linewidth = 0.30, colour = TRACE_COLORS[["ink"]]),
+      axis.ticks.length = grid::unit(1.3, "mm"),
+      axis.title = element_text(size = base_size, colour = TRACE_COLORS[["ink"]]),
+      axis.text = element_text(size = base_size - 0.4, colour = TRACE_COLORS[["ink"]]),
+      plot.title = element_text(size = 7.2, face = "bold", hjust = 0,
+                                margin = margin(b = 2.5)),
+      plot.subtitle = element_text(size = 6.1, colour = TRACE_COLORS[["neutral_dark"]],
+                                   margin = margin(b = 3.0)),
+      plot.tag = element_text(size = 8.0, face = "bold", colour = TRACE_COLORS[["ink"]]),
+      plot.tag.position = c(0, 1),
+      plot.margin = margin(5, 5, 5, 5),
+      legend.position = "top",
+      legend.justification = "left",
+      legend.title = element_blank(),
+      legend.text = element_text(size = 5.9),
+      legend.key.height = grid::unit(3.0, "mm"),
+      legend.key.width = grid::unit(4.2, "mm"),
+      panel.grid = element_blank(),
+      strip.background = element_blank(),
+      strip.text = element_text(size = 6.2, face = "bold", margin = margin(b = 1.5)),
+      plot.background = element_rect(fill = "white", colour = NA),
+      panel.background = element_rect(fill = "white", colour = NA)
     )
 }
 
-panel_tag_theme <- theme(
-  plot.tag = element_text(family = FONT_FAMILY, face = "bold", size = 12, colour = COL["ink"]),
-  plot.tag.position = c(0, 1)
-)
+theme_set(theme_trace())
 
-read_tsv <- function(path) {
-  if (grepl("\\.gz$", path, ignore.case = TRUE)) {
-    return(as.data.table(read.delim(gzfile(path), sep = "\t", header = TRUE,
-                                    na.strings = c("NA", "NaN", ""), check.names = FALSE)))
-  }
-  fread(path, sep = "\t", na.strings = c("NA", "NaN", ""), check.names = FALSE)
+write_plot_source <- function(x, filename) {
+  data.table::fwrite(as.data.table(x), file.path(SOURCE_DIR, filename), sep = "\t", na = "NA")
 }
 
-write_source <- function(x, filename) {
-  dir.create(file.path(OUT_DIR, "plot_source"), recursive = TRUE, showWarnings = FALSE)
-  fwrite(as.data.table(x), file.path(OUT_DIR, "plot_source", filename), sep = "\t", na = "NA", quote = FALSE)
+read_tsv <- function(...) {
+  data.table::fread(file.path(REPO_ROOT, ...), sep = "\t", na.strings = c("NA", ""))
 }
 
-save_figure <- function(plot, stem, height_in) {
-  dir.create(OUT_DIR, recursive = TRUE, showWarnings = FALSE)
+read_tsv_gz <- function(...) {
+  path <- file.path(REPO_ROOT, ...)
+  data.table::fread(cmd = paste("gzip -cd", shQuote(path)), sep = "\t", na.strings = c("NA", ""))
+}
+
+save_trace_figure <- function(plot, stem, height_mm, panel_ids,
+                              row_groups = NULL, column_groups = NULL,
+                              exemptions = list(), width_mm = 183) {
+  stopifnot(inherits(plot, "patchwork"))
+  width_in <- width_mm / 25.4
+  height_in <- height_mm / 25.4
+
+  alignment_helper <- file.path(
+    REPO_ROOT, ".agents", "skills", "nature-figure", "scripts", "panel_alignment.R"
+  )
+  source(alignment_helper, local = environment())
+  measured_rows <- .nature_alignment_panel_rows(patchwork::patchworkGrob(plot))
+  message("Alignment plot areas: ", nrow(measured_rows), " [",
+          paste(measured_rows$name, collapse = ", "), "]")
+  all_panel_names <- patchwork::patchworkGrob(plot)$layout$name
+  message("All panel-like grobs: ", paste(all_panel_names[grepl("panel", all_panel_names)], collapse = ", "))
+  require_patchwork_panel_alignment(
+    plot = plot,
+    manifest_path = file.path(QA_DIR, paste0(stem, ".alignment-layout.json")),
+    report_path = file.path(QA_DIR, paste0(stem, ".alignment.json")),
+    overlay_svg = file.path(QA_DIR, paste0(stem, ".alignment.svg")),
+    width_in = width_in,
+    height_in = height_in,
+    panel_ids = panel_ids,
+    row_groups = row_groups,
+    column_groups = column_groups,
+    exemptions = exemptions,
+    audit_script = file.path(
+      REPO_ROOT, ".agents", "skills", "nature-figure", "scripts", "audit_panel_alignment.py"
+    ),
+    python = Sys.which("python"),
+    tolerance_pt = 1.5,
+    gutter_tolerance_pt = 1.5,
+    strict = TRUE
+  )
+
+  svg_file <- file.path(OUT_DIR, paste0(stem, ".svg"))
   pdf_file <- file.path(OUT_DIR, paste0(stem, ".pdf"))
-  tif_file <- file.path(OUT_DIR, paste0(stem, "_600dpi.tiff"))
+  tiff_file <- file.path(OUT_DIR, paste0(stem, "_600dpi.tiff"))
   png_file <- file.path(OUT_DIR, paste0(stem, "_preview.png"))
 
-  cairo_pdf(pdf_file, width = FIG_WIDTH_IN, height = height_in, family = FONT_FAMILY, onefile = TRUE)
+  svglite::svglite(
+    svg_file, width = width_in, height = height_in,
+    system_fonts = list(sans = "Liberation Sans")
+  )
   print(plot)
-  invisible(dev.off())
+  grDevices::dev.off()
 
-  agg_tiff(tif_file, width = FIG_WIDTH_IN, height = height_in, units = "in", res = 600,
-           compression = "lzw", background = "white")
+  grDevices::cairo_pdf(
+    pdf_file, width = width_in, height = height_in,
+    family = FONT_FAMILY, onefile = TRUE
+  )
   print(plot)
-  invisible(dev.off())
+  grDevices::dev.off()
 
-  agg_png(png_file, width = FIG_WIDTH_IN, height = height_in, units = "in", res = 240,
-          background = "white")
+  ragg::agg_tiff(
+    tiff_file, width = width_in, height = height_in,
+    units = "in", res = 600, compression = "lzw", background = "white"
+  )
   print(plot)
-  invisible(dev.off())
+  grDevices::dev.off()
+
+  ragg::agg_png(
+    png_file, width = width_in, height = height_in,
+    units = "in", res = 300, background = "white"
+  )
+  print(plot)
+  grDevices::dev.off()
+
+  invisible(c(svg = svg_file, pdf = pdf_file, tiff = tiff_file, png = png_file))
 }
 
-roc_points <- function(y, score) {
-  d <- data.table(y = as.integer(y), score = as.numeric(score))
-  g <- d[, .(tp_add = sum(y), fp_add = .N - sum(y)), by = score][order(-score)]
-  g[, `:=`(tp = cumsum(tp_add), fp = cumsum(fp_add))]
-  out <- rbind(data.table(score = Inf, tp_add = 0L, fp_add = 0L, tp = 0L, fp = 0L), g, fill = TRUE)
-  out[, `:=`(TPR = tp / sum(d$y), FPR = fp / sum(1L - d$y))]
-  out
-}
-
-pr_points <- function(y, score) {
-  d <- data.table(y = as.integer(y), score = as.numeric(score))
-  g <- d[, .(tp_add = sum(y), n_add = .N), by = score][order(-score)]
-  g[, `:=`(tp = cumsum(tp_add), n = cumsum(n_add))]
-  g[, `:=`(recall = tp / sum(d$y), precision = tp / n)]
-  rbind(data.table(score = Inf, tp_add = 0L, n_add = 0L, tp = 0L, n = 0L, recall = 0, precision = 1), g, fill = TRUE)
-}
-
-tie_budget_curve <- function(y, score) {
-  d <- data.table(y = as.integer(y), score = as.numeric(score))
-  groups <- d[, .(group_n = .N, group_pos = sum(y)), by = score][order(-score)]
-  rows <- vector("list", nrow(groups))
-  n_before <- 0L
-  pos_before <- 0
-  for (i in seq_len(nrow(groups))) {
-    g <- groups[i]
-    ks <- seq.int(n_before + 1L, n_before + g$group_n)
-    expected <- pos_before + (ks - n_before) * g$group_pos / g$group_n
-    rows[[i]] <- data.table(k = ks, expected_positives = expected, boundary_score = g$score)
-    n_before <- n_before + g$group_n
-    pos_before <- pos_before + g$group_pos
-  }
-  out <- rbindlist(rows)
-  out[, `:=`(
-    fraction_screened = k / .N,
-    fraction_recovered = expected_positives / sum(d$y),
-    expected_precision = expected_positives / k,
-    expected_lift = (expected_positives / k) / mean(d$y)
-  )]
-  out
-}
+percent1 <- function(x) sprintf("%.1f%%", 100 * x)
+number2 <- function(x) sprintf("%.2f", x)

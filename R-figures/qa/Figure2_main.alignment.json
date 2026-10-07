@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "applicable": true,
+  "auditable": true,
+  "verdict": "PASS",
+  "backend": "r-patchwork",
+  "summary": {
+    "fail": 0,
+    "warn": 0,
+    "comparisons": 4,
+    "exemptions": 0
+  },
+  "tolerances": {
+    "alignment_pt": 1.5,
+    "gutter_pt": 1.5
+  },
+  "layout": {
+    "schema_version": 1,
+    "backend": "r-patchwork",
+    "figure": {
+      "width_pt": 518.740157480315,
+      "height_pt": 357.165354330709
+    },
+    "panels": [
+      {
+        "id": "a",
+        "bbox_pt": [
+          59.7877085927772,
+          167.22068167723,
+          372.636787524147,
+          338.146054206176
+        ],
+        "grid_id": "patchwork-grid-1",
+        "row_start": 10,
+        "row_stop": 11,
+        "col_start": 8,
+        "col_stop": 39
+      },
+      {
+        "id": "b",
+        "bbox_pt": [
+          407.815371103441,
+          167.22068167723,
+          508.777517380688,
+          338.146054206176
+        ],
+        "grid_id": "patchwork-grid-1",
+        "row_start": 10,
+        "row_stop": 11,
+        "col_start": 53,
+        "col_stop": 54
+      },
+      {
+        "id": "c",
+        "bbox_pt": [
+          59.7877085927772,
+          28.8005835792942,
+          261.712001147273,
+          120.746646043141
+        ],
+        "grid_id": "patchwork-grid-1",
+        "row_start": 28,
+        "row_stop": 29,
+        "col_start": 8,
+        "col_stop": 24
+      },
+      {
+        "id": "d",
+        "bbox_pt": [
+          271.674641246899,
+          28.8005835792942,
+          508.777517380688,
+          120.746646043141
+        ],
+        "grid_id": "patchwork-grid-1",
+        "row_start": 28,
+        "row_stop": 29,
+        "col_start": 38,
+        "col_stop": 54
+      }
+    ],
+    "row_groups": [
+      {
+        "id": "inferred-row-1",
+        "panels": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "id": "inferred-row-2",
+        "panels": [
+          "c",
+          "d"
+        ]
+      }
+    ],
+    "column_groups": [],
+    "boundary_groups": [
+      {
+        "id": "inferred-shared-left-1",
+        "edge": "left",
+        "panels": [
+          "a",
+          "c"
+        ]
+      },
+      {
+        "id": "inferred-shared-right-1",
+        "edge": "right",
+        "panels": [
+          "b",
+          "d"
+        ]
+      }
+    ],
+    "exemptions": []
+  },
+  "findings": []
+}

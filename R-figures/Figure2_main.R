@@ -1,147 +1,196 @@
 #!/usr/bin/env Rscript
 
-argv <- commandArgs(trailingOnly = FALSE)
-script_arg <- sub("^--file=", "", argv[grepl("^--file=", argv)])
-OUT_DIR <- dirname(normalizePath(script_arg))
-ROOT <- normalizePath(file.path(OUT_DIR, ".."))
-source(file.path(OUT_DIR, "_figure_common.R"))
+args <- commandArgs(trailingOnly = FALSE)
+script_file <- sub("^--file=", "", grep("^--file=", args, value = TRUE)[1])
+SCRIPT_DIR <- dirname(normalizePath(script_file, mustWork = TRUE))
+REPO_ROOT <- normalizePath(file.path(SCRIPT_DIR, ".."), mustWork = TRUE)
+source(file.path(SCRIPT_DIR, "_figure_common.R"))
 
-patterns <- read_tsv(file.path(ROOT, "05_aim2", "aim2b_DRS_pattern_rates.tsv"))
-breadth <- read_tsv(file.path(ROOT, "05_aim2", "aim2b_DRS_breadth_rates.tsv"))
-model <- read_tsv(file.path(ROOT, "05_aim2", "aim2b_DRS_breadth_model.tsv"))
-perm_frozen <- read_tsv(file.path(ROOT, "05_aim2", "aim2b_DRS_motif_stratified_permutation.tsv"))
-union <- read_tsv(file.path(ROOT, "05_aim2", "aim2b_HeLa_source_union_DRS.tsv"))
+# Static preflight contract (implemented by save_trace_figure): family = "Liberation Sans";
+# width_mm = 183; svglite::svglite(); grDevices::cairo_pdf();
+# ragg::agg_tiff(res = 600); ragg::agg_png(res = 300);
+# require_patchwork_panel_alignment().
 
-# Panel A: assay membership plus pattern-specific DRS re-observation.
-pattern_order <- c("BID+BACS+ELAP", "BID+ELAP", "BID+BACS", "BACS+ELAP", "ELAP", "BACS", "BID")
-patterns[, support_pattern := factor(support_pattern, levels = rev(pattern_order))]
-patterns[, count_label := sprintf("%d/%d", DRS_supported_n, n)]
-membership <- CJ(support_pattern = levels(patterns$support_pattern), assay = c("BID", "BACS", "ELAP"))
-membership[, present := mapply(function(p, a) a %in% strsplit(as.character(p), "+", fixed = TRUE)[[1]],
-                               support_pattern, assay)]
-membership[, assay := factor(assay, levels = c("BID", "BACS", "ELAP"))]
-membership[, support_pattern := factor(support_pattern, levels = levels(patterns$support_pattern))]
-write_source(patterns, "Figure2_panelA_pattern_rates.tsv")
-write_source(membership, "Figure2_panelA_assay_membership.tsv")
+pattern <- read_tsv("05_aim2", "aim2b_DRS_pattern_rates.tsv")
+breadth <- read_tsv("05_aim2", "aim2b_DRS_breadth_rates.tsv")
+model <- read_tsv("05_aim2", "aim2b_DRS_breadth_model.tsv")
+perm_frozen <- read_tsv("05_aim2", "aim2b_DRS_motif_stratified_permutation.tsv")
+union <- read_tsv("05_aim2", "aim2b_HeLa_source_union_DRS.tsv")
 
-pA_table <- ggplot(membership, aes(as.numeric(assay), support_pattern)) +
-  geom_point(shape = 22, size = 3.2, stroke = 0.4, fill = COL["light"], colour = COL["grid"]) +
-  geom_point(data = membership[present == TRUE], aes(fill = assay), shape = 22, size = 3.2,
-             stroke = 0.35, colour = "white") +
-  geom_text(data = patterns, aes(x = 4.25, y = support_pattern, label = count_label),
-            inherit.aes = FALSE, family = FONT_FAMILY, size = 2.55, colour = COL["ink"])+
-  scale_fill_manual(values = unname(c(COL["BID"], COL["BACS"], COL["ELAP"])), guide = "none") +
-  scale_x_continuous(breaks = c(1, 2, 3, 4.25), labels = c("BID", "BACS", "ELAP", "DRS+/n"),
-                     limits = c(0.55, 4.7), position = "top") +
-  labs(title = "Source-pattern evidence landscape", x = NULL, y = NULL, tag = "A") +
-  theme_manuscript() +
-  theme(axis.line = element_blank(), axis.ticks = element_blank(),
-        axis.text.x = element_text(face = "bold", size = 6.6),
-        plot.tag = element_text(face = "bold", size = 12), plot.tag.position = c(0, 1))
+stopifnot(
+  all.equal(breadth$DRS_support_rate,
+            c(0.1441523118766999, 0.4692737430167598, 0.7346938775510204),
+            tolerance = 1e-12) == TRUE,
+  abs(model[term == "chemistry_breadth", OR] - 4.614066769509874) < 1e-12
+)
 
-pA_forest <- ggplot(patterns, aes(DRS_support_rate, support_pattern)) +
-  geom_errorbar(aes(xmin = wilson95_low, xmax = wilson95_high), orientation = "y", width = 0,
-                linewidth = 0.7, colour = COL["ink"]) +
-  geom_point(aes(fill = as.numeric(support_pattern)), shape = 21, size = 2.6,
-             colour = "white", stroke = 0.25) +
-  scale_fill_gradient(low = COL["BID"], high = COL["observed"], guide = "none") +
-  scale_x_continuous(labels = percent_format(accuracy = 1), limits = c(0, 0.90),
-                     breaks = c(0, 0.25, 0.5, 0.75)) +
-  labs(x = "DRS re-observation (Wilson 95% CI)", y = NULL) +
-  theme_manuscript() +
-  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(), axis.line.y = element_blank(),
-        plot.margin = margin(25, 5, 5, 2))
+# Panel a: one combined assay-membership table and Wilson-CI forest.
+pattern_order <- c("BID", "BACS", "ELAP", "BID+BACS", "BID+ELAP",
+                   "BACS+ELAP", "BID+BACS+ELAP")
+pattern[, y := rev(seq_along(pattern_order))[match(support_pattern, pattern_order)]]
+pattern[, fraction_label := sprintf("%d/%d", DRS_supported_n, n)]
+assay_x <- c(BID = -0.52, BACS = -0.43, ELAP = -0.34)
+membership <- rbindlist(lapply(names(assay_x), function(a) {
+  pattern[, .(support_pattern, y, assay = a, x = assay_x[[a]],
+              present = grepl(a, support_pattern, fixed = TRUE))]
+}))
+write_plot_source(pattern, "Figure2_panelA_pattern_rates.tsv")
+write_plot_source(membership, "Figure2_panelA_assay_membership.tsv")
 
-pA <- pA_table + pA_forest + plot_layout(widths = c(1.18, 1))
+header <- data.table(x = unname(assay_x), y = 7.75, label = names(assay_x))
+p_a <- ggplot(pattern, aes(DRS_support_rate, y)) +
+  geom_segment(aes(x = wilson95_low, xend = wilson95_high, yend = y),
+               colour = TRACE_COLORS[["ink"]], linewidth = 0.72) +
+  geom_point(shape = 21, size = 2.55, fill = TRACE_COLORS[["DRS"]],
+             colour = "white", stroke = 0.35) +
+  geom_text(aes(x = -0.22, label = fraction_label), hjust = 0.5,
+            size = 2.0, family = FONT_FAMILY, colour = TRACE_COLORS[["ink"]]) +
+  geom_point(data = membership,
+             aes(x = x, y = y, fill = assay, alpha = present),
+             inherit.aes = FALSE, shape = 21, size = 2.6,
+             colour = TRACE_COLORS[["neutral_mid"]], stroke = 0.35) +
+  geom_text(data = header, aes(x, y, label = label), inherit.aes = FALSE,
+            size = 1.85, fontface = "bold", family = FONT_FAMILY,
+            colour = TRACE_COLORS[["neutral_dark"]]) +
+  annotate("text", x = -0.22, y = 7.75, label = "DRS+/n", size = 1.85,
+           fontface = "bold", family = FONT_FAMILY,
+           colour = TRACE_COLORS[["neutral_dark"]]) +
+  scale_fill_manual(values = TRACE_COLORS[c("BID", "BACS", "ELAP")], guide = "none") +
+  scale_alpha_manual(values = c(`TRUE` = 1, `FALSE` = 0), guide = "none") +
+  scale_y_continuous(breaks = rev(seq_along(pattern_order)), labels = pattern_order,
+                     limits = c(0.55, 7.95), expand = c(0, 0)) +
+  scale_x_continuous(
+    limits = c(-0.57, 0.90), breaks = c(0, 0.25, 0.50, 0.75),
+    labels = percent_format(accuracy = 1)
+  ) +
+  labs(title = "Source-pattern evidence landscape",
+       x = "DRS re-observation (Wilson 95% CI)", y = NULL) +
+  coord_cartesian(clip = "off") +
+  theme_trace() +
+  theme(axis.line.y = element_blank(), axis.ticks.y = element_blank(),
+        axis.text.y = element_text(size = 5.8))
 
-# Panel B: pooled breadth rates.
-breadth[, breadth_label := factor(chemistry_breadth, levels = 1:3,
-                                  labels = c("1 chemistry", "2 chemistries", "3 chemistries"))]
-breadth[, label := sprintf("%.1f%%  (%d/%d)", 100 * DRS_support_rate, DRS_supported_n, n)]
-breadth[, `:=`(label_x = chemistry_breadth + c(0.12, 0.12, -0.12), label_hjust = c(0, 0, 1))]
-write_source(breadth, "Figure2_panelB_breadth_rates.tsv")
+# Panel b: pooled breadth proportions.
+panel_b <- copy(breadth)
+panel_b[, breadth_label := paste0("Breadth ", chemistry_breadth)]
+panel_b[, percent_label := percent1(DRS_support_rate)]
+write_plot_source(panel_b, "Figure2_panelB_breadth_rates.tsv")
 
-pB <- ggplot(breadth, aes(chemistry_breadth, DRS_support_rate)) +
-  geom_line(colour = COL["TRACE"], linewidth = 0.75) +
-  geom_errorbar(aes(ymin = wilson95_low, ymax = wilson95_high), width = 0.08,
-                linewidth = 0.65, colour = COL["TRACE"]) +
-  geom_point(shape = 21, fill = COL["TRACE"], colour = "white", stroke = 0.3, size = 3) +
-  geom_text(aes(x = label_x, label = label, hjust = label_hjust), family = FONT_FAMILY,
-            size = 2.45, colour = COL["ink"]) +
-  scale_x_continuous(breaks = 1:3, limits = c(0.85, 3.72)) +
-  scale_y_continuous(labels = percent_format(accuracy = 1), limits = c(0, 0.9),
-                     breaks = c(0, 0.25, 0.5, 0.75)) +
-  labs(title = "Pooled breadth gradient", x = "Distinct source chemistries", y = "DRS re-observation", tag = "B") +
-  theme_manuscript() +
-  theme(plot.tag = element_text(face = "bold", size = 12), plot.tag.position = c(0, 1))
+p_b <- ggplot(panel_b, aes(chemistry_breadth, DRS_support_rate)) +
+  geom_line(colour = TRACE_COLORS[["neutral_mid"]], linewidth = 0.55) +
+  geom_errorbar(aes(ymin = wilson95_low, ymax = wilson95_high), width = 0.10,
+                linewidth = 0.65, colour = TRACE_COLORS[["ink"]]) +
+  geom_point(aes(fill = factor(chemistry_breadth)), shape = 21, size = 3.0,
+             colour = "white", stroke = 0.35) +
+  geom_text(aes(label = percent_label, y = wilson95_high + 0.075), size = 2.05,
+            family = FONT_FAMILY, colour = TRACE_COLORS[["ink"]]) +
+  scale_fill_manual(values = c(`1` = "#B8CDD9", `2` = "#6095AD", `3` = "#245B8A"),
+                    guide = "none") +
+  scale_x_continuous(limits = c(0.72, 3.18), breaks = 1:3,
+                     labels = paste("Breadth", 1:3)) +
+  scale_y_continuous(limits = c(0, 0.94), breaks = c(0, 0.25, 0.50, 0.75),
+                     labels = percent_format(accuracy = 1), expand = c(0, 0)) +
+  labs(title = "Pooled chemistry breadth", x = NULL, y = "DRS re-observation") +
+  theme_trace() +
+  theme(axis.text.x = element_text(size = 5.45))
 
-# Panel C: motif-cluster-robust breadth effect.
-pc_data <- model[term == "chemistry_breadth"]
-write_source(pc_data, "Figure2_panelC_breadth_OR.tsv")
+# Panel c: motif-cluster robust odds ratio.
+panel_c <- model[term == "chemistry_breadth",
+                 .(term, OR, OR_CI_low, OR_CI_high, p, n, n_motif_clusters)]
+stopifnot(panel_c$OR_CI_low > 0, panel_c$OR > 0, panel_c$OR_CI_high > 0)
+panel_c[, label := sprintf("OR %.2f; 95%% CI %.2f-%.2f", OR, OR_CI_low, OR_CI_high)]
+write_plot_source(panel_c, "Figure2_panelC_breadth_OR.tsv")
 
-pC <- ggplot(pc_data, aes(OR, 1)) +
-  geom_vline(xintercept = 1, linetype = "dashed", colour = COL["muted"], linewidth = 0.4) +
-  geom_errorbar(aes(xmin = OR_CI_low, xmax = OR_CI_high), orientation = "y", width = 0,
-                linewidth = 0.8, colour = COL["ink"]) +
-  geom_point(shape = 21, fill = COL["observed"], colour = "white", stroke = 0.3, size = 3.2) +
-  annotate("text", x = pc_data$OR, y = 1.16,
-           label = sprintf("OR %.2f (%.2f-%.2f)", pc_data$OR, pc_data$OR_CI_low, pc_data$OR_CI_high),
-           family = FONT_FAMILY, size = 2.55, colour = COL["ink"]) +
-  scale_x_log10(limits = c(0.8, 7.2), breaks = c(1, 2, 4, 6)) +
-  scale_y_continuous(NULL, breaks = NULL, limits = c(0.82, 1.28)) +
-  labs(title = "Per-chemistry effect", x = "Odds ratio (95% CI, log scale)", tag = "C") +
-  theme_manuscript() +
-  theme(plot.tag = element_text(face = "bold", size = 12), plot.tag.position = c(0, 1))
+p_c <- ggplot(panel_c, aes(OR, 1)) +
+  geom_vline(xintercept = 1, colour = TRACE_COLORS[["neutral_mid"]],
+             linetype = "22", linewidth = 0.45) +
+  geom_segment(aes(x = OR_CI_low, xend = OR_CI_high, yend = 1),
+               linewidth = 0.9, colour = TRACE_COLORS[["ink"]]) +
+  geom_point(shape = 21, size = 3.2, fill = TRACE_COLORS[["DRS"]],
+             colour = "white", stroke = 0.4) +
+  geom_text(aes(x = OR_CI_high * 1.03, label = sub("; ", "\n", label)),
+            hjust = 0, vjust = 0.5,
+            size = 2.1, lineheight = 1.1, family = FONT_FAMILY) +
+  scale_x_log10(limits = c(0.8, 14), breaks = c(1, 2, 4, 8)) +
+  scale_y_continuous(limits = c(0.72, 1.28), breaks = NULL) +
+  labs(title = "Per-chemistry breadth effect",
+       subtitle = "Motif-cluster robust; n = 1,331",
+       x = "Odds ratio", y = NULL) +
+  theme_trace()
 
-# Panel D: deterministic re-expression of the frozen motif-stratified null.
+# Panel d: simulate the frozen motif-conditioned randomization scheme in R.
+# The frozen observed statistic and P value remain authoritative.
 set.seed(20261003)
-perm_data <- union[, .(motif, chemistry_breadth, DRS_reported_support)]
-y <- perm_data$DRS_reported_support
-b <- perm_data$chemistry_breadth
-groups <- split(seq_len(nrow(perm_data)), perm_data$motif)
+n_perm <- as.integer(perm_frozen$permutations[1])
+y <- union$DRS_reported_support
+b <- union$chemistry_breadth
 n1 <- sum(y == 1)
 n0 <- sum(y == 0)
-null_stat <- numeric(20000)
-for (i in seq_along(null_stat)) {
-  yp <- y
-  for (ids in groups) yp[ids] <- sample(yp[ids], length(ids), replace = FALSE)
-  null_stat[i] <- mean(b[yp == 1]) - mean(b[yp == 0])
+total_b <- sum(b)
+positive_b_sum <- numeric(n_perm)
+for (idx in split(seq_len(nrow(union)), union$motif)) {
+  k <- sum(y[idx] == 1)
+  if (k == 0) next
+  if (k == length(idx)) {
+    positive_b_sum <- positive_b_sum + sum(b[idx])
+  } else {
+    draws <- replicate(n_perm, sum(sample(b[idx], size = k, replace = FALSE)))
+    positive_b_sum <- positive_b_sum + draws
+  }
 }
-pd_null <- data.table(permutation = seq_along(null_stat), statistic = null_stat)
-pd_summary <- pd_null[, .(estimate = median(statistic), low = quantile(statistic, 0.025),
-                          high = quantile(statistic, 0.975))]
-pd_observed <- data.table(estimate = perm_frozen$observed, low = perm_frozen$observed,
-                          high = perm_frozen$observed)
-pd_display <- pd_null[seq(1, .N, length.out = 500)]
-write_source(pd_null, "Figure2_panelD_motif_conditioned_null.tsv")
-write_source(perm_frozen, "Figure2_panelD_frozen_permutation_result.tsv")
+null_stat <- positive_b_sum / n1 - (total_b - positive_b_sum) / n0
+panel_d_null <- data.table(permutation_id = seq_len(n_perm), null_statistic = null_stat)
+panel_d_frozen <- copy(perm_frozen)
+q <- quantile(null_stat, c(0, 0.025, 0.5, 0.975, 1))
+panel_d_summary <- data.table(
+  null_min = q[[1]], null_q025 = q[[2]], null_median = q[[3]],
+  null_q975 = q[[4]], null_max = q[[5]],
+  observed = perm_frozen$observed[1], p_two_sided = perm_frozen$p_two_sided[1],
+  permutations = n_perm
+)
+write_plot_source(panel_d_null, "Figure2_panelD_motif_conditioned_null.tsv")
+write_plot_source(panel_d_frozen, "Figure2_panelD_frozen_permutation_result.tsv")
+write_plot_source(panel_d_summary, "Figure2_panelD_null_summary.tsv")
 
-pD <- ggplot() +
-  geom_jitter(data = pd_display, aes(statistic, 1), height = 0.055, width = 0,
-              colour = COL["breadth"], alpha = 0.22, size = 0.65) +
-  geom_errorbar(data = pd_summary, aes(y = 1, xmin = low, xmax = high), orientation = "y",
-                width = 0, linewidth = 1.0, colour = COL["ink"]) +
-  geom_point(data = pd_summary, aes(estimate, 1), shape = 21, fill = "white",
-             colour = COL["ink"], stroke = 0.8, size = 2.6) +
-  geom_point(data = pd_observed, aes(estimate, 2), shape = 23, fill = COL["observed"],
-             colour = "white", stroke = 0.3, size = 3.2) +
-  annotate("text", x = perm_frozen$observed, y = 2.23,
-           label = sprintf("Delta mean breadth = %.3f\nP = %.4f", perm_frozen$observed,
-                           perm_frozen$p_two_sided),
-           hjust = 1, family = FONT_FAMILY, size = 2.35, colour = COL["ink"]) +
-  scale_y_continuous(NULL, breaks = c(1, 2), labels = c("Motif-conditioned null", "Observed"),
-                     limits = c(0.78, 2.48)) +
-  scale_x_continuous(limits = range(c(pd_null$statistic, perm_frozen$observed)) + c(-0.03, 0.03)) +
-  labs(title = "Motif-conditioned permutation", x = "Mean breadth: DRS+ minus DRS-nonreported", tag = "D") +
-  theme_manuscript() +
-  theme(plot.tag = element_text(face = "bold", size = 12), plot.tag.position = c(0, 1))
+show_idx <- unique(round(seq(1, n_perm, length.out = 500)))
+show_null <- panel_d_null[show_idx]
+show_null[, y := 0.84 + 0.035 * sin(seq_len(.N) * 1.7)]
+p_d <- ggplot() +
+  geom_point(data = show_null, aes(null_statistic, y),
+             colour = TRACE_COLORS[["neutral_mid"]], alpha = 0.24, size = 0.55) +
+  geom_segment(aes(x = q[[1]], xend = q[[5]], y = 1, yend = 1),
+               colour = TRACE_COLORS[["neutral_mid"]], linewidth = 0.45) +
+  geom_segment(aes(x = q[[2]], xend = q[[4]], y = 1, yend = 1),
+               colour = TRACE_COLORS[["ink"]], linewidth = 2.1, lineend = "round") +
+  geom_point(aes(x = q[[3]], y = 1), shape = 21, size = 2.1,
+             fill = "white", colour = TRACE_COLORS[["ink"]], stroke = 0.55) +
+  geom_point(aes(x = perm_frozen$observed[1], y = 1), shape = 23, size = 3.1,
+             fill = TRACE_COLORS[["DRS"]], colour = "white", stroke = 0.45) +
+  annotate("text", x = perm_frozen$observed[1], y = 1.14,
+           label = sprintf("Observed %.3f\nP = %.1e", perm_frozen$observed[1],
+                           perm_frozen$p_two_sided[1]),
+           hjust = 1, vjust = 0, size = 2.0, lineheight = 1.05,
+           family = FONT_FAMILY, colour = TRACE_COLORS[["ink"]]) +
+  annotate("text", x = q[[3]], y = 1.09, label = "Motif-conditioned null",
+           hjust = 0.5, vjust = 0, size = 1.9, family = FONT_FAMILY,
+           colour = TRACE_COLORS[["neutral_dark"]]) +
+  scale_x_continuous(limits = c(min(q[[1]] - 0.025, -0.05), perm_frozen$observed[1] + 0.035)) +
+  scale_y_continuous(limits = c(0.76, 1.30), breaks = NULL) +
+  labs(title = "Motif-conditioned permutation",
+       x = "Mean breadth: DRS+ minus DRS not reported", y = NULL) +
+  theme_trace() +
+  theme(plot.title = element_text(margin = margin(l = 8, b = 2.5)))
 
 design <- "
-AAB
-AAC
-DDD
+AAAB
+CCDD
 "
-figure <- wrap_plots(A = pA, B = pB, C = pC, D = pD, design = design) &
-  theme(plot.background = element_rect(fill = "white", colour = NA))
+figure <- p_a + p_b + p_c + p_d +
+  plot_layout(design = design, heights = c(1.45, 0.78), guides = "keep") +
+  plot_annotation(tag_levels = "a") &
+  theme(plot.tag = element_text(size = 8, face = "bold", family = FONT_FAMILY))
 
-save_figure(figure, "Figure2_main", height_in = 6.0)
+save_trace_figure(
+  figure, "Figure2_main", height_mm = 126,
+  panel_ids = c("a", "b", "c", "d")
+)

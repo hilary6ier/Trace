@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "applicable": true,
+  "auditable": true,
+  "verdict": "PASS",
+  "backend": "r-patchwork",
+  "summary": {
+    "fail": 0,
+    "warn": 0,
+    "comparisons": 3,
+    "exemptions": 0
+  },
+  "tolerances": {
+    "alignment_pt": 1.5,
+    "gutter_pt": 1.5
+  },
+  "layout": {
+    "schema_version": 1,
+    "backend": "r-patchwork",
+    "figure": {
+      "width_pt": 518.740157480315,
+      "height_pt": 317.48031496063
+    },
+    "panels": [
+      {
+        "id": "a",
+        "bbox_pt": [
+          53.7277085927772,
+          59.3708767515517,
+          299.152006240503,
+          289.844222806209
+        ],
+        "grid_id": "patchwork-grid-1",
+        "row_start": 10,
+        "row_stop": 29,
+        "col_start": 8,
+        "col_stop": 24
+      },
+      {
+        "id": "b",
+        "bbox_pt": [
+          367.658546233246,
+          197.844567595925,
+          508.777517380688,
+          289.844222806209
+        ],
+        "grid_id": "patchwork-grid-1",
+        "row_start": 10,
+        "row_stop": 11,
+        "col_start": 38,
+        "col_stop": 39
+      },
+      {
+        "id": "c",
+        "bbox_pt": [
+          367.658546233246,
+          59.3708767515517,
+          508.777517380688,
+          151.370531961836
+        ],
+        "grid_id": "patchwork-grid-1",
+        "row_start": 28,
+        "row_stop": 29,
+        "col_start": 38,
+        "col_stop": 39
+      }
+    ],
+    "row_groups": [],
+    "column_groups": [
+      {
+        "id": "inferred-column-2",
+        "panels": [
+          "b",
+          "c"
+        ]
+      }
+    ],
+    "boundary_groups": [
+      {
+        "id": "inferred-shared-top-1",
+        "edge": "top",
+        "panels": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "id": "inferred-shared-bottom-1",
+        "edge": "bottom",
+        "panels": [
+          "a",
+          "c"
+        ]
+      }
+    ],
+    "exemptions": []
+  },
+  "findings": []
+}

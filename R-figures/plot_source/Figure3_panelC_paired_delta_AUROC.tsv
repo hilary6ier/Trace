@@ -1,5 +1,5 @@
-delta_AUROC	CI_low	CI_high	bootstrap_P_delta_gt_0	bootstrap_replicates	subset	model_A	model_B	comparison	label	emphasis
--0.0520333653128665	-0.0928242965973099	-0.0129264985279226	0.005	3000	HeLa_DRS_breadth1	P1_provenance	P0_breadth	P1_provenance minus P0_breadth	P1 - P0	Benchmark contrast
-0.158308682443236	0.11527880027575	0.203275021848767	1	3000	HeLa_DRS_breadth1	A_context_only	P1_provenance	A_context_only minus P1_provenance	Context - P1	Benchmark contrast
-0.196307696407632	0.152415451674201	0.237520462422651	1	3000	HeLa_DRS_breadth1	P2_TRACEpsi	P1_provenance	P2_TRACEpsi minus P1_provenance	TRACE-Psi - P1	Benchmark contrast
-0.0379990139643961	0.00838804561559723	0.0679765068798978	0.993666666666667	3000	HeLa_DRS_breadth1	P2_TRACEpsi	A_context_only	P2_TRACEpsi minus A_context_only	TRACE-Psi - Context	Primary increment
+delta_AUROC	CI_low	CI_high	bootstrap_P_delta_gt_0	bootstrap_replicates	subset	model_A	model_B	comparison_key	comparison	comparison_colour
+-0.0520333653128665	-0.0928242965973099	-0.0129264985279226	0.005	3000	"HeLa_DRS_breadth1"	"P1_provenance"	"P0_breadth"	"P1_provenance-P0_breadth"	"P1 - P0"	"P1_provenance"
+0.158308682443236	0.11527880027575	0.203275021848767	1	3000	"HeLa_DRS_breadth1"	"A_context_only"	"P1_provenance"	"A_context_only-P1_provenance"	"Context - P1"	"A_context_only"
+0.196307696407632	0.152415451674201	0.237520462422651	1	3000	"HeLa_DRS_breadth1"	"P2_TRACEpsi"	"P1_provenance"	"P2_TRACEpsi-P1_provenance"	"TRACE-PSI - P1"	"P2_TRACEpsi"
+0.0379990139643961	0.00838804561559723	0.0679765068798978	0.993666666666667	3000	"HeLa_DRS_breadth1"	"P2_TRACEpsi"	"A_context_only"	"P2_TRACEpsi-A_context_only"	"TRACE-PSI - Context"	"P2_TRACEpsi"
