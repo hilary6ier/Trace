@@ -1,0 +1,2 @@
+term	analysis	n	reason
+NOT_RUN	DRS_table_evaluable_direct_reads_ge_10	279	insufficient evaluable rows or outcome classes
