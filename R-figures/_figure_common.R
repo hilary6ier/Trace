@@ -23,8 +23,9 @@ FONT_CACHE <- file.path(tempdir(), "trace-font-cache")
 dir.create(FONT_CACHE, recursive = TRUE, showWarnings = FALSE)
 Sys.setenv(XDG_CACHE_HOME = FONT_CACHE)
 
-# Generic sans is used in grobs so the alignment probe's base-PDF device remains
-# portable; svglite explicitly maps it to Liberation Sans below.
+# Keep the grid-level family portable for the base-PDF alignment probe. Export
+# devices below resolve this single generic family to Liberation Sans, avoiding
+# cross-device font substitution while preserving alignment audit compatibility.
 FONT_FAMILY <- "sans"
 
 TRACE_COLORS <- c(

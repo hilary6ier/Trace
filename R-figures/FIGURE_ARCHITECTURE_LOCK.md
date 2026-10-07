@@ -1,6 +1,6 @@
 # TRACE-PSI main-figure architecture lock
 
-Status: **LOCKED before plotting**
+Status: **REVISED AND LOCKED before final rendering**
 
 Governing workflow: repo-local `nature-figure` v2.8.0
 
@@ -33,9 +33,11 @@ from the frozen files listed below.
   default grid lines.
 - Model colours: P0 breadth `#9AA0A6`; P1 provenance `#8F6BAE`;
   Context-only `#2A9D8F`; TRACE-PSI `#245B8A`.
-- Assay colours: BID `#D07A2D`; BACS `#3F7EA6`; ELAP `#7A5AA6`;
-  held-out DRS `#2A9D8F`.
-- Cell colours: HEK293T `#31688E`; HeLa `#C75B7A`.
+- Assay colours: BID orange `#E68632`; BACS blue `#2E86AB`; ELAP violet
+  `#7B61A8`; held-out DRS teal `#2A9D8F`.
+- Cell/direction colours: HEK293T blue `#277DA1`; HeLa rose `#D25577`.
+- Ordered breadth colours: breadth 1 `#86BFD1`; breadth 2 `#2A9D8F`;
+  breadth 3 `#D96C4B`.
 - Reference/null geometry: `#7A7F85` and `#D6D9DC`, visually subordinate.
 - Proportions use points with Wilson 95% CIs; model/effect estimates use points
   with their frozen CIs; paired comparisons use delta estimates with paired
@@ -55,18 +57,20 @@ confounders?
 cellular contexts, remains after removing the synthetic-calibration-aligned
 component, and survives gene, confidence and PUS7-like-context attacks.
 
-**Archetype.** Validation envelope. Asymmetric layout `AAC / BBD`.
+**Archetype.** Validation envelope. Three-panel asymmetric layout
+`AABBB / CCCCC`: two scatter-based structure tests above one full-width
+interval envelope.
 
 | Panel | Evidence role | Decisive comparison | Frozen source |
 |---|---|---|---|
 | a | Primary quantitative evidence | HEK293T versus HeLa motif log-ratios among 105 motifs observed in both cells; Pearson and Spearman correlations reported | `04_aim1/aim1b_motif_effects.tsv`; `00_meta/phase1b_summary.json` |
 | b | Decomposition | Synthetic calibration contrast versus human-map motif log-ratio, separately by training cell; point area reflects motif count and weighted fits are descriptive | `04_aim1/aim1b_motif_effects.tsv`; `04_aim1/aim1b_calibration_decomposition.tsv` |
-| c | Transfer after attack | Full fingerprint versus calibration-residual AUROC in both cross-cell directions, with motif-cluster bootstrap 95% CIs | `04_aim1/aim1b_transfer_results.tsv` |
-| d | Robustness envelope | Primary, gene-disjoint, corrected confidence-restricted and PUS7-like-excluded AUROCs in both directions | `04_aim1/aim1b_transfer_results.tsv`; `aim1c_gene_disjoint.tsv`; `aim1d_corrected_confidence_sensitivity.tsv`; `aim1c_writer_motif_sensitivity.tsv` |
+| c | Transfer and robustness envelope | Full fingerprint, calibration residual, gene-disjoint, corrected confidence-restricted and PUS7-like-excluded AUROCs in both cross-cell directions, all in one point/CI grammar | `04_aim1/aim1b_transfer_results.tsv`; `aim1c_gene_disjoint.tsv`; `aim1d_corrected_confidence_sensitivity.tsv`; `aim1c_writer_motif_sensitivity.tsv` |
 
-Panel a is the hero. Panels c--d use a 0.5 reference line and never imply
-causality. The invalid Phase 1C rank-based confidence analysis is excluded; only
-the corrected author-defined ELAP confidence result is used.
+Panel a is the primary structure evidence; panel c is the full-width validation
+envelope. Panel c uses a 0.5 reference line and never implies causality. The
+invalid Phase 1C rank-based confidence analysis is excluded; only the corrected
+author-defined ELAP confidence result is used.
 
 ## Figure 2 — cross-technology evidence predicts DRS re-observation
 
@@ -77,17 +81,17 @@ distinct chemistries stratify re-observation by held-out DRS?
 with chemistry breadth, is visible within exact source patterns, and survives
 motif-conditioned label randomization.
 
-**Archetype.** Evidence landscape with control. Asymmetric layout `AAAB / CCDD`.
+**Archetype.** Evidence landscape with control. Three-panel asymmetric layout
+`AAB / AAC`, with the pattern-level table-forest spanning both rows.
 
 | Panel | Evidence role | Decisive comparison | Frozen source |
 |---|---|---|---|
 | a | Hero evidence landscape | Source-pattern assay membership, DRS+/n and Wilson 95% CI in one table-forest geometry | `05_aim2/aim2b_DRS_pattern_rates.tsv` |
-| b | Pooled stratification | Breadth 1, 2 and 3 DRS re-observation proportions with Wilson 95% CIs | `05_aim2/aim2b_DRS_breadth_rates.tsv` |
-| c | Effect estimate | Motif-cluster-robust OR per additional chemistry with 95% CI | `05_aim2/aim2b_DRS_breadth_model.tsv` |
-| d | Motif-conditioned falsification | Observed mean-breadth contrast versus a 20,000-permutation motif-stratified null; frozen P value retained | `05_aim2/aim2b_DRS_motif_stratified_permutation.tsv`; labels/strata from `aim2b_HeLa_source_union_DRS.tsv` |
+| b | Pooled stratification and effect estimate | Breadth 1, 2 and 3 DRS re-observation proportions with Wilson 95% CIs, plus the motif-cluster-robust OR per additional chemistry | `05_aim2/aim2b_DRS_breadth_rates.tsv`; `05_aim2/aim2b_DRS_breadth_model.tsv` |
+| c | Motif-conditioned falsification | Observed mean-breadth contrast versus a 20,000-permutation motif-stratified null; frozen P value retained | `05_aim2/aim2b_DRS_motif_stratified_permutation.tsv`; labels/strata from `aim2b_HeLa_source_union_DRS.tsv` |
 
 The breadth anchors are 14.42%, 46.93% and 73.47%; the frozen OR is 4.614
-(95% CI 3.546--6.004). Panel d uses a compact null strip/interval, not a sparse
+(95% CI 3.546--6.004). Panel c uses a compact null strip/interval, not a sparse
 density plot.
 
 ## Figure 3 — resolving breadth=1 prioritization

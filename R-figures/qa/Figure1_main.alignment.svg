@@ -1,12 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="518.740157480315pt" height="388.346456692913pt" viewBox="0 0 518.740157480315 388.346456692913">
+<svg xmlns="http://www.w3.org/2000/svg" width="518.740157480315pt" height="340.157480314961pt" viewBox="0 0 518.740157480315 340.157480314961">
 <rect width="100%" height="100%" fill="white"/>
-<rect x="30.013" y="19.019" width="237.061" height="139.521" fill="none" stroke="#2c7bb6" stroke-width="1.2"/>
-<text x="32.013" y="29.019" font-family="Arial, sans-serif" font-size="8" fill="#2c7bb6">a</text>
-<rect x="390.247" y="19.019" width="118.531" height="139.521" fill="none" stroke="#2c7bb6" stroke-width="1.2"/>
-<text x="392.247" y="29.019" font-family="Arial, sans-serif" font-size="8" fill="#2c7bb6">c</text>
-<rect x="30.013" y="226.669" width="237.061" height="132.877" fill="none" stroke="#2c7bb6" stroke-width="1.2"/>
-<text x="32.013" y="236.669" font-family="Arial, sans-serif" font-size="8" fill="#2c7bb6">b</text>
-<rect x="390.247" y="226.669" width="118.531" height="132.877" fill="none" stroke="#2c7bb6" stroke-width="1.2"/>
-<text x="392.247" y="236.669" font-family="Arial, sans-serif" font-size="8" fill="#2c7bb6">d</text>
-<text x="4" y="383.346" font-family="Arial, sans-serif" font-size="7" fill="#333">PASS: 0 fail, 0 warn</text>
+<rect x="76.729" y="19.019" width="168.038" height="130.863" fill="none" stroke="#2c7bb6" stroke-width="1.2"/>
+<text x="78.729" y="29.019" font-family="Arial, sans-serif" font-size="8" fill="#2c7bb6">a</text>
+<rect x="256.721" y="19.019" width="252.056" height="130.863" fill="none" stroke="#2c7bb6" stroke-width="1.2"/>
+<text x="258.721" y="29.019" font-family="Arial, sans-serif" font-size="8" fill="#2c7bb6">b</text>
+<rect x="76.729" y="208.536" width="432.049" height="102.821" fill="none" stroke="#2c7bb6" stroke-width="1.2"/>
+<text x="78.729" y="218.536" font-family="Arial, sans-serif" font-size="8" fill="#2c7bb6">c</text>
+<text x="4" y="335.157" font-family="Arial, sans-serif" font-size="7" fill="#333">PASS: 0 fail, 0 warn</text>
 </svg>

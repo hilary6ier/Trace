@@ -3,22 +3,20 @@
 ## Fig. 1 | Technology-associated sequence structure transfers across cellular contexts
 
 **a,** Concordance of BID-versus-ELAP 5-mer log-ratios learned independently in
-HEK293T and HeLa. Only motifs observed in both cells are shown (n = 105 motifs);
-point area is proportional to the pooled number of source loci. The grey dashed
-line denotes identity and the black line is the least-squares fit. Pearson
+HEK293T and HeLa. Only motifs observed in both cells are shown (n = 105 motifs).
+The grey dashed line denotes identity and the violet line is the least-squares fit. Pearson
 *r* = 0.509 and Spearman rho = 0.430. **b,** Relationship between the measured
 synthetic-calibration contrast and the human-map motif log-ratio. Colours denote
 the cell in which the human-map fingerprint was learned, point area denotes the
 motif-specific number of loci, and lines are count-weighted fits. Synthetic
 calibration explains only 4.9% and 8.1% of weighted motif-score variation in
-HEK293T and HeLa, respectively. **c,** Cross-cell AUROC for the complete motif
-fingerprint and the calibration-residual fingerprint. Horizontal lines are 95%
-motif-cluster bootstrap confidence intervals. Test sets contain 492 HeLa loci
-for HEK293T-to-HeLa transfer and 623 HEK293T loci for HeLa-to-HEK293T transfer.
-**d,** Cross-cell AUROC under the primary analysis and gene-disjoint,
+HEK293T and HeLa, respectively. **c,** Cross-cell AUROC for the full and
+calibration-residual fingerprints together with gene-disjoint,
 author-defined confidence-restricted and PUS7-like-motif-exclusion analyses.
-Horizontal lines are 95% motif-cluster bootstrap confidence intervals; the
-dashed vertical line in **c,d** denotes AUROC = 0.5. These results identify a
+Rose denotes HEK293T-to-HeLa transfer and blue denotes HeLa-to-HEK293T transfer.
+Horizontal lines are motif-cluster bootstrap 95% confidence intervals; the
+dashed vertical line denotes AUROC = 0.5. Primary test sets contain 492 HeLa
+loci and 623 HEK293T loci, respectively. These results identify a
 transferable technology-associated sequence structure but do not establish that
 the structure is entirely assay-caused. Source data are provided in the
 `R-figures/plot_source` directory.
@@ -31,12 +29,13 @@ loci re-observed by held-out DRS over the number in each source pattern. Teal
 points and horizontal lines show DRS re-observation proportions and Wilson 95%
 confidence intervals. **b,** Pooled DRS re-observation by chemistry breadth:
 159/1,103 (14.42%) for breadth 1, 84/179 (46.93%) for breadth 2 and 36/49
-(73.47%) for breadth 3. Error bars are Wilson 95% confidence intervals.
-**c,** Motif-cluster-robust logistic estimate for each additional source
-chemistry (odds ratio 4.61, 95% CI 3.55–6.00; n = 1,331 loci in 137 5-mer
-clusters; two-sided Wald *P* = 5.13 × 10^-30). **d,** Observed difference in
-mean chemistry breadth between DRS-reobserved and DRS-not-reported loci
-(diamond) compared with the motif-conditioned null. The thin and thick null
+(73.47%) for breadth 3. Error bars are Wilson 95% confidence intervals. The
+motif-cluster-robust logistic estimate for each additional source chemistry is
+reported in the same panel (odds ratio 4.61, 95% CI 3.55–6.00;
+n = 1,331 loci in 137 5-mer clusters; two-sided Wald *P* = 5.13 × 10^-30).
+**c,** Observed difference in mean chemistry breadth between DRS-reobserved and
+DRS-not-reported loci (diamond) compared with the motif-conditioned null. The
+thin and thick null
 segments denote the full and central 95% permutation ranges, respectively; the
 open circle denotes the null median and pale points show a deterministic subset
 of permutations for visual context. Labels were permuted within 5-mer motif
@@ -83,4 +82,3 @@ DRS lockbox was opened; no retraining, recalibration or feature change was
 performed. TRACE-Ψ estimates re-observation portability rather than
 `P(true pseudouridine)`. Source data are provided in the
 `R-figures/plot_source` directory.
-

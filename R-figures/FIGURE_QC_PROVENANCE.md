@@ -27,8 +27,8 @@ was regenerated from the frozen project outputs by the corresponding R script.
 - cowplot 1.2.0
 - Font family: generic sans grobs, mapped to Liberation Sans for SVG; vector PDF
   exported with Cairo.
-- Canonical width: 183 mm. Heights: Figure 1, 137 mm; Figures 2 and 4, 126 mm;
-  Figure 3, 112 mm.
+- Canonical width: 183 mm. Heights: Figure 1, 120 mm; Figure 2, 116 mm;
+  Figure 3, 112 mm; Figure 4, 126 mm.
 
 Reproduction from the repository root:
 
@@ -68,12 +68,10 @@ Rscript R-figures/Figure4_main.R
 |---|---|---|
 | 1a | Inner join of motifs with `n_total > 0` in both cell-specific motif tables; 105 motifs retained | Motif log-ratio scatter; least-squares fit; Pearson and Spearman correlations |
 | 1b | Observed motifs from both cell-specific motif tables; count-weighted linear fits checked against frozen weighted R² | Scatter with motif-count area and cell colour |
-| 1c | Full and calibration-residual rows reshaped directly from frozen transfer results | AUROC point and motif-cluster bootstrap 95% CI |
-| 1d | Primary, gene-disjoint, corrected author-confidence and PUS7-like-exclusion rows concatenated without refitting | AUROC point and motif-cluster bootstrap 95% CI |
+| 1c | Full and calibration-residual rows from frozen transfer results combined with primary-equivalent gene-disjoint, corrected author-confidence and PUS7-like-exclusion rows without refitting | One integrated cross-direction AUROC point/CI envelope; motif-cluster bootstrap 95% CIs |
 | 2a | Seven frozen source patterns plus membership parsed from the pattern string | Proportion point and Wilson 95% CI; DRS+/n printed explicitly |
-| 2b | Frozen breadth 1/2/3 summary | Proportion point and Wilson 95% CI |
-| 2c | Frozen motif-cluster-robust chemistry-breadth coefficient | OR point and 95% CI on an asserted-positive log axis |
-| 2d | Frozen observed statistic and P value; 20,000 R permutations reproduce the specified within-5-mer label-randomization scheme from the frozen union table | Full/central-null interval, null median, deterministic 500-point display subset and observed diamond |
+| 2b | Frozen breadth 1/2/3 summary combined with the frozen motif-cluster-robust chemistry-breadth coefficient | Proportion points with Wilson 95% CIs plus compact OR/CI annotation |
+| 2c | Frozen observed statistic and P value; 20,000 R permutations reproduce the specified within-5-mer label-randomization scheme from the frozen union table | Full/central-null interval, null median, deterministic 360-point display subset and observed diamond |
 | 3a | Twelve rows from frozen internal metrics reshaped to a 4 × 3 matrix | AUROC heatmap with printed values |
 | 3b | Frozen HeLa DRS rows restricted to `subset == breadth1` | AUROC point and 3,000-resample bootstrap 95% CI |
 | 3c | Frozen paired delta-AUROC table | Delta point and paired-bootstrap 95% CI |
@@ -86,7 +84,7 @@ Rscript R-figures/Figure4_main.R
 
 - Figure 1a: 105 common observed motifs; Pearson 0.5094503; Spearman 0.4301159.
 - Figure 2b: 0.1441523, 0.4692737 and 0.7346939 for breadth 1/2/3.
-- Figure 2c: OR 4.6140668, 95% CI 3.5459269–6.0039625.
+- Figure 2b: OR 4.6140668, 95% CI 3.5459269–6.0039625.
 - Figure 3b: breadth=1 AUROC P0 0.5000000, P1 0.4479666,
   Context-only 0.6062753 and TRACE-Ψ 0.6442743.
 - Figure 3c: TRACE-Ψ minus Context-only delta AUROC 0.0379990, 95% CI
@@ -99,8 +97,8 @@ Rscript R-figures/Figure4_main.R
 
 | Figure | Alignment gate | PDF glyph minimum | Collision audit | Physical output | Visual review |
 |---|---|---:|---|---|---|
-| 1 | PASS; 4 comparisons, 0 fail/warn | 5.199 pt, PASS | PASS; 0 fail/warn | 183 × 137 mm; TIFF 4,322 × 3,236 px | PASS after moving weighted-R² text out of the data field |
-| 2 | PASS; 4 comparisons, 0 fail/warn | 5.263 pt, PASS | PASS; 0 fail/warn | 183 × 126 mm; TIFF 4,322 × 2,976 px | PASS after expanding breadth and OR label clearance |
+| 1 | PASS; 3 comparisons, 0 fail/warn | 5.449 pt, PASS | PASS; 0 fail/warn | 183 × 120 mm; TIFF 4,322 × 2,834 px | PASS after replacing the four-panel dashboard with a three-role asymmetric argument and moving weighted-R² into facet headers |
+| 2 | PASS; 3 comparisons, 0 fail/warn | 5.349 pt, PASS | PASS; 0 fail/warn | 183 × 116 mm; TIFF 4,322 × 2,740 px | PASS after rebuilding the pattern landscape, integrating the OR with breadth, correcting the transformed proportion axis and clearing all labels |
 | 3 | PASS; 3 comparisons, 0 fail/warn | 5.405 pt, PASS | 0 fail, 1 reviewed WARN | 183 × 112 mm; TIFF 4,322 × 2,645 px | PASS; WARN is the `0.5` colourbar tick touching its filled colourbar edge, an intentional readable colourbar relationship |
 | 4 | PASS; 4 comparisons, 0 fail/warn | 5.300 pt, PASS | 0 fail, 5 reviewed WARN | 183 × 126 mm; TIFF 4,322 × 2,976 px | PASS; WARNs are axis/legend labels adjacent to their intended filled point or endpoint geometry; no glyph is obscured |
 
@@ -111,8 +109,11 @@ blank space, inconsistent model/assay colour, hidden denominator change or
 misleading uncertainty geometry.
 
 Static preflight warnings were reviewed: R delimiter checks were independently
-confirmed with `Rscript parse()` for all four scripts; Figure 2's log-scale
-warning is covered by explicit positivity assertions for OR and both CI bounds.
+confirmed with `Rscript parse()` for all four scripts. Figure 2's uncertainty
+heuristic is triggered by `set.seed()` and the phrase “Mean breadth” in the
+permutation panel; the plotted null is the 20,000-draw permutation distribution,
+while all displayed proportions carry Wilson 95% CIs. It is not an unreported
+seed/fold aggregate.
 
 ## Repo-local skill QA compatibility fixes
 
@@ -121,7 +122,9 @@ ggplot2 4.0.3 / patchwork 1.3.2 / Cairo-PDF runtime:
 
 1. `panel_alignment.R` now measures actual rendered panel viewports in device
    points when unresolved gtable `null` units otherwise produce zero-area
-   rectangles. The 1.5-pt tolerance and strict blocking behaviour are unchanged.
+   rectangles, and recognizes patchwork 1.3 packed cells used by fixed-aspect
+   and wrapped-facet panels. The 1.5-pt tolerance and strict blocking behaviour
+   are unchanged.
 2. `audit_figure_collisions.py` uses PyMuPDF's per-line span boxes instead of
    unioning broad Cairo text traces, and ignores page-spanning off-page Cairo
    construction paths. Text-text, on-page text-stroke, fill-edge and page-clipping
@@ -129,4 +132,3 @@ ggplot2 4.0.3 / patchwork 1.3.2 / Cairo-PDF runtime:
 
 The measured alignment manifests/reports, diagnostic overlays and collision
 JSON/PDF reports are stored in `R-figures/qa/`.
-

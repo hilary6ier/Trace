@@ -13,7 +13,16 @@
 }
 
 .nature_alignment_panel_rows <- function(grob) {
-  rows <- grob$layout[grepl("^panel(?:-[0-9]+)?$", grob$layout$name, perl = TRUE), , drop = FALSE]
+  # patchwork 1.3 represents fixed-aspect ggplots and wrapped facet plots as
+  # packed panel cells (`panel; ...` and `panel_patch-N`) rather than the usual
+  # `panel-N` names. They are still top-level, measurable panel rectangles and
+  # must participate in the same physical alignment gate.
+  panel_cell <- grepl(
+    "^panel(?:-[0-9]+)?$|^panel_patch-[0-9]+$|^panel;",
+    grob$layout$name,
+    perl = TRUE
+  )
+  rows <- grob$layout[panel_cell, , drop = FALSE]
   if (nrow(rows) < 2) {
     stop("At least two patchwork panel cells are required for alignment QA", call. = FALSE)
   }
