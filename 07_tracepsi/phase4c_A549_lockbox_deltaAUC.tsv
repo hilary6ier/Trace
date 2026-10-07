@@ -1,0 +1,3 @@
+delta_AUROC	CI_low	CI_high	bootstrap_support_fraction_delta_gt_0	bootstrap_replicates	model_A	model_B
+-0.005215577190542331	-0.07791961619614976	0.06744833974748744	0.4402	5000	P2_TRACEpsi_frozen	A_context_only_frozen
+0.13509172792900204	0.06915123375946623	0.20216045390376525	1.0	5000	P2_TRACEpsi_frozen	minus_source_alignment_predefined
