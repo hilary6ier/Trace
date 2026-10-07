@@ -1,0 +1,140 @@
+{
+  "tool": "TRACE-Ψ",
+  "title": "A technology-aware framework for cross-platform evidence portability in pseudouridine mapping",
+  "version": "1.1-frozen",
+  "intended_use": "Rank already-reported Ψ loci for orthogonal cross-platform validation.",
+  "estimand": "Relative propensity of source-reported evidence to be re-observed by another profiling technology.",
+  "not_intended_as": [
+    "P(true Ψ)",
+    "biological truth score",
+    "causal functional score",
+    "replacement for orthogonal experimental validation"
+  ],
+  "frozen_model": "P2_TRACEpsi",
+  "development": {
+    "cell_context": "HeLa",
+    "source/target roles": "BID, BACS, ELAP LOTO",
+    "development_external_platform": "HeLa DRS",
+    "breadth1_DRS_AUROC": 0.644274331094766,
+    "breadth1_DRS_AUROC_CI": [
+      0.6002652651285907,
+      0.6882343777873113
+    ],
+    "breadth1_DRS_Lift10": 1.7499008442404667
+  },
+  "external_A549_lockbox": {
+    "source": "BID",
+    "target": "native DRS / Mod-p ID",
+    "n": 761,
+    "positives": 42,
+    "prevalence": 0.05519053876478318,
+    "AUROC": 0.7634942711437844,
+    "AUROC_CI": [
+      0.6765042020165268,
+      0.8460747782094489
+    ],
+    "average_precision": 0.2897929111560993,
+    "Lift10_tieaware": 5.045810729355033,
+    "budget50_expected_precision": 0.36648648648648646,
+    "budget100_expected_precision": 0.25
+  },
+  "external_ablation_note": {
+    "context_only_AUROC": 0.7687098483343268,
+    "P2_minus_context_AUROC": -0.005215577190542331,
+    "interpretation": "The full P2 model externally validated as a portability ranker, but its learned assay-fingerprint component did not outperform generic local-sequence context in A549. Do not claim external validation of fingerprint-specific gain."
+  },
+  "post_lockbox_no_retraining_audit": {
+    "canonical_PUS7_exclusion_supported": true,
+    "table": [
+      {
+        "subset": "all_A549",
+        "n": 761,
+        "DRS_positive_n": 42,
+        "prevalence": 0.05519053876478318,
+        "AUROC": 0.7634942711437844,
+        "average_precision": 0.2897929111560993,
+        "CI_low": 0.67242494368546,
+        "CI_high": 0.8430567851445918,
+        "bootstrap_support_AUC_gt_0.5": 1.0,
+        "n_boot": 5000
+      },
+      {
+        "subset": "A549_excluding_PUS7_like",
+        "n": 727,
+        "DRS_positive_n": 28,
+        "prevalence": 0.03851444291609354,
+        "AUROC": 0.6661557326793378,
+        "average_precision": 0.1515515805893004,
+        "CI_low": 0.5591990837265445,
+        "CI_high": 0.7692915902452279,
+        "bootstrap_support_AUC_gt_0.5": 0.9978,
+        "n_boot": 5000
+      },
+      {
+        "subset": "A549_PUS7_like_only",
+        "n": 34,
+        "DRS_positive_n": 14,
+        "prevalence": 0.4117647058823529,
+        "AUROC": 0.6321428571428571,
+        "average_precision": 0.4876847290640394,
+        "CI_low": 0.4723320158102766,
+        "CI_high": 0.7839326298701298,
+        "bootstrap_support_AUC_gt_0.5": 0.9454,
+        "n_boot": 5000
+      }
+    ],
+    "interpretation": "Used only to characterize robustness of the already-frozen score; no model or threshold was changed."
+  },
+  "score_output": {
+    "TRACEpsi_score": "raw frozen logistic ranking score",
+    "TRACEpsi_reference_percentile": "empirical percentile within the frozen HeLa reference distribution at the same source breadth when possible",
+    "TRACEpsi_validation_priority": "relative experimental-validation priority; not a probability"
+  },
+  "priority_bands": {
+    "high_validation_priority": "reference percentile >=0.90",
+    "elevated_validation_priority": "0.75-0.90",
+    "intermediate_validation_priority": "0.25-0.75",
+    "lower_validation_priority": "<0.25"
+  },
+  "limitations": [
+    "Validated on processed published call tables rather than uniformly reprocessed raw data.",
+    "Primary benchmark is restricted to locally-single-U exact loci.",
+    "A549 external benchmark tests BID-to-DRS portability; broader source/platform generalization remains less established.",
+    "DRS non-reporting is not biological absence.",
+    "Scores are ordinal/ranking-oriented and should not be interpreted as calibrated truth probabilities."
+  ],
+  "release_policy": {
+    "model_changed_from_v1.0": false,
+    "weights_or_features_changed": false,
+    "purpose": "software/domain hardening only"
+  },
+  "validated_input_domain": {
+    "primary": "locally-single-U 5-mer with central U and -1/+1 != U",
+    "out_of_domain_policy": "retain row but return no TRACE-Ψ score for consecutive-U, non-central-U or malformed motifs"
+  },
+  "recommended_interpretation": {
+    "source_breadth_ge_2": "label as multi-technology-supported evidence; chemistry breadth already carries strong portability evidence",
+    "source_breadth_eq_1": "main TRACE-Ψ use case; rank by score/reference percentile to prioritize orthogonal validation"
+  },
+  "percentile_policy": {
+    "primary_reference": "same source-pattern reference distribution when >=20 reference loci",
+    "fallback": "same source-breadth reference distribution",
+    "not_a_probability": true
+  },
+  "priority_band_policy": {
+    "v1_fixed_bands": "deprecated",
+    "reason": "0.90/0.75/0.25 cutoffs were heuristic and could look probability-like; v1.1 reports continuous percentiles/ranks instead",
+    "recommended_use": "choose top K according to experimental budget"
+  },
+  "claim_hierarchy": {
+    "supported": [
+      "TRACE-Ψ is an externally validated evidence-portability ranker.",
+      "High-scoring A549 BID calls were enriched for independent DRS re-observation.",
+      "External signal persisted after excluding canonical PUS7-like motifs."
+    ],
+    "qualified": [
+      "The full P2 model did not outperform context-only in A549; do not claim externally validated fingerprint-specific gain.",
+      "Broader source/platform generalization beyond BID->DRS remains less established."
+    ]
+  }
+}

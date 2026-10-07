@@ -1,0 +1,5 @@
+benchmark	n	positives	AUROC	AUROC_CI_low	AUROC_CI_high	note
+HeLa development DRS breadth=1	1103	159	0.644274331094766	0.6002652651285907	0.6882343777873113	development benchmark
+A549 BID->DRS external lockbox	761	42	0.7634942711437844	0.6765042020165268	0.8460747782094489	frozen external validation
+A549 external excluding PUS7-like motifs	727	28	0.6661557326793378	0.5591990837265445	0.7692915902452279	post-lockbox no-retraining robustness
+A549 context-only ablation	761	42	0.7687098483343268	0.685111858004411	0.8455118711684689	secondary ablation; slightly higher AUC than P2

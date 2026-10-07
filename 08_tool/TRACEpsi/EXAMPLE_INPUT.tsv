@@ -1,0 +1,5 @@
+site_id	motif	source_assay
+example_1	AGUAC	BID
+example_2	GAUCG	BACS
+example_3	ACUGA	ELAP
+example_out_of_domain	AUUAG	BID
