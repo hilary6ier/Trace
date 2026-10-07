@@ -1,0 +1,233 @@
+{
+  "status": "PHASE3B_NO_ROBUST_SEQUENCE_INDEPENDENT_PSI_INCREMENT",
+  "sequence_QC": {
+    "input_genes": 812,
+    "sequence_feature_genes": 810,
+    "mapping_fraction": 0.9975369458128078,
+    "length_agreement_within_3nt_fraction": 1.0,
+    "n_failures": 2,
+    "MANE_RNA_FASTA": "D:\\RNA\\Trace\\02_reference\\MANE.GRCh38.v1.5.refseq_rna.fna.gz",
+    "n_raw_sequence_features": 345
+  },
+  "sequence_features_used_n": 325,
+  "sequence_constant_features_removed_n": 20,
+  "functional_genes_sequence_eligible": 810,
+  "TE_datasets": [
+    "raw__HeLa_TE_GSE143301",
+    "raw__HeLa_TE_GSE188692",
+    "raw__HeLa_TE_GSE21992",
+    "raw__HeLa_TE_GSE79664",
+    "raw__HeLa_TE_SRA099816"
+  ],
+  "model_performance": [
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE143301",
+      "model": "M0_sequence",
+      "n_genes": 805,
+      "R2": 0.3563682633562978,
+      "RMSE": 0.8031532975995832,
+      "Spearman": 0.5714130900603864
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE143301",
+      "model": "M1_sequence_plus_naivePsi",
+      "n_genes": 805,
+      "R2": 0.3572049785735365,
+      "RMSE": 0.8026310819508321,
+      "Spearman": 0.5687469592223522
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE143301",
+      "model": "M2_plus_confirmation",
+      "n_genes": 805,
+      "R2": 0.3564699440944342,
+      "RMSE": 0.8030898541418549,
+      "Spearman": 0.5692586724991322
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE188692",
+      "model": "M0_sequence",
+      "n_genes": 736,
+      "R2": 0.004621390958032712,
+      "RMSE": 0.9986583021348379,
+      "Spearman": 0.1394389169743763
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE188692",
+      "model": "M1_sequence_plus_naivePsi",
+      "n_genes": 736,
+      "R2": 0.004398932344859885,
+      "RMSE": 0.9987698916986341,
+      "Spearman": 0.1383907878531036
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE188692",
+      "model": "M2_plus_confirmation",
+      "n_genes": 736,
+      "R2": 0.003829563109378209,
+      "RMSE": 0.9990554415981299,
+      "Spearman": 0.13744923844117315
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE21992",
+      "model": "M0_sequence",
+      "n_genes": 798,
+      "R2": 0.16819042769869763,
+      "RMSE": 0.9111331296794463,
+      "Spearman": 0.41279815777117557
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE21992",
+      "model": "M1_sequence_plus_naivePsi",
+      "n_genes": 798,
+      "R2": 0.16739404583184436,
+      "RMSE": 0.9115691888050396,
+      "Spearman": 0.41205235046369265
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE21992",
+      "model": "M2_plus_confirmation",
+      "n_genes": 798,
+      "R2": 0.16651779489029306,
+      "RMSE": 0.912048739370295,
+      "Spearman": 0.4106862453265873
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE79664",
+      "model": "M0_sequence",
+      "n_genes": 807,
+      "R2": 0.13433332221596617,
+      "RMSE": 0.9305128028322013,
+      "Spearman": 0.45221740457920445
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE79664",
+      "model": "M1_sequence_plus_naivePsi",
+      "n_genes": 807,
+      "R2": 0.13627242535017936,
+      "RMSE": 0.9294700389607943,
+      "Spearman": 0.4578764962293272
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE79664",
+      "model": "M2_plus_confirmation",
+      "n_genes": 807,
+      "R2": 0.13591606099085607,
+      "RMSE": 0.9296617636702172,
+      "Spearman": 0.4579417983585328
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_SRA099816",
+      "model": "M0_sequence",
+      "n_genes": 810,
+      "R2": 0.31889573268712923,
+      "RMSE": 0.8252500182211864,
+      "Spearman": 0.6205204126545267
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_SRA099816",
+      "model": "M1_sequence_plus_naivePsi",
+      "n_genes": 810,
+      "R2": 0.3193856302268193,
+      "RMSE": 0.8249531762418313,
+      "Spearman": 0.6210736715264233
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_SRA099816",
+      "model": "M2_plus_confirmation",
+      "n_genes": 810,
+      "R2": 0.31921741905698997,
+      "RMSE": 0.8250551119136028,
+      "Spearman": 0.6210400271006979
+    }
+  ],
+  "dataset_deltas": [
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE143301",
+      "n_genes": 805,
+      "R2_M0": 0.3563682633562978,
+      "R2_M1": 0.3572049785735365,
+      "R2_M2": 0.3564699440944342,
+      "delta_R2_M1_minus_M0": 0.0008367152172387149,
+      "delta_R2_M2_minus_M1": -0.0007350344791022811,
+      "delta10_CI_low": -0.002282528331959821,
+      "delta10_CI_high": 0.0042360134521136255,
+      "delta21_CI_low": -0.001880274510143881,
+      "delta21_CI_high": 0.0002283717367721178,
+      "bootstrap_replicates": 3000
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE188692",
+      "n_genes": 736,
+      "R2_M0": 0.004621390958032712,
+      "R2_M1": 0.004398932344859885,
+      "R2_M2": 0.003829563109378209,
+      "delta_R2_M1_minus_M0": -0.00022245861317282678,
+      "delta_R2_M2_minus_M1": -0.000569369235481676,
+      "delta10_CI_low": -0.0008470131352295184,
+      "delta10_CI_high": 0.0004433585111559114,
+      "delta21_CI_low": -0.0013142621779473173,
+      "delta21_CI_high": 0.00015955268631516516,
+      "bootstrap_replicates": 3000
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE21992",
+      "n_genes": 798,
+      "R2_M0": 0.16819042769869763,
+      "R2_M1": 0.16739404583184436,
+      "R2_M2": 0.16651779489029306,
+      "delta_R2_M1_minus_M0": -0.0007963818668532685,
+      "delta_R2_M2_minus_M1": -0.0008762509415513042,
+      "delta10_CI_low": -0.0017351890517384478,
+      "delta10_CI_high": 0.00016229085325979774,
+      "delta21_CI_low": -0.0019406796561326906,
+      "delta21_CI_high": 6.590372784373621e-06,
+      "bootstrap_replicates": 3000
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_GSE79664",
+      "n_genes": 807,
+      "R2_M0": 0.13433332221596617,
+      "R2_M1": 0.13627242535017936,
+      "R2_M2": 0.13591606099085607,
+      "delta_R2_M1_minus_M0": 0.0019391031342131937,
+      "delta_R2_M2_minus_M1": -0.00035636435932329125,
+      "delta10_CI_low": -0.0019519558946480193,
+      "delta10_CI_high": 0.006142937876365948,
+      "delta21_CI_low": -0.001088126288614863,
+      "delta21_CI_high": 0.00018754304144880948,
+      "bootstrap_replicates": 3000
+    },
+    {
+      "TE_dataset": "raw__HeLa_TE_SRA099816",
+      "n_genes": 810,
+      "R2_M0": 0.31889573268712923,
+      "R2_M1": 0.3193856302268193,
+      "R2_M2": 0.31921741905698997,
+      "delta_R2_M1_minus_M0": 0.0004898975396900873,
+      "delta_R2_M2_minus_M1": -0.00016821116982934647,
+      "delta10_CI_low": -0.002176177995762757,
+      "delta10_CI_high": 0.0034655185094110063,
+      "delta21_CI_low": -0.0005179796008642074,
+      "delta21_CI_high": 0.00019081288779971008,
+      "bootstrap_replicates": 3000
+    }
+  ],
+  "macro_summary": {
+    "macro_R2_M0": 0.1964818273832247,
+    "macro_R2_M1": 0.19693120246544787,
+    "macro_R2_M2": 0.1963901564283903,
+    "macro_delta_R2_M1_minus_M0": 0.0004493750822231801,
+    "macro_delta_R2_M2_minus_M1": -0.0005410460370575798,
+    "datasets_delta10_positive": 3,
+    "datasets_delta21_positive": 0,
+    "macro_delta10_CI_low": -0.0008208426475316233,
+    "macro_delta10_CI_high": 0.002086869053738034,
+    "macro_delta21_CI_low": -0.0010277682409623795,
+    "macro_delta21_CI_high": -0.00015690239002708807,
+    "bootstrap_replicates": 3000
+  },
+  "psi_beyond_sequence_supported": false,
+  "provenance_beyond_naive_Psi_supported": false,
+  "final_interpretation_gate": "This is the final primary analysis. Regardless of direction, freeze the main study after interpreting M0/M1/M2 together with Aim1, Aim2 and Phase3A."
+}

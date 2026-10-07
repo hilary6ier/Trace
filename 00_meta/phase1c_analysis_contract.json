@@ -1,0 +1,14 @@
+{
+  "phase": "1C",
+  "purpose": "Explain/stress-test the strong Aim1B cross-cell fingerprint without increasing model complexity.",
+  "frozen_primary_universe": "Aim1A locally single-U exact loci",
+  "tests": {
+    "gene_disjoint": "Train on uniquely MANE-annotated training loci; evaluate only held-out loci whose MANE gene is absent from training.",
+    "region": "Region-only cross-cell score plus fixed 5-mer score evaluated within held-out transcript regions.",
+    "confidence": "Repeat transfer after retaining calls at or above 50% and 75% within-assay/cell source-signal ranks.",
+    "writer_sequence": "Repeat after removing PUS7-like UNUAR and strict USUAG contexts.",
+    "positional_effects": "Report -2/-1/+1/+2 base log-odds effects independently in HEK293T/HeLa."
+  },
+  "known_mechanism_exclusion_by_design": "Single-U primary loci contain no +/-1 U, so the main Aim1B result cannot be directly driven by ELAP's +1U preference, consecutive-U localization ambiguity, or canonical local TRUB1 GUΨCN context.",
+  "no_model_selection": true
+}

@@ -1,0 +1,456 @@
+﻿source_file	source_sheet	clean_column	original_column
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	chr	chr
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	pos	pos
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	name	name
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	refseq	refseq
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	seg	seg
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	strand	strand
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_rep1	Deletion_rep1
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_rep2	Deletion_rep2
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_rep3	Deletion_rep3
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_Ave	Deletion_Ave
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Motif_1	Motif_1
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Motif_2	Motif_2
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_rep1_%	Frac_rep1 %
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_rep2_%	Frac_rep2 %
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_rep3_%	Frac_rep3 %
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_Ave_%	Frac_Ave %
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_count_rep1	Deletion count_rep1
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_count_rep2	Deletion count_rep2
+GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_count_rep3	Deletion count_rep3
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	chr	chr
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	pos	pos
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	name	name
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	refseq	refseq
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	seg	seg
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	strand	strand
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_rep1	Deletion_rep1
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_rep2	Deletion_rep2
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_rep3	Deletion_rep3
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_Ave	Deletion_Ave
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Motif_1	Motif_1
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Motif_2	Motif_2
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_rep1_%	Frac_rep1 %
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_rep2_%	Frac_rep2 %
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_rep3_%	Frac_rep3 %
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_Ave_%	Frac_Ave %
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_count_rep1	Deletion count_rep1
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_count_rep2	Deletion count_rep2
+GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_count_rep3	Deletion count_rep3
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	chr	chr
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	pos	pos
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	name	name
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	refseq	refseq
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	seg	seg
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	strand	strand
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_rep1	Deletion_rep1
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_rep2	Deletion_rep2
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_rep3	Deletion_rep3
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_Ave	Deletion_Ave
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Motif_1	Motif_1
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Motif_2	Motif_2
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_rep1_%	Frac_rep1 %
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_rep2_%	Frac_rep2 %
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_rep3_%	Frac_rep3 %
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Frac_Ave_%	Frac_Ave %
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_count_rep1	Deletion count_rep1
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_count_rep2	Deletion count_rep2
+GSE179798_A549_mRNA_WT_BID-seq.xlsx	Sheet1	Deletion_count_rep3	Deletion count_rep3
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	chrom	chrom
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	start	start
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	end	end
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	strand	strand
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	ref	ref
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	Input_count_III_IV_rep1	Input_count_III_IV_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	IP_count_III_IV_rep1	IP_count_III_IV_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	stopped_reads_rep1	stopped_reads_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	Input_stop_rep1	Input_stop_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	IP_stop_rep1	IP_stop_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	peak_rep1	peak_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	sample_type_rep1	sample_type_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	Input_count_III_IV_rep2	Input_count_III_IV_rep2
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	IP_count_III_IV_rep2	IP_count_III_IV_rep2
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	stopped_reads_rep2	stopped_reads_rep2
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	Input_stop_rep2	Input_stop_rep2
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	IP_stop_rep2	IP_stop_rep2
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	peak_rep1__dup2	peak_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	sample_type_rep1__dup2	sample_type_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	Input_avg_stop	Input_avg_stop
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	IP_avg_stop	IP_avg_stop
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	confidence	confidence
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	Input_RPM_III_IV_rep1	Input_RPM_III_IV_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	IP_RPM_III_IV_rep1	IP_RPM_III_IV_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	Input_RPM_III_IV_rep2	Input_RPM_III_IV_rep2
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	IP_RPM_III_IV_rep2	IP_RPM_III_IV_rep2
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	enrich_rep1	enrich_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	enrich_rep2	enrich_rep2
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	factor_synthetic_oligo	factor_synthetic_oligo
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	ln(adjusted_enrich_rep1)	ln(adjusted_enrich_rep1)
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	ln(adjusted_enrich_rep2)	ln(adjusted_enrich_rep2)
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	-2	-2
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	-1	-1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	0	0
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	1	1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	1__dup2	1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	modification_estimation	modification_estimation
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	stop_ratio_rep1_Stopped_reads_rep1	stop_ratio_rep1 * Stopped_reads_rep1
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	stop_ratio_rep2_Stopped_reads_rep2	stop_ratio_rep2 * Stopped_reads_rep2
+GSE236530_ELAP-HEK-all-update-1.xlsx	Sheet1	avg(stop_ratio_stopped_reads)	avg(stop_ratio*stopped_reads)
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	chrom	chrom
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	start	start
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	end	end
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	strand	strand
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	ref	ref
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	Input_count_III_IV_rep1	Input_count_III_IV_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	IP_count_III_IV_rep1	IP_count_III_IV_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	stopped_reads_rep1	stopped_reads_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	Input_stop_rep1	Input_stop_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	IP_stop_rep1	IP_stop_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	peak_rep1	peak_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	sample_type_rep1	sample_type_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	Input_count_III_IV_rep1__dup2	Input_count_III_IV_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	IP_count_III_IV_rep1__dup2	IP_count_III_IV_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	stopped_reads_rep2	stopped_reads_rep2
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	Input_stop_rep1__dup2	Input_stop_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	IP_stop_rep1__dup2	IP_stop_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	peak_rep1__dup2	peak_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	sample_type_rep1__dup2	sample_type_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	Input_avg_stop	Input_avg_stop
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	IP_avg_stop	IP_avg_stop
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	confidence	confidence
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	Input_RPM_III_IV_rep1	Input_RPM_III_IV_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	IP_RPM_III_IV_rep1	IP_RPM_III_IV_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	Input_RPM_III_IV_rep2	Input_RPM_III_IV_rep2
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	IP_RPM_III_IV_rep2	IP_RPM_III_IV_rep2
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	enrich_rep1	enrich_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	enrich_rep2	enrich_rep2
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	factor_synthetic_oligo	factor_synthetic_oligo
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	ln(adjusted_enrich_rep1)	ln(adjusted_enrich_rep1)
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	ln(adjusted_enrich_rep2)	ln(adjusted_enrich_rep2)
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	-2	-2
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	-1	-1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	0	0
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	1	1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	1__dup2	1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	modification_estimation	modification_estimation
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	stop_ratio_rep1_Stopped_reads_rep1	stop_ratio_rep1 * Stopped_reads_rep1
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	stop_ratio_rep2_Stopped_reads_rep2	stop_ratio_rep2 * Stopped_reads_rep2
+GSE236530_ELAP-HeLa-all-update-1.xlsx	Sheet1	avg(stop_ratio_stopped_reads)	avg(stop_ratio*stopped_reads)
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	chr	chr
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	pos	pos
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	strand	strand
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	motif	motif
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	gene	gene
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	feature	feature
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	BACS_T_count	BACS_T count
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	BACS_C_count	BACS_C count
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	BACS_conversion_rate	BACS_conversion rate
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	control_T_count	control_T_count
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	control_C_count	control_C_count
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	control_conversion_rate	control_conversion rate
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	IVT_T_count	IVT_T count
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	IVT_C_count	IVT_C count
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	IVT_conversion_rate	IVT_conversion rate
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	psi_level	Ψ level
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	p-value	p-value
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	transcript_id	transcript_id
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	transcript	transcript
+GSE241849_Supplementary_Table_3_10.xlsx	Supplementary Table 8	codon	codon
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	chr_name	chr_name
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	site	site
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	rep1_total_counts	rep1_total_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	rep1_deletion_counts	rep1_deletion_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	rep1_deletion_ratio	rep1_deletion_ratio
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	rep1_p_value	rep1_p_value
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	rep2_total_counts	rep2_total_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	rep2_deletion_counts	rep2_deletion_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	rep2_deletion_ratio	rep2_deletion_ratio
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	rep2_p_value	rep2_p_value
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	ctrl_total_counts	ctrl_total_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	ctrl_deletion_counts	ctrl_deletion_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	ctrl_deletion_ratio	ctrl_deletion_ratio
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	gene_name	gene_name
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 2	chr_site	chr_site
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	chr_name	chr_name
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	site	site
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	ko_rep1_total_counts	ko_rep1_total_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	ko_rep1_deletion_counts	ko_rep1_deletion_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	ko_rep1_deletion_ratio	ko_rep1_deletion_ratio
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	ko_rep1_p_value	ko_rep1_p_value
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	ko_rep2_total_counts	ko_rep2_total_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	ko_rep2_deletion_counts	ko_rep2_deletion_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	ko_rep2_deletion_ratio	ko_rep2_deletion_ratio
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	ko_rep2_p_value	ko_rep2_p_value
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	ko_rep1_untreated_total_counts	ko_rep1_untreated_total_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	ko_rep1_untreated_deletion_counts	ko_rep1_untreated_deletion_counts
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	ko_rep1_untreated_deletion_ratio	ko_rep1_untreated_deletion_ratio
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	wt_treated_deletion_ratio	wt_treated_deletion_ratio
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	gene_name	gene_name
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	chr_site	chr_site
+41589_2023_1304_MOESM3_ESM.xlsx	Supplementary Dataset 3	enzyme_dependency	enzyme_dependency
+SupplementaryTableS3.xlsx	Sheet1	Annotation	Annotation
+SupplementaryTableS3.xlsx	Sheet1	Cell_Line	Cell Line
+SupplementaryTableS3.xlsx	Sheet1	mean_protein_abundance	mean protein abundance
+SupplementaryTableS3.xlsx	Sheet1	median_protein_abundance	median protein abundance
+SupplementaryTableS3.xlsx	Sheet1	standard_deviation_of_protein_abundance	standard deviation of protein abundance
+SupplementaryTableS3.xlsx	Sheet1	mRNA_TPM	mRNA TPM
+SupplementaryTableS3.xlsx	TE_values	Annotation	Annotation
+SupplementaryTableS3.xlsx	TE_values	Cell_Line	Cell Line
+SupplementaryTableS3.xlsx	TE_values	mean_protein_abundance	mean protein abundance
+SupplementaryTableS3.xlsx	TE_values	median_protein_abundance	median protein abundance
+SupplementaryTableS3.xlsx	TE_values	standard_deviation_of_protein_abundance	standard deviation of protein abundance
+SupplementaryTableS3.xlsx	TE_values	mRNA_TPM	mRNA TPM
+SupplementaryTableS3.xlsx	TE_values	colored_in_Fig_3_plot	colored in Fig 3 plot
+SupplementaryTableS3.xlsx	TE_values	SYMBOL_UPPER	SYMBOL_UPPER
+SupplementaryTableS3.xlsx	TE_values	ensembl_gene_id	ensembl_gene_id
+SupplementaryTableS3.xlsx	TE_values	ensembl_gene_id_stripped	ensembl_gene_id_stripped
+SupplementaryTableS3.xlsx	TE_values	gene_type	gene_type
+SupplementaryTableS3.xlsx	TE_values	HeLa_TE_GSE21992	HeLa_TE_GSE21992
+SupplementaryTableS3.xlsx	TE_values	HeLa_TE_GSE79664	HeLa_TE_GSE79664
+SupplementaryTableS3.xlsx	TE_values	HeLa_TE_GSE143301	HeLa_TE_GSE143301
+SupplementaryTableS3.xlsx	TE_values	HeLa_TE_GSE188692	HeLa_TE_GSE188692
+SupplementaryTableS3.xlsx	TE_values	HeLa_TE_SRA099816	HeLa_TE_SRA099816
+SupplementaryTableS3.xlsx	TE_values	A549_TE_GSE82232	A549_TE_GSE82232
+SupplementaryTableS3.xlsx	TE_values	A549_TE_GSE101760	A549_TE_GSE101760
+SupplementaryTableS3.xlsx	TE_values	HepG2_TE_GSE125757	HepG2_TE_GSE125757
+SupplementaryTableS3.xlsx	TE_values	HepG2_TE_GSE174419	HepG2_TE_GSE174419
+SupplementaryTableS3.xlsx	TE_values	SHSY5Y_TE_GSE148827	SHSY5Y_TE_GSE148827
+SupplementaryTableS3.xlsx	TE_values	SHSY5Y_TE_GSE155727	SHSY5Y_TE_GSE155727
+SupplementaryTableS6.xlsx	Legend	psi	psi
+SupplementaryTableS6.xlsx	Legend	1_if_psi_is_detected_0_if_psi_is_not_detected	1 if psi is detected, 0 if psi is not detected
+SupplementaryTableS6.xlsx	HeLa	Annotation.x	Annotation.x
+SupplementaryTableS6.xlsx	HeLa	chr	chr
+SupplementaryTableS6.xlsx	HeLa	position	position
+SupplementaryTableS6.xlsx	HeLa	kmer	kmer
+SupplementaryTableS6.xlsx	HeLa	T_Direct	T_Direct
+SupplementaryTableS6.xlsx	HeLa	C_Direct	C_Direct
+SupplementaryTableS6.xlsx	HeLa	T_IVT	T_IVT
+SupplementaryTableS6.xlsx	HeLa	C_IVT	C_IVT
+SupplementaryTableS6.xlsx	HeLa	N_reads_Direct	N_reads_Direct
+SupplementaryTableS6.xlsx	HeLa	N_reads_IVT	N_reads_IVT
+SupplementaryTableS6.xlsx	HeLa	mm.Direct	mm.Direct
+SupplementaryTableS6.xlsx	HeLa	mm.IVT	mm.IVT
+SupplementaryTableS6.xlsx	HeLa	p.value.Direct	p.value.Direct
+SupplementaryTableS6.xlsx	HeLa	mm.DirectMINUSmm.IVT	mm.DirectMINUSmm.IVT
+SupplementaryTableS6.xlsx	HeLa	total_Direct	total_Direct
+SupplementaryTableS6.xlsx	HeLa	total_IVT	total_IVT
+SupplementaryTableS6.xlsx	HeLa	psi	psi
+SupplementaryTableS6.xlsx	HeLa	which.IVT	which.IVT
+SupplementaryTableS6.xlsx	HeLa	ACP	ACP
+SupplementaryTableS6.xlsx	HeLa	BID.seq	BID.seq
+SupplementaryTableS6.xlsx	HeLa	CeU.seq	CeU.seq
+SupplementaryTableS6.xlsx	HeLa	PRAISE	PRAISE
+SupplementaryTableS6.xlsx	HeLa	RBS.seq	RBS.seq
+SupplementaryTableS6.xlsx	A549	Annotation.x	Annotation.x
+SupplementaryTableS6.xlsx	A549	chr	chr
+SupplementaryTableS6.xlsx	A549	position	position
+SupplementaryTableS6.xlsx	A549	kmer	kmer
+SupplementaryTableS6.xlsx	A549	T_Direct	T_Direct
+SupplementaryTableS6.xlsx	A549	C_Direct	C_Direct
+SupplementaryTableS6.xlsx	A549	T_IVT	T_IVT
+SupplementaryTableS6.xlsx	A549	C_IVT	C_IVT
+SupplementaryTableS6.xlsx	A549	N_reads_Direct	N_reads_Direct
+SupplementaryTableS6.xlsx	A549	N_reads_IVT	N_reads_IVT
+SupplementaryTableS6.xlsx	A549	mm.Direct	mm.Direct
+SupplementaryTableS6.xlsx	A549	mm.IVT	mm.IVT
+SupplementaryTableS6.xlsx	A549	p.value.Direct	p.value.Direct
+SupplementaryTableS6.xlsx	A549	mm.DirectMINUSmm.IVT	mm.DirectMINUSmm.IVT
+SupplementaryTableS6.xlsx	A549	total_Direct	total_Direct
+SupplementaryTableS6.xlsx	A549	total_IVT	total_IVT
+SupplementaryTableS6.xlsx	A549	psi	psi
+SupplementaryTableS6.xlsx	A549	which.IVT	which.IVT
+SupplementaryTableS6.xlsx	A549	ACP	ACP
+SupplementaryTableS6.xlsx	A549	BID.seq	BID.seq
+SupplementaryTableS6.xlsx	A549	CeU.seq	CeU.seq
+SupplementaryTableS6.xlsx	A549	PRAISE	PRAISE
+SupplementaryTableS6.xlsx	A549	RBS.seq	RBS.seq
+SupplementaryTableS6.xlsx	Jurkat	Annotation.x	Annotation.x
+SupplementaryTableS6.xlsx	Jurkat	chr	chr
+SupplementaryTableS6.xlsx	Jurkat	position	position
+SupplementaryTableS6.xlsx	Jurkat	kmer	kmer
+SupplementaryTableS6.xlsx	Jurkat	T_Direct	T_Direct
+SupplementaryTableS6.xlsx	Jurkat	C_Direct	C_Direct
+SupplementaryTableS6.xlsx	Jurkat	T_IVT	T_IVT
+SupplementaryTableS6.xlsx	Jurkat	C_IVT	C_IVT
+SupplementaryTableS6.xlsx	Jurkat	N_reads_Direct	N_reads_Direct
+SupplementaryTableS6.xlsx	Jurkat	N_reads_IVT	N_reads_IVT
+SupplementaryTableS6.xlsx	Jurkat	mm.Direct	mm.Direct
+SupplementaryTableS6.xlsx	Jurkat	mm.IVT	mm.IVT
+SupplementaryTableS6.xlsx	Jurkat	p.value.Direct	p.value.Direct
+SupplementaryTableS6.xlsx	Jurkat	mm.DirectMINUSmm.IVT	mm.DirectMINUSmm.IVT
+SupplementaryTableS6.xlsx	Jurkat	total_Direct	total_Direct
+SupplementaryTableS6.xlsx	Jurkat	total_IVT	total_IVT
+SupplementaryTableS6.xlsx	Jurkat	psi	psi
+SupplementaryTableS6.xlsx	Jurkat	which.IVT	which.IVT
+SupplementaryTableS6.xlsx	Jurkat	ACP	ACP
+SupplementaryTableS6.xlsx	Jurkat	BID.seq	BID.seq
+SupplementaryTableS6.xlsx	Jurkat	CeU.seq	CeU.seq
+SupplementaryTableS6.xlsx	Jurkat	PRAISE	PRAISE
+SupplementaryTableS6.xlsx	Jurkat	RBS.seq	RBS.seq
+SupplementaryTableS6.xlsx	SHSY5Y	Annotation.x	Annotation.x
+SupplementaryTableS6.xlsx	SHSY5Y	chr	chr
+SupplementaryTableS6.xlsx	SHSY5Y	position	position
+SupplementaryTableS6.xlsx	SHSY5Y	kmer	kmer
+SupplementaryTableS6.xlsx	SHSY5Y	T_Direct	T_Direct
+SupplementaryTableS6.xlsx	SHSY5Y	C_Direct	C_Direct
+SupplementaryTableS6.xlsx	SHSY5Y	T_IVT	T_IVT
+SupplementaryTableS6.xlsx	SHSY5Y	C_IVT	C_IVT
+SupplementaryTableS6.xlsx	SHSY5Y	N_reads_Direct	N_reads_Direct
+SupplementaryTableS6.xlsx	SHSY5Y	N_reads_IVT	N_reads_IVT
+SupplementaryTableS6.xlsx	SHSY5Y	mm.Direct	mm.Direct
+SupplementaryTableS6.xlsx	SHSY5Y	mm.IVT	mm.IVT
+SupplementaryTableS6.xlsx	SHSY5Y	p.value.Direct	p.value.Direct
+SupplementaryTableS6.xlsx	SHSY5Y	mm.DirectMINUSmm.IVT	mm.DirectMINUSmm.IVT
+SupplementaryTableS6.xlsx	SHSY5Y	total_Direct	total_Direct
+SupplementaryTableS6.xlsx	SHSY5Y	total_IVT	total_IVT
+SupplementaryTableS6.xlsx	SHSY5Y	psi	psi
+SupplementaryTableS6.xlsx	SHSY5Y	which.IVT	which.IVT
+SupplementaryTableS6.xlsx	SHSY5Y	ACP	ACP
+SupplementaryTableS6.xlsx	SHSY5Y	BID.seq	BID.seq
+SupplementaryTableS6.xlsx	SHSY5Y	CeU.seq	CeU.seq
+SupplementaryTableS6.xlsx	SHSY5Y	PRAISE	PRAISE
+SupplementaryTableS6.xlsx	SHSY5Y	RBS.seq	RBS.seq
+SupplementaryTableS6.xlsx	NTERA	Annotation.x	Annotation.x
+SupplementaryTableS6.xlsx	NTERA	chr	chr
+SupplementaryTableS6.xlsx	NTERA	position	position
+SupplementaryTableS6.xlsx	NTERA	kmer	kmer
+SupplementaryTableS6.xlsx	NTERA	T_Direct	T_Direct
+SupplementaryTableS6.xlsx	NTERA	C_Direct	C_Direct
+SupplementaryTableS6.xlsx	NTERA	T_IVT	T_IVT
+SupplementaryTableS6.xlsx	NTERA	C_IVT	C_IVT
+SupplementaryTableS6.xlsx	NTERA	N_reads_Direct	N_reads_Direct
+SupplementaryTableS6.xlsx	NTERA	N_reads_IVT	N_reads_IVT
+SupplementaryTableS6.xlsx	NTERA	mm.Direct	mm.Direct
+SupplementaryTableS6.xlsx	NTERA	mm.IVT	mm.IVT
+SupplementaryTableS6.xlsx	NTERA	p.value.Direct	p.value.Direct
+SupplementaryTableS6.xlsx	NTERA	mm.DirectMINUSmm.IVT	mm.DirectMINUSmm.IVT
+SupplementaryTableS6.xlsx	NTERA	total_Direct	total_Direct
+SupplementaryTableS6.xlsx	NTERA	total_IVT	total_IVT
+SupplementaryTableS6.xlsx	NTERA	psi	psi
+SupplementaryTableS6.xlsx	NTERA	which.IVT	which.IVT
+SupplementaryTableS6.xlsx	NTERA	ACP	ACP
+SupplementaryTableS6.xlsx	NTERA	BID.seq	BID.seq
+SupplementaryTableS6.xlsx	NTERA	CeU.seq	CeU.seq
+SupplementaryTableS6.xlsx	NTERA	PRAISE	PRAISE
+SupplementaryTableS6.xlsx	NTERA	RBS.seq	RBS.seq
+SupplementaryTableS6.xlsx	HepG2	Annotation.x	Annotation.x
+SupplementaryTableS6.xlsx	HepG2	chr	chr
+SupplementaryTableS6.xlsx	HepG2	position	position
+SupplementaryTableS6.xlsx	HepG2	kmer	kmer
+SupplementaryTableS6.xlsx	HepG2	T_Direct	T_Direct
+SupplementaryTableS6.xlsx	HepG2	C_Direct	C_Direct
+SupplementaryTableS6.xlsx	HepG2	T_IVT	T_IVT
+SupplementaryTableS6.xlsx	HepG2	C_IVT	C_IVT
+SupplementaryTableS6.xlsx	HepG2	N_reads_Direct	N_reads_Direct
+SupplementaryTableS6.xlsx	HepG2	N_reads_IVT	N_reads_IVT
+SupplementaryTableS6.xlsx	HepG2	mm.Direct	mm.Direct
+SupplementaryTableS6.xlsx	HepG2	mm.IVT	mm.IVT
+SupplementaryTableS6.xlsx	HepG2	p.value.Direct	p.value.Direct
+SupplementaryTableS6.xlsx	HepG2	mm.DirectMINUSmm.IVT	mm.DirectMINUSmm.IVT
+SupplementaryTableS6.xlsx	HepG2	total_Direct	total_Direct
+SupplementaryTableS6.xlsx	HepG2	total_IVT	total_IVT
+SupplementaryTableS6.xlsx	HepG2	psi	psi
+SupplementaryTableS6.xlsx	HepG2	which.IVT	which.IVT
+SupplementaryTableS6.xlsx	HepG2	ACP	ACP
+SupplementaryTableS6.xlsx	HepG2	BID.seq	BID.seq
+SupplementaryTableS6.xlsx	HepG2	CeU.seq	CeU.seq
+SupplementaryTableS6.xlsx	HepG2	PRAISE	PRAISE
+SupplementaryTableS6.xlsx	HepG2	RBS.seq	RBS.seq
+SupplementaryTableS8.xlsx	Legend	ACP	ACP
+SupplementaryTableS8.xlsx	Legend	Unique_identifier_for_each_transcript_-_concatenated_gene_name_chromosome_and_position	Unique identifier for each transcript - concatenated gene name, chromosome, and position
+SupplementaryTableS8.xlsx	Conserved Psi Sites	ACP	ACP
+SupplementaryTableS8.xlsx	Conserved Psi Sites	Annotation	Annotation
+SupplementaryTableS8.xlsx	Conserved Psi Sites	chr	chr
+SupplementaryTableS8.xlsx	Conserved Psi Sites	position	position
+SupplementaryTableS8.xlsx	Conserved Psi Sites	kmer	kmer
+SupplementaryTableS8.xlsx	Conserved Psi Sites	A549.N_reads_Direct	A549.N_reads_Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	A549.N_reads_IVT	A549.N_reads_IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	A549.mm.Direct	A549.mm.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	A549.mm.IVT	A549.mm.IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	A549.p.value.Direct	A549.p.value.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	A549.psi	A549.psi
+SupplementaryTableS8.xlsx	Conserved Psi Sites	A549.pIVT	A549.pIVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HeLa.N_reads_Direct	HeLa.N_reads_Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HeLa.N_reads_IVT	HeLa.N_reads_IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HeLa.mm.Direct	HeLa.mm.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HeLa.mm.IVT	HeLa.mm.IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HeLa.p.value.Direct	HeLa.p.value.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HeLa.psi	HeLa.psi
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HeLa.pIVT	HeLa.pIVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HepG2.N_reads_Direct	HepG2.N_reads_Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HepG2.N_reads_IVT	HepG2.N_reads_IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HepG2.mm.Direct	HepG2.mm.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HepG2.mm.IVT	HepG2.mm.IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HepG2.p.value.Direct	HepG2.p.value.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HepG2.psi	HepG2.psi
+SupplementaryTableS8.xlsx	Conserved Psi Sites	HepG2.pIVT	HepG2.pIVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	Jurkat.N_reads_Direct	Jurkat.N_reads_Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	Jurkat.N_reads_IVT	Jurkat.N_reads_IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	Jurkat.mm.Direct	Jurkat.mm.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	Jurkat.mm.IVT	Jurkat.mm.IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	Jurkat.p.value.Direct	Jurkat.p.value.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	Jurkat.psi	Jurkat.psi
+SupplementaryTableS8.xlsx	Conserved Psi Sites	Jurkat.pIVT	Jurkat.pIVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	NTERA.N_reads_Direct	NTERA.N_reads_Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	NTERA.N_reads_IVT	NTERA.N_reads_IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	NTERA.mm.Direct	NTERA.mm.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	NTERA.mm.IVT	NTERA.mm.IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	NTERA.p.value.Direct	NTERA.p.value.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	NTERA.psi	NTERA.psi
+SupplementaryTableS8.xlsx	Conserved Psi Sites	NTERA.pIVT	NTERA.pIVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	SHSY5Y.N_reads_Direct	SHSY5Y.N_reads_Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	SHSY5Y.N_reads_IVT	SHSY5Y.N_reads_IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	SHSY5Y.mm.Direct	SHSY5Y.mm.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	SHSY5Y.mm.IVT	SHSY5Y.mm.IVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	SHSY5Y.p.value.Direct	SHSY5Y.p.value.Direct
+SupplementaryTableS8.xlsx	Conserved Psi Sites	SHSY5Y.psi	SHSY5Y.psi
+SupplementaryTableS8.xlsx	Conserved Psi Sites	SHSY5Y.pIVT	SHSY5Y.pIVT
+SupplementaryTableS8.xlsx	Conserved Psi Sites	rank	rank
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	ACP	ACP
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	Annotation	Annotation
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	chr	chr
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	position	position
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	kmer	kmer
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	A549_N_reads_Direct	A549_N_reads_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	A549_N_reads_IVT	A549_N_reads_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	A549_mm_Direct	A549_mm_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	A549_mm_IVT	A549_mm_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	A549_p_value_Direct	A549_p_value_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	A549_psi	A549_psi
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	A549_pIVT	A549_pIVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HeLa_N_reads_Direct	HeLa_N_reads_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HeLa_N_reads_IVT	HeLa_N_reads_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HeLa_mm_Direct	HeLa_mm_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HeLa_mm_IVT	HeLa_mm_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HeLa_p_value_Direct	HeLa_p_value_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HeLa_psi	HeLa_psi
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HeLa_pIVT	HeLa_pIVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HepG2_N_reads_Direct	HepG2_N_reads_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HepG2_N_reads_IVT	HepG2_N_reads_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HepG2_mm_Direct	HepG2_mm_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HepG2_mm_IVT	HepG2_mm_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HepG2_p_value_Direct	HepG2_p_value_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HepG2_psi	HepG2_psi
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	HepG2_pIVT	HepG2_pIVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	Jurkat_N_reads_Direct	Jurkat_N_reads_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	Jurkat_N_reads_IVT	Jurkat_N_reads_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	Jurkat_mm_Direct	Jurkat_mm_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	Jurkat_mm_IVT	Jurkat_mm_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	Jurkat_p_value_Direct	Jurkat_p_value_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	Jurkat_psi	Jurkat_psi
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	Jurkat_pIVT	Jurkat_pIVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	NTERA_N_reads_Direct	NTERA_N_reads_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	NTERA_N_reads_IVT	NTERA_N_reads_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	NTERA_mm_Direct	NTERA_mm_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	NTERA_mm_IVT	NTERA_mm_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	NTERA_p_value_Direct	NTERA_p_value_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	NTERA_psi	NTERA_psi
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	NTERA_pIVT	NTERA_pIVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	SHSY5Y_N_reads_Direct	SHSY5Y_N_reads_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	SHSY5Y_N_reads_IVT	SHSY5Y_N_reads_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	SHSY5Y_mm_Direct	SHSY5Y_mm_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	SHSY5Y_mm_IVT	SHSY5Y_mm_IVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	SHSY5Y_p_value_Direct	SHSY5Y_p_value_Direct
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	SHSY5Y_psi	SHSY5Y_psi
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	SHSY5Y_pIVT	SHSY5Y_pIVT
+SupplementaryTableS8.xlsx	Housekeeping Psi Sites 	rank	rank

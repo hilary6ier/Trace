@@ -1,0 +1,327 @@
+{
+  "status": "AIM2B_DRS_BREADTH_SUPPORTS_CROSS_PLATFORM_REPRODUCIBILITY",
+  "source_union_QC": {
+    "source_assays": [
+      {
+        "assay": "BID",
+        "source_rows": 575,
+        "single_U_exact_rows": 400,
+        "motif_source": "motif_5mer_reported"
+      },
+      {
+        "assay": "BACS",
+        "source_rows": 1335,
+        "single_U_exact_rows": 595,
+        "motif_source": "motif_5mer_reported"
+      },
+      {
+        "assay": "ELAP",
+        "source_rows": 5367,
+        "single_U_exact_rows": 613,
+        "motif_source": "raw__-2|raw__-1|raw__0|raw__1|raw__1__dup2"
+      }
+    ],
+    "union_unambiguous_loci": 1331,
+    "ambiguous_coordinate_or_motif_loci_excluded": 0,
+    "breadth_counts": {
+      "1": 1103,
+      "2": 179,
+      "3": 49
+    },
+    "pattern_counts": {
+      "ELAP": 467,
+      "BACS": 389,
+      "BID": 247,
+      "BID+BACS": 82,
+      "BACS+ELAP": 75,
+      "BID+BACS+ELAP": 49,
+      "BID+ELAP": 22
+    }
+  },
+  "DRS_QC": {
+    "HeLa_rows_raw": 7436,
+    "single_U_coordinate_motif_pairs": 2582,
+    "psi_detected_n": 2580,
+    "direct_read_column": "raw__N_reads_Direct",
+    "ivt_read_column": "raw__N_reads_IVT",
+    "schema": {
+      "chr": "raw__chr",
+      "position": "raw__position",
+      "kmer": "raw__kmer",
+      "psi": "raw__psi"
+    }
+  },
+  "n_source_union": 1331,
+  "DRS_reported_support_n": 279,
+  "DRS_table_present_n": 279,
+  "DRS_evaluable_direct_reads_ge10_n": 279,
+  "breadth_rates": [
+    {
+      "chemistry_breadth": 1,
+      "n": 1103,
+      "DRS_supported_n": 159,
+      "DRS_support_rate": 0.1441523118766999,
+      "wilson95_low": 0.12465794169908585,
+      "wilson95_high": 0.1661167272978692
+    },
+    {
+      "chemistry_breadth": 2,
+      "n": 179,
+      "DRS_supported_n": 84,
+      "DRS_support_rate": 0.4692737430167598,
+      "wilson95_low": 0.3975796354040489,
+      "wilson95_high": 0.5422589544270063
+    },
+    {
+      "chemistry_breadth": 3,
+      "n": 49,
+      "DRS_supported_n": 36,
+      "DRS_support_rate": 0.7346938775510204,
+      "wilson95_low": 0.5973771102868921,
+      "wilson95_high": 0.8378871786504258
+    }
+  ],
+  "pattern_rates": [
+    {
+      "support_pattern": "BACS",
+      "n": 389,
+      "DRS_supported_n": 72,
+      "DRS_support_rate": 0.18508997429305912,
+      "wilson95_low": 0.14964129195841525,
+      "wilson95_high": 0.22669744597548974
+    },
+    {
+      "support_pattern": "BACS+ELAP",
+      "n": 75,
+      "DRS_supported_n": 32,
+      "DRS_support_rate": 0.4266666666666667,
+      "wilson95_low": 0.3210074201902476,
+      "wilson95_high": 0.5394720767072307
+    },
+    {
+      "support_pattern": "BID",
+      "n": 247,
+      "DRS_supported_n": 16,
+      "DRS_support_rate": 0.06477732793522267,
+      "wilson95_low": 0.0402626151028941,
+      "wilson95_high": 0.10262229311442826
+    },
+    {
+      "support_pattern": "BID+BACS",
+      "n": 82,
+      "DRS_supported_n": 40,
+      "DRS_support_rate": 0.4878048780487805,
+      "wilson95_low": 0.38260895860619915,
+      "wilson95_high": 0.5940922761179496
+    },
+    {
+      "support_pattern": "BID+BACS+ELAP",
+      "n": 49,
+      "DRS_supported_n": 36,
+      "DRS_support_rate": 0.7346938775510204,
+      "wilson95_low": 0.5973771102868921,
+      "wilson95_high": 0.8378871786504258
+    },
+    {
+      "support_pattern": "BID+ELAP",
+      "n": 22,
+      "DRS_supported_n": 12,
+      "DRS_support_rate": 0.5454545454545454,
+      "wilson95_low": 0.3465979532073494,
+      "wilson95_high": 0.7307970581918668
+    },
+    {
+      "support_pattern": "ELAP",
+      "n": 467,
+      "DRS_supported_n": 71,
+      "DRS_support_rate": 0.15203426124197003,
+      "wilson95_low": 0.12231742607097142,
+      "wilson95_high": 0.18742899937333823
+    }
+  ],
+  "breadth_effect": {
+    "term": "chemistry_breadth",
+    "beta": 1.529109630715317,
+    "SE_motif_cluster": 0.13434185682710564,
+    "z": 11.38222789851148,
+    "p": 5.127289374225233e-30,
+    "OR": 4.614066769509874,
+    "OR_CI_low": 3.545926895290566,
+    "OR_CI_high": 6.0039625130936995,
+    "n": 1331,
+    "n_motif_clusters": 137,
+    "analysis": "all_source_positive_union_reported_support"
+  },
+  "motif_stratified_permutation": {
+    "statistic": "mean_breadth_DRS1_minus_DRS0",
+    "observed": 0.4441207735393924,
+    "permutations": 20000,
+    "p_upper": 4.999750012499375e-05,
+    "p_lower": 1.0,
+    "p_two_sided": 9.99950002499875e-05
+  },
+  "monotonic_rate_pattern": true,
+  "writer_conditioned_followup": [
+    {
+      "term": "ELAP_support",
+      "beta": 0.5631795142504205,
+      "SE_motif_cluster": 0.15824900463624203,
+      "z": 3.5588186829040036,
+      "p": 0.0003725265876535479,
+      "OR": 1.7562476468908947,
+      "OR_CI_low": 1.287898042711468,
+      "OR_CI_high": 2.3949145778000185,
+      "n": 1016,
+      "n_motif_clusters": 891,
+      "writer": "DKC1",
+      "scope": "all_coordinate_resolved",
+      "writer_cases": 472,
+      "writer_assigned_universe": 1016,
+      "q_BH_within_scope": 0.0014901063506141917
+    },
+    {
+      "term": "ELAP_support",
+      "beta": -0.3382215157391432,
+      "SE_motif_cluster": 0.19238264545395284,
+      "z": -1.7580666641789018,
+      "p": 0.07873616705731586,
+      "OR": 0.7130373214136072,
+      "OR_CI_low": 0.48904953267223217,
+      "OR_CI_high": 1.0396129384903094,
+      "n": 1016,
+      "n_motif_clusters": 891,
+      "writer": "TRUB1",
+      "scope": "all_coordinate_resolved",
+      "writer_cases": 343,
+      "writer_assigned_universe": 1016,
+      "q_BH_within_scope": 0.10498155607642114
+    },
+    {
+      "term": "ELAP_support",
+      "beta": -0.7575142303445844,
+      "SE_motif_cluster": 0.2834588133131102,
+      "z": -2.672396111063338,
+      "p": 0.007531169019034763,
+      "OR": 0.46883038408827415,
+      "OR_CI_low": 0.26898665657035625,
+      "OR_CI_high": 0.8171480765882049,
+      "n": 1016,
+      "n_motif_clusters": 891,
+      "writer": "PUS7",
+      "scope": "all_coordinate_resolved",
+      "writer_cases": 164,
+      "writer_assigned_universe": 1016,
+      "q_BH_within_scope": 0.015062338038069526
+    },
+    {
+      "term": "ELAP_support",
+      "beta": -0.36307041887124103,
+      "SE_motif_cluster": 0.439688923151,
+      "z": -0.8257438378691058,
+      "p": 0.408949418898412,
+      "OR": 0.6955374528122,
+      "OR_CI_low": 0.29379862119841316,
+      "OR_CI_high": 1.6466120443015082,
+      "n": 1016,
+      "n_motif_clusters": 891,
+      "writer": "PUS1",
+      "scope": "all_coordinate_resolved",
+      "writer_cases": 37,
+      "writer_assigned_universe": 1016,
+      "q_BH_within_scope": 0.408949418898412
+    },
+    {
+      "term": "ELAP_support",
+      "beta": 0.6143407795322305,
+      "SE_motif_cluster": 0.28759112959724553,
+      "z": 2.13616038989999,
+      "p": 0.03266634280537363,
+      "OR": 1.8484376698853906,
+      "OR_CI_low": 1.0519674423726413,
+      "OR_CI_high": 3.247934947250029,
+      "n": 346,
+      "n_motif_clusters": 323,
+      "writer": "DKC1",
+      "scope": "PRAISE_point_sites_only",
+      "writer_cases": 155,
+      "writer_assigned_universe": 346,
+      "q_BH_within_scope": 0.0733416777693988
+    },
+    {
+      "term": "ELAP_support",
+      "beta": 0.28306289406162605,
+      "SE_motif_cluster": 0.8345949132414677,
+      "z": 0.3391620168906174,
+      "p": 0.734487681325455,
+      "OR": 1.327188631475834,
+      "OR_CI_low": 0.25853010385595776,
+      "OR_CI_high": 6.813247808464475,
+      "n": 346,
+      "n_motif_clusters": 323,
+      "writer": "TRUB1",
+      "scope": "PRAISE_point_sites_only",
+      "writer_cases": 10,
+      "writer_assigned_universe": 346,
+      "q_BH_within_scope": 0.734487681325455
+    },
+    {
+      "term": "ELAP_support",
+      "beta": -0.6140917571157621,
+      "SE_motif_cluster": 0.29390678717714247,
+      "z": -2.0894099214715953,
+      "p": 0.0366708388846994,
+      "OR": 0.5411321516116597,
+      "OR_CI_low": 0.3041759202298255,
+      "OR_CI_high": 0.9626797719116488,
+      "n": 346,
+      "n_motif_clusters": 323,
+      "writer": "PUS7",
+      "scope": "PRAISE_point_sites_only",
+      "writer_cases": 158,
+      "writer_assigned_universe": 346,
+      "q_BH_within_scope": 0.0733416777693988
+    },
+    {
+      "term": "ELAP_support",
+      "beta": -0.2890577651565073,
+      "SE_motif_cluster": 0.6577178309791322,
+      "z": -0.4394859794605118,
+      "p": 0.6603094389433983,
+      "OR": 0.7489689398450313,
+      "OR_CI_low": 0.206349341519204,
+      "OR_CI_high": 2.718469895385561,
+      "n": 346,
+      "n_motif_clusters": 323,
+      "writer": "PUS1",
+      "scope": "PRAISE_point_sites_only",
+      "writer_cases": 23,
+      "writer_assigned_universe": 346,
+      "q_BH_within_scope": 0.734487681325455
+    }
+  ],
+  "writer_motif_calibration_context": [
+    {
+      "motif_set": "PUS7_UNUAR",
+      "n_contexts": 8,
+      "mean_ELAP_percentile": 0.3056640625,
+      "median_ELAP_percentile": 0.298828125,
+      "mean_BID_percentile": 0.53369140625,
+      "mean_ELAP_minus_BID_percentile": -0.22802734375,
+      "two_sided_random_set_p_ELAP": 0.04871951280487195,
+      "two_sided_random_set_p_ELAP_minus_BID": 0.08853911460885391,
+      "motifs": "UAUAA|UAUAG|UCUAA|UCUAG|UGUAA|UGUAG|UUUAA|UUUAG"
+    },
+    {
+      "motif_set": "TRUB1_GUUCN",
+      "n_contexts": 4,
+      "mean_ELAP_percentile": 0.7041015625,
+      "median_ELAP_percentile": 0.70703125,
+      "mean_BID_percentile": 0.86328125,
+      "mean_ELAP_minus_BID_percentile": -0.1591796875,
+      "two_sided_random_set_p_ELAP": 0.16711832881671182,
+      "two_sided_random_set_p_ELAP_minus_BID": 0.43165568344316557,
+      "motifs": "GUUCA|GUUCC|GUUCG|GUUCU"
+    }
+  ],
+  "next_gate": "If DRS breadth is positively supported, Aim2 concludes that chemistry breadth predicts cross-platform reproducibility but not generic PUS dependency. If DRS breadth is also null/non-monotonic, freeze Aim2 as evidence that simple consensus breadth is not a universal confidence measure and proceed directly to Aim3 map-choice functional inference."
+}

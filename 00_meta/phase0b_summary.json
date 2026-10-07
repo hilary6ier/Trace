@@ -1,0 +1,24 @@
+{
+  "phase": "0B",
+  "status": "PHASE0B_AUDIT_COMPLETE",
+  "downloads_total": 5,
+  "downloads_pass": 4,
+  "downloads_attention": [
+    "DRS_2026_supplement"
+  ],
+  "reference_freeze": {
+    "status": "FROZEN_VERIFIED",
+    "selected_source": "D:\\RNA\\phase1\\reference\\MANE.GRCh38.v1.5.refseq_genomic.gtf.gz",
+    "trace_path": "D:\\RNA\\Trace\\02_reference\\MANE.GRCh38.v1.5.refseq_genomic.gtf.gz",
+    "sha256": "59e5ff1c794a70de777e553ab67062b316578d41287cd898ee1da2827527969a",
+    "candidate_count": 2,
+    "all_candidates_identical": true,
+    "notes": "Duplicate local MANE GTF copies were byte-identical."
+  },
+  "xlsx_files_audited": 0,
+  "xlsx_sheets_audited": 0,
+  "target_table_hits": 1,
+  "drs_extracted_files": 0,
+  "genome_fasta_status": "DEFERRED_UNTIL_SCHEMA_REVIEW",
+  "scientific_gate": "Do not construct canonical loci yet. First review workbook_schema, target_table_hits, and DRS extracted contents; then freeze field mappings."
+}

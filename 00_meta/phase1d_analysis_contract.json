@@ -1,0 +1,20 @@
+{
+  "phase": "1D",
+  "role": "Aim 1 closure; no larger model added",
+  "confidence_correction": {
+    "Phase1C_problem": "ELAP signal_primary was empty because Phase0C referenced the pre-cleaned column name avg(stop_ratio*stopped_reads); therefore the previous top50/top25 results were invalid and are superseded.",
+    "replacement_primary": "Use ELAP author-defined higher/highest/lower confidence classes.",
+    "primary_confidence_sensitivity": "Keep all published BID calls; remove ELAP lower-confidence calls in both training and test.",
+    "secondary_confidence_sensitivity": "Keep all published BID calls; retain ELAP highest-confidence only."
+  },
+  "region_closure": "Formal motif-cluster CI/permutation for held-out CDS; additionally CDS-to-CDS transfer.",
+  "positional_interpretation": "16 base-by-position effects per cell; BH FDR within cell; replicated features require same direction and q<0.05 in both cells.",
+  "closure_gate": {
+    "gene_disjoint_both_CI_above_0.5": "required",
+    "remove_PUS7_like_both_CI_above_0.5": "required",
+    "ELAP_higher_or_highest_both_CI_above_0.5": "required",
+    "CDS_to_CDS_both_CI_above_0.5": "required",
+    "ELAP_highest_only": "supportive; direction reported, not required"
+  },
+  "interpretation_boundary": "A robust result supports a technology-associated sequence fingerprint that cannot be reduced to exact locus/gene reuse, broad transcript region, lower-confidence ELAP calls, or canonical PUS7-like motifs. It remains non-causal with respect to assay mechanism."
+}

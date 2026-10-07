@@ -1,0 +1,23 @@
+{
+  "phase": "2B",
+  "scientific_story": "Calibration -> Measurement -> Evidence -> Inference",
+  "Aim2A_frozen_result": "No robust positive generic association between orthogonal ELAP support and PRAISE PUS-dependency. No threshold/model retuning.",
+  "primary_Aim2B_question": "Among HeLa loci already reported by >=1 of BID/BACS/ELAP, does pre-DRS chemistry breadth predict exact single-U support by held-out DRS?",
+  "source_assays": [
+    "BID_HeLa",
+    "BACS_HeLa",
+    "ELAP_HeLa"
+  ],
+  "heldout_platform": "DRS HeLa Supplementary Table S6",
+  "primary_locus_rule": "locally single-U exact genomic coordinate; source strand/motif conflicts excluded; DRS match requires exact coordinate + same five-mer",
+  "primary_outcome": "DRS_reported_support; absence means not reported/detected in the published DRS table, not biological negative",
+  "primary_statistics": [
+    "DRS support rate by chemistry breadth 1/2/3",
+    "motif-cluster robust logistic breadth effect",
+    "motif-stratified permutation of DRS labels"
+  ],
+  "qualified_sensitivity": "source loci explicitly present in S6 with N_reads_Direct>=10; author psi 1/0 modeled with chemistry breadth + direct-read coverage",
+  "explanatory_writer_followup": "post-Aim2A, explicitly exploratory: writer identity among already PUS-dependent PRAISE sites vs ELAP/BID support, plus independent synthetic calibration context for PUS7/TRUB1 motifs",
+  "no_truth_score": true,
+  "no_raw_sequencing": true
+}

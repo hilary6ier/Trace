@@ -1,0 +1,287 @@
+{
+  "status": "AIM1_CLOSURE_REQUIRES_INTERPRETATION",
+  "n_exact_cross_cell_loci_removed": 427,
+  "ELAP_confidence_mapping_QC": [
+    {
+      "cell_line": "HEK293T",
+      "n_source_rows": 5731,
+      "confidence_distribution": {
+        "highest": 3408,
+        "higher": 1705,
+        "lower": 617,
+        "": 1
+      },
+      "n_confidence_resolved": 5730,
+      "numeric_candidate_columns_present": [
+        "signal_primary",
+        "modification_estimation",
+        "raw__modification_estimation",
+        "raw__avg(stop_ratio_stopped_reads)"
+      ],
+      "mapping_fraction_among_ELAP_reported_primary_loci": 1.0,
+      "n_ELAP_reported_primary_loci": 787
+    },
+    {
+      "cell_line": "HeLa",
+      "n_source_rows": 5367,
+      "confidence_distribution": {
+        "highest": 3237,
+        "higher": 1679,
+        "lower": 451
+      },
+      "n_confidence_resolved": 5367,
+      "numeric_candidate_columns_present": [
+        "signal_primary",
+        "modification_estimation",
+        "raw__modification_estimation",
+        "raw__avg(stop_ratio_stopped_reads)"
+      ],
+      "mapping_fraction_among_ELAP_reported_primary_loci": 1.0,
+      "n_ELAP_reported_primary_loci": 613
+    }
+  ],
+  "corrected_confidence_sensitivity": [
+    {
+      "n_train": 529,
+      "n_test": 395,
+      "n_train_BID": 159,
+      "n_train_ELAP": 370,
+      "n_test_BID": 186,
+      "n_test_ELAP": 209,
+      "n_train_motifs": 112,
+      "n_test_motifs": 106,
+      "AUC": 0.7395945876421258,
+      "CI_low": 0.6237954523407437,
+      "CI_high": 0.8362468636652255,
+      "permutation_p": 0.0001999600079984003,
+      "analysis": "ELAP_higher_or_highest_only",
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa",
+      "ELAP_min_confidence_ordinal": 2.0
+    },
+    {
+      "n_train": 395,
+      "n_test": 529,
+      "n_train_BID": 186,
+      "n_train_ELAP": 209,
+      "n_test_BID": 159,
+      "n_test_ELAP": 370,
+      "n_train_motifs": 106,
+      "n_test_motifs": 112,
+      "AUC": 0.7969573346931837,
+      "CI_low": 0.6721054217699355,
+      "CI_high": 0.8842778396974245,
+      "permutation_p": 0.0001999600079984003,
+      "analysis": "ELAP_higher_or_highest_only",
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T",
+      "ELAP_min_confidence_ordinal": 2.0
+    },
+    {
+      "n_train": 312,
+      "n_test": 266,
+      "n_train_BID": 159,
+      "n_train_ELAP": 153,
+      "n_test_BID": 186,
+      "n_test_ELAP": 80,
+      "n_train_motifs": 90,
+      "n_test_motifs": 88,
+      "AUC": 0.7737903225806452,
+      "CI_low": 0.6438177581359035,
+      "CI_high": 0.8605433810820001,
+      "permutation_p": 0.0001999600079984003,
+      "analysis": "ELAP_highest_only",
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa",
+      "ELAP_min_confidence_ordinal": 3.0
+    },
+    {
+      "n_train": 266,
+      "n_test": 312,
+      "n_train_BID": 186,
+      "n_train_ELAP": 80,
+      "n_test_BID": 159,
+      "n_test_ELAP": 153,
+      "n_train_motifs": 88,
+      "n_test_motifs": 90,
+      "AUC": 0.7567312040120031,
+      "CI_low": 0.6259523368462739,
+      "CI_high": 0.8575992584482721,
+      "permutation_p": 0.0001999600079984003,
+      "analysis": "ELAP_highest_only",
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T",
+      "ELAP_min_confidence_ordinal": 3.0
+    }
+  ],
+  "CDS_sensitivity": [
+    {
+      "n_train": 623,
+      "n_test": 286,
+      "n_train_BID": 159,
+      "n_train_ELAP": 464,
+      "n_test_BID": 118,
+      "n_test_ELAP": 168,
+      "n_train_motifs": 124,
+      "n_test_motifs": 97,
+      "AUC": 0.6863902340597255,
+      "CI_low": 0.5590931035171606,
+      "CI_high": 0.7895666668902961,
+      "permutation_p": 0.0003999200159968006,
+      "analysis": "fixed_all_region_training_to_CDS_test",
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa"
+    },
+    {
+      "n_train": 282,
+      "n_test": 286,
+      "n_train_BID": 81,
+      "n_train_ELAP": 201,
+      "n_test_BID": 118,
+      "n_test_ELAP": 168,
+      "n_train_motifs": 102,
+      "n_test_motifs": 97,
+      "AUC": 0.6283797417271993,
+      "CI_low": 0.48656428650110456,
+      "CI_high": 0.7476078980994837,
+      "permutation_p": 0.002999400119976005,
+      "analysis": "CDS_to_CDS",
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa"
+    },
+    {
+      "n_train": 492,
+      "n_test": 282,
+      "n_train_BID": 186,
+      "n_train_ELAP": 306,
+      "n_test_BID": 81,
+      "n_test_ELAP": 201,
+      "n_train_motifs": 115,
+      "n_test_motifs": 102,
+      "AUC": 0.7864688901173147,
+      "CI_low": 0.6445950904065658,
+      "CI_high": 0.8865856192079035,
+      "permutation_p": 0.0001999600079984003,
+      "analysis": "fixed_all_region_training_to_CDS_test",
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T"
+    },
+    {
+      "n_train": 286,
+      "n_test": 282,
+      "n_train_BID": 118,
+      "n_train_ELAP": 168,
+      "n_test_BID": 81,
+      "n_test_ELAP": 201,
+      "n_train_motifs": 97,
+      "n_test_motifs": 102,
+      "AUC": 0.7387138382163257,
+      "CI_low": 0.5899847857023272,
+      "CI_high": 0.8559791925463267,
+      "permutation_p": 0.0007998400319936012,
+      "analysis": "CDS_to_CDS",
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T"
+    }
+  ],
+  "n_replicated_positional_features_FDR05_both_cells": 8,
+  "replicated_positional_features_FDR05": [
+    {
+      "relative_position": -1,
+      "base": "G",
+      "logOR_HEK293T": -1.8700081796714183,
+      "q_HEK293T": 1.7651734495457928e-16,
+      "logOR_HeLa": -1.6396263590389777,
+      "q_HeLa": 5.027550829281414e-15,
+      "direction_consistent": true,
+      "FDR05_both_cells": true,
+      "min_abs_logOR": 1.6396263590389777
+    },
+    {
+      "relative_position": 2,
+      "base": "G",
+      "logOR_HEK293T": -1.706447395142942,
+      "q_HEK293T": 8.298751398304456e-17,
+      "logOR_HeLa": -1.2427308666787986,
+      "q_HeLa": 5.53652825021244e-09,
+      "direction_consistent": true,
+      "FDR05_both_cells": true,
+      "min_abs_logOR": 1.2427308666787986
+    },
+    {
+      "relative_position": -1,
+      "base": "A",
+      "logOR_HEK293T": 2.2529924509329518,
+      "q_HEK293T": 5.0653591336696e-10,
+      "logOR_HeLa": 1.2245238996366612,
+      "q_HeLa": 6.919256044381347e-06,
+      "direction_consistent": true,
+      "FDR05_both_cells": true,
+      "min_abs_logOR": 1.2245238996366612
+    },
+    {
+      "relative_position": 1,
+      "base": "G",
+      "logOR_HEK293T": -0.8384539718556973,
+      "q_HEK293T": 2.2101550743573187e-05,
+      "logOR_HeLa": -1.1185410762753931,
+      "q_HeLa": 3.2860495938544594e-08,
+      "direction_consistent": true,
+      "FDR05_both_cells": true,
+      "min_abs_logOR": 0.8384539718556973
+    },
+    {
+      "relative_position": 1,
+      "base": "A",
+      "logOR_HEK293T": 1.3314064133897812,
+      "q_HEK293T": 1.6367419487427546e-07,
+      "logOR_HeLa": 0.6667683305396717,
+      "q_HeLa": 0.005923332105634024,
+      "direction_consistent": true,
+      "FDR05_both_cells": true,
+      "min_abs_logOR": 0.6667683305396717
+    },
+    {
+      "relative_position": -1,
+      "base": "C",
+      "logOR_HEK293T": 0.6562497134597975,
+      "q_HEK293T": 0.01843137556343633,
+      "logOR_HeLa": 0.8459551998382863,
+      "q_HeLa": 0.00012614218363835638,
+      "direction_consistent": true,
+      "FDR05_both_cells": true,
+      "min_abs_logOR": 0.6562497134597975
+    },
+    {
+      "relative_position": 2,
+      "base": "A",
+      "logOR_HEK293T": 1.253928868683476,
+      "q_HEK293T": 8.597925355371852e-05,
+      "logOR_HeLa": 0.6297840320470587,
+      "q_HeLa": 0.00685702580930023,
+      "direction_consistent": true,
+      "FDR05_both_cells": true,
+      "min_abs_logOR": 0.6297840320470587
+    },
+    {
+      "relative_position": -2,
+      "base": "G",
+      "logOR_HEK293T": -0.445633171055658,
+      "q_HEK293T": 0.02769060954132905,
+      "logOR_HeLa": -0.5421438485773271,
+      "q_HeLa": 0.00685702580930023,
+      "direction_consistent": true,
+      "FDR05_both_cells": true,
+      "min_abs_logOR": 0.445633171055658
+    }
+  ],
+  "closure_flags": {
+    "gene_disjoint": true,
+    "PUS7_removed": true,
+    "ELAP_higher_or_highest_confidence": true,
+    "ELAP_highest_only_direction": true,
+    "CDS_to_CDS": false
+  },
+  "scientific_interpretation": "If closed: freeze Aim 1. The main result is a strong, reproducible BID-vs-ELAP technology-associated 5-mer fingerprint that transfers across cell types and persists under major biological/measurement stress tests; synthetic assay calibration explains only a minority of its variation.",
+  "next_step": "If Aim1 is closed, do NOT add +/-10 nt elastic-net merely to improve prediction. Move to Aim2: chemistry-diverse support -> independent biological evidence using source-positive PUS perturbation and held-out DRS."
+}

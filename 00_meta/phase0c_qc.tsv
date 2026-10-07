@@ -1,0 +1,35 @@
+﻿check_id	dataset	status	observed	expected	notes
+asset_exists	BID_HEK293T	PASS	D:\RNA\Trace\01_source\BID\GSE179798_HEK293T_mRNA_WT_BID-seq.xlsx	exists	
+asset_exists	BID_HeLa	PASS	D:\RNA\Trace\01_source\BID\GSE179798_HeLa_mRNA_WT_BID-seq.xlsx	exists	
+asset_exists	BID_A549	PASS	D:\RNA\Trace\01_source\BID\GSE179798_A549_mRNA_WT_BID-seq.xlsx	exists	
+asset_exists	ELAP_HEK293T	PASS	D:\RNA\Trace\01_source\ELAP\GSE236530_ELAP-HEK-all-update-1.xlsx	exists	
+asset_exists	ELAP_HeLa	PASS	D:\RNA\Trace\01_source\ELAP\GSE236530_ELAP-HeLa-all-update-1.xlsx	exists	
+asset_exists	BACS_HeLa	PASS	D:\RNA\Trace\01_source\BACS\GSE241849_Supplementary_Table_3_10.xlsx	exists	
+asset_exists	PRAISE	PASS	D:\RNA\Trace\01_source\PRAISE\41589_2023_1304_MOESM3_ESM.xlsx	exists	
+asset_exists	BID_supp	PASS	D:\RNA\Trace\01_source\BID\BID_supplementary_tables.xlsx	exists	
+asset_exists	BACS_fig1	PASS	D:\RNA\Trace\01_source\BACS\BACS_source_data_fig1.xlsx	exists	
+asset_exists	ELAP_source	PASS	D:\RNA\Trace\01_source\ELAP\ELAP_source_data.xlsx	exists	
+asset_exists	DRS_zip	PASS	D:\RNA\Trace\01_source\DRS_2026\gkag353_supplemental_files.zip	exists	
+asset_exists	MANE	PASS	D:\RNA\Trace\02_reference\MANE.GRCh38.v1.5.refseq_genomic.gtf.gz	exists	
+drs_zip_integrity	DRS	PASS	None	None	
+mane_sha256	MANE	PASS	59e5ff1c794a70de777e553ab67062b316578d41287cd898ee1da2827527969a	59e5ff1c794a70de777e553ab67062b316578d41287cd898ee1da2827527969a	
+drs_table_present	SupplementaryTableS3.xlsx	PASS	D:\RNA\Trace\01_source\DRS_2026\extracted\SupplementaryTableS3.xlsx	present	
+drs_table_present	SupplementaryTableS6.xlsx	PASS	D:\RNA\Trace\01_source\DRS_2026\extracted\SupplementaryTableS6.xlsx	present	
+drs_table_present	SupplementaryTableS8.xlsx	PASS	D:\RNA\Trace\01_source\DRS_2026\extracted\SupplementaryTableS8.xlsx	present	
+row_count	BID_HEK293T	PASS	543	543	
+bid_motif_center_U	BID_HEK293T	PASS	543/543	all usable motifs centered U	
+row_count	BID_HeLa	PASS	575	575	
+bid_motif_center_U	BID_HeLa	PASS	575/575	all usable motifs centered U	
+row_count	BID_A549	PASS	922	922	
+bid_motif_center_U	BID_A549	PASS	922/922	all usable motifs centered U	
+row_count	ELAP_HEK293T	PASS	5731	5731	
+elap_one_base_intervals	ELAP_HEK293T	PASS	5731/5731	all [start,end) length 1	
+row_count	ELAP_HeLa	PASS	5367	5367	
+elap_one_base_intervals	ELAP_HeLa	PASS	5367/5367	all [start,end) length 1	
+row_count	BACS_HeLa	PASS	1335	1335	
+bacs_motif_center_U	BACS_HeLa	PASS	1335/1335	all usable motifs centered U	
+row_count	PRAISE_HEK293T	PASS	2209	2209	
+praise_interval_records	PRAISE_HEK293T	PASS	1270	historical Stage0 value around 1357	Diagnostic only; exact semantics remain chemistry-aware.
+synthetic_calibration	BID	REVIEW	256	>=200 unique NNUNN contexts	
+synthetic_calibration	BACS	REVIEW	0	>=200 unique NNUNN contexts	
+synthetic_calibration	ELAP	REVIEW	0	>=200 unique NNUNN contexts	

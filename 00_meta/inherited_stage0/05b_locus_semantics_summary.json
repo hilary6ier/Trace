@@ -1,0 +1,53 @@
+{
+  "project": "PsiTrust",
+  "stage": "Stage0",
+  "program": "05B_locus_semantics_audit",
+  "canonical_coordinate_assumptions": {
+    "BID": "hg38 pos interpreted as 1-based nucleotide",
+    "BACS": "hg38 pos interpreted as 1-based nucleotide",
+    "ELAP": "hg38 [start,end) interpreted as one-base BED-like interval; pos1=end"
+  },
+  "elap_one_base_interval_fraction": 1.0,
+  "exact_overlap": {
+    "BID_HEK_vs_ELAP_HEK": 124,
+    "BID_HELA_vs_BACS_HELA": 178
+  },
+  "published_overlap": {
+    "BID_HEK_vs_ELAP_HEK": 192,
+    "BID_HELA_vs_BACS_HELA": 230,
+    "PRAISE_HEK_vs_ELAP_HEK": 961
+  },
+  "bacs_urun_equivalence": {
+    "valid_centered_motifs": 1335,
+    "invalid_or_unusable_motifs": 0,
+    "run_size_distribution": {
+      "1": 595,
+      "2": 468,
+      "3": 220,
+      "4": 35,
+      "5": 17
+    },
+    "BID_HeLa_supported": 227,
+    "published": 230,
+    "absolute_error": 3
+  },
+  "bid_motif_expansion_diagnostic": {
+    "BID_HEK_supported_by_ELAP": 135,
+    "published": 192,
+    "absolute_error": 57,
+    "interpretation": "Diagnostic only until BID motif-column semantics are verified."
+  },
+  "praise_interval_equivalence": {
+    "parse_fraction": 0.9379809868718877,
+    "supported_records": 941,
+    "published": 961,
+    "absolute_error": 20
+  },
+  "author_code_snapshot": {
+    "downloaded": true,
+    "bytes": 4043,
+    "sha256": "d87d88097408bb8a8038561efa95b6b1e618cd262bc6fd6d82e5f25849bbdc9a"
+  },
+  "status": "LOCUS_EQUIVALENCE_STRONGLY_SUPPORTED",
+  "scientific_interpretation": "Exact nucleotide identity is too strict for cross-assay integration when deletion-based methods cannot uniquely localize a Ψ within consecutive uridines."
+}

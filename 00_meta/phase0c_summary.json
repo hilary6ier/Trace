@@ -1,0 +1,51 @@
+{
+  "phase": "0C",
+  "status": "SITE_NORMALIZATION_PASS_CALIBRATION_MAPPING_REVIEW",
+  "normalized_site_datasets": {
+    "BID_HEK293T": 543,
+    "BID_HeLa": 575,
+    "BID_A549": 922,
+    "ELAP_HEK293T": 5731,
+    "ELAP_HeLa": 5367,
+    "BACS_HeLa": 1335,
+    "PRAISE_HEK293T": 2209
+  },
+  "praise_writer_rows": 1021,
+  "calibration_mapping": [
+    {
+      "assay": "BID",
+      "source_file": "BID_supplementary_tables.xlsx",
+      "status": "RESPONSE_UNRESOLVED",
+      "sheet": "Supplementary Table 1",
+      "header_row_1based": 4,
+      "motif_column_index_1based": 1,
+      "unique_motifs": 256,
+      "selected_response": "",
+      "candidate_numeric_columns": "fit_R[semantic=0,n=256] | fit_B[semantic=0,n=256] | fit_A[semantic=0,n=256]",
+      "notes": "Response selection is based on assay chemistry/header semantics only, never downstream performance."
+    },
+    {
+      "assay": "BACS",
+      "source_file": "BACS_source_data_fig1.xlsx",
+      "status": "NO_5MER_BLOCK",
+      "sheet": "",
+      "unique_motifs": 0,
+      "selected_response": "",
+      "notes": ""
+    },
+    {
+      "assay": "ELAP",
+      "source_file": "ELAP_source_data.xlsx",
+      "status": "NO_5MER_BLOCK",
+      "sheet": "",
+      "unique_motifs": 0,
+      "selected_response": "",
+      "notes": ""
+    }
+  ],
+  "qc_pass": 31,
+  "qc_review_or_warn": 3,
+  "qc_fail": 0,
+  "errors": 0,
+  "next_if_ready": "Build chemistry-aware canonical loci, add a single frozen GRCh38 FASTA for common sequence extraction, then run Aim1A synthetic-calibration transfer and Aim1B HEK<->HeLa cross-cell transfer."
+}

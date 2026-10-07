@@ -1,0 +1,2 @@
+﻿asset_id	assay	role	required_now	status	source_path	trace_path	size_bytes	sha256	expected_sha256	hash_match_expected	notes
+BID_A549_WT	BID-seq	Aim1_replication	False	NOT_FOUND_LOCAL		D:\RNA\Trace\01_source\BID\GSE179798_A549_mRNA_WT_BID-seq.xlsx					Not a failure. If needed, this will be acquired in the next download step.

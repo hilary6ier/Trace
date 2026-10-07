@@ -1,0 +1,2 @@
+﻿file	sheet	hit_type	detail
+		DEPENDENCY_MISSING	openpyxl import failed: No module named 'openpyxl'

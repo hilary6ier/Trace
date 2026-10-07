@@ -1,0 +1,31 @@
+{
+  "project": "PsiTrust",
+  "stage": "Stage0",
+  "program": "01_existing_asset_audit",
+  "praise_dataset2": {
+    "n_records": 2209,
+    "n_unique_chr_site": 2201,
+    "n_unique_transcripts": 1753,
+    "n_unique_genes": 1704,
+    "n_interval_sites": 1357,
+    "missing_chr_site": 0,
+    "missing_gene": 0,
+    "replicate_spearman": 0.9022072619627991
+  },
+  "praise_dataset3": {
+    "n_records": 1021,
+    "n_unique_chr_site": 1017,
+    "n_unique_genes": 892,
+    "writer_counts": {
+      "DKC1": 473,
+      "TRUB1": 346,
+      "PUS7": 165,
+      "PUS1": 37
+    }
+  },
+  "scientific_status": {
+    "PRAISE": "candidate primary source assay",
+    "m6A": "not part of primary PsiTrust analysis",
+    "stability": "not part of primary PsiTrust analysis"
+  }
+}

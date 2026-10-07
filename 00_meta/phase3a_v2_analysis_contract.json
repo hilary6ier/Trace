@@ -1,0 +1,25 @@
+{
+  "phase": "3A_v2",
+  "scientific_story": "Calibration -> Measurement -> Evidence -> Inference",
+  "primary_question": "Does the Ψ–translation-efficiency association change when only the underlying published Ψ map is changed?",
+  "cell_line": "HeLa",
+  "functional_source": "NAR 2026 Supplementary Table S3 TE values; multiple public HeLa Ribo-seq/RNA-seq datasets are analyzed as repeated outcome definitions",
+  "maps": [
+    "BID",
+    "BACS",
+    "ELAP",
+    "DRS"
+  ],
+  "same_cohort_policy": "All four map models use identical stacked gene-by-TE-dataset rows and the same MANE transcript-length covariate.",
+  "primary_model": "within-dataset z(log10 TE) ~ standardized log1p(map-specific Ψ count) + standardized log(MANE transcript length) + dataset fixed effects; gene-cluster robust SE",
+  "map_comparison": "gene-cluster bootstrap pairwise differences of standardized map-burden effects; BH correction across six map pairs",
+  "secondary_technology_aware_features": [
+    "naive_singleU_union_count",
+    "orthogonal_singleU_count",
+    "triple_singleU_count",
+    "breadth_sum_singleU"
+  ],
+  "interpretation_boundary": "0 map count means no site assigned to the MANE gene in that published map, not biological absence. Associations are not causal.",
+  "next_step": "Phase3B final sequence-baseline test M0/M1/M2. Phase3A determines whether map provenance visibly changes the functional association; Phase3B asks whether technology-aware Ψ adds information beyond sequence.",
+  "no_raw_sequencing": true
+}

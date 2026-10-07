@@ -1,0 +1,41 @@
+{
+  "phase": "1A",
+  "primary_question": "Does assay-intrinsic synthetic sequence response explain BID-vs-ELAP reported-map discordance in human cells?",
+  "primary_assays": [
+    "BID",
+    "ELAP"
+  ],
+  "BID_response": "fit_R (published BID-induced deletion ratio)",
+  "ELAP_response": {
+    "assay": "ELAP",
+    "status": "RESOLVED",
+    "layout": "matrix16",
+    "sheet": "Figure 2",
+    "response_source": "16x16 heatmap; orientation=row_upstream",
+    "n_motifs": 256,
+    "plus1U_log1p_median_effect": 1.7396584188522108,
+    "notes": "Axis orientation chosen by the paper's independently reported +1U preference; no human outcome used."
+  },
+  "BACS_calibration_role": "secondary resource; not required to declare Aim1A primary result",
+  "normalization": "within-assay percentile; raw assay units are never subtracted",
+  "human_universe": "union of sites reported by BID or ELAP, restricted to locally single-U exact loci",
+  "labels": {
+    "0": "BID-exclusive reported",
+    "1": "ELAP-exclusive reported",
+    "shared": "held out from fitting; continuum check only"
+  },
+  "inference": {
+    "primary_discrimination": "AUC of fixed synthetic calibration contrast",
+    "CI": "motif-cluster bootstrap",
+    "null_test": "permute calibration contrast across 5-mer motifs",
+    "effect": "logistic OR per 0.1 contrast with motif-cluster-robust SE",
+    "cross_context": "HEK293T and HeLa analyzed independently; pooled interaction tests heterogeneity"
+  },
+  "not_done": [
+    "no sequence classifier",
+    "no feature tuning",
+    "no foundation model",
+    "no raw sequencing",
+    "no missing call interpreted as biological negative"
+  ]
+}

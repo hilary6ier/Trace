@@ -1,0 +1,9 @@
+{
+  "status": "FROZEN_VERIFIED",
+  "selected_source": "D:\\RNA\\phase1\\reference\\MANE.GRCh38.v1.5.refseq_genomic.gtf.gz",
+  "trace_path": "D:\\RNA\\Trace\\02_reference\\MANE.GRCh38.v1.5.refseq_genomic.gtf.gz",
+  "sha256": "59e5ff1c794a70de777e553ab67062b316578d41287cd898ee1da2827527969a",
+  "candidate_count": 2,
+  "all_candidates_identical": true,
+  "notes": "Duplicate local MANE GTF copies were byte-identical."
+}

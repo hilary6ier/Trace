@@ -1,0 +1,431 @@
+Loaded: {'PRAISE': 2209, 'BID_HEK': 543, 'BID_HeLa': 575, 'ELAP_HEK': 5731, 'ELAP_HeLa': 5367, 'BACS': 1335}
+
+Coordinate examples:
+{
+  "PRAISE_chr_site_examples": [
+    "chr14_73219165-73219168",
+    "chr21_43774291-43774290",
+    "chr15_76285712",
+    "chr8_118110620-118110619",
+    "chr15_48411282-48411281",
+    "chr17_80104560",
+    "chr17_80117650",
+    "chr3_81670949-81670948",
+    "chr7_41962277-41962276",
+    "chrX_134498641"
+  ],
+  "PRAISE_site_examples": [
+    "1492-1495",
+    "247-248",
+    "670",
+    "1207-1208",
+    "8640-8641",
+    "316",
+    "2724",
+    "446-447",
+    "7077-7078",
+    "713"
+  ],
+  "BID_HEK_coordinate_examples": [
+    {
+      "chr": "chr1",
+      "pos": "43450939",
+      "strand": "+"
+    },
+    {
+      "chr": "chrX",
+      "pos": "78129969",
+      "strand": "-"
+    },
+    {
+      "chr": "chr14",
+      "pos": "69380270",
+      "strand": "-"
+    },
+    {
+      "chr": "chr2",
+      "pos": "27326828",
+      "strand": "-"
+    },
+    {
+      "chr": "chr12",
+      "pos": "124012693",
+      "strand": "+"
+    },
+    {
+      "chr": "chr10",
+      "pos": "70422027",
+      "strand": "+"
+    },
+    {
+      "chr": "chr1",
+      "pos": "40622675",
+      "strand": "-"
+    },
+    {
+      "chr": "chr11",
+      "pos": "94874363",
+      "strand": "+"
+    },
+    {
+      "chr": "chrX",
+      "pos": "129592365",
+      "strand": "+"
+    },
+    {
+      "chr": "chr16",
+      "pos": "18542694",
+      "strand": "-"
+    }
+  ],
+  "ELAP_HEK_coordinate_examples": [
+    {
+      "chrom": "chr1",
+      "start": "630835",
+      "end": "630836",
+      "strand": "+",
+      "ref": "T"
+    },
+    {
+      "chrom": "chr1",
+      "start": "630871",
+      "end": "630872",
+      "strand": "-",
+      "ref": "T"
+    },
+    {
+      "chrom": "chr1",
+      "start": "630962",
+      "end": "630963",
+      "strand": "-",
+      "ref": "T"
+    },
+    {
+      "chrom": "chr1",
+      "start": "630969",
+      "end": "630970",
+      "strand": "-",
+      "ref": "T"
+    },
+    {
+      "chrom": "chr1",
+      "start": "630974",
+      "end": "630975",
+      "strand": "-",
+      "ref": "T"
+    },
+    {
+      "chrom": "chr1",
+      "start": "631830",
+      "end": "631831",
+      "strand": "+",
+      "ref": "T"
+    },
+    {
+      "chrom": "chr1",
+      "start": "632140",
+      "end": "632141",
+      "strand": "+",
+      "ref": "T"
+    },
+    {
+      "chrom": "chr1",
+      "start": "632499",
+      "end": "632500",
+      "strand": "+",
+      "ref": "T"
+    },
+    {
+      "chrom": "chr1",
+      "start": "632586",
+      "end": "632587",
+      "strand": "+",
+      "ref": "T"
+    },
+    {
+      "chrom": "chr1",
+      "start": "632827",
+      "end": "632828",
+      "strand": "+",
+      "ref": "T"
+    }
+  ],
+  "BACS_coordinate_examples": [
+    {
+      "chr": "chr1",
+      "pos": "100874411",
+      "strand": "-",
+      "motif": "TGTAG"
+    },
+    {
+      "chr": "chr1",
+      "pos": "10403085",
+      "strand": "+",
+      "motif": "GATAC"
+    },
+    {
+      "chr": "chr1",
+      "pos": "10413090",
+      "strand": "+",
+      "motif": "GCTAG"
+    },
+    {
+      "chr": "chr1",
+      "pos": "10413123",
+      "strand": "+",
+      "motif": "TATTC"
+    },
+    {
+      "chr": "chr1",
+      "pos": "10417451",
+      "strand": "+",
+      "motif": "GCTGG"
+    },
+    {
+      "chr": "chr1",
+      "pos": "10431372",
+      "strand": "+",
+      "motif": "GTTCA"
+    },
+    {
+      "chr": "chr1",
+      "pos": "1082418",
+      "strand": "-",
+      "motif": "GTTCC"
+    },
+    {
+      "chr": "chr1",
+      "pos": "109310866",
+      "strand": "-",
+      "motif": "TGTAA"
+    },
+    {
+      "chr": "chr1",
+      "pos": "109342073",
+      "strand": "-",
+      "motif": "GTTCT"
+    },
+    {
+      "chr": "chr1",
+      "pos": "109656185",
+      "strand": "+",
+      "motif": "GCTCC"
+    }
+  ]
+}
+
+PRAISE chr_site parse success: 0.9633318243549117
+
+==========================================================================================
+BEST EXACT COORDINATE HYPOTHESES
+
+ BID_HEK_vs_ELAP_HEK
+{
+  "minimum_absolute_error": 68,
+  "candidate_hypotheses": [
+    {
+      "anchor": "BID_HEK_vs_ELAP_HEK",
+      "left_transform": "pos_minus_1",
+      "right_transform": "start",
+      "use_strand": true,
+      "observed_overlap": 124,
+      "published_overlap": 192,
+      "absolute_error": 68
+    },
+    {
+      "anchor": "BID_HEK_vs_ELAP_HEK",
+      "left_transform": "pos_minus_1",
+      "right_transform": "start",
+      "use_strand": false,
+      "observed_overlap": 124,
+      "published_overlap": 192,
+      "absolute_error": 68
+    },
+    {
+      "anchor": "BID_HEK_vs_ELAP_HEK",
+      "left_transform": "pos_minus_1",
+      "right_transform": "end_minus_1",
+      "use_strand": true,
+      "observed_overlap": 124,
+      "published_overlap": 192,
+      "absolute_error": 68
+    },
+    {
+      "anchor": "BID_HEK_vs_ELAP_HEK",
+      "left_transform": "pos_minus_1",
+      "right_transform": "end_minus_1",
+      "use_strand": false,
+      "observed_overlap": 124,
+      "published_overlap": 192,
+      "absolute_error": 68
+    },
+    {
+      "anchor": "BID_HEK_vs_ELAP_HEK",
+      "left_transform": "pos",
+      "right_transform": "start_plus_1",
+      "use_strand": true,
+      "observed_overlap": 124,
+      "published_overlap": 192,
+      "absolute_error": 68
+    },
+    {
+      "anchor": "BID_HEK_vs_ELAP_HEK",
+      "left_transform": "pos",
+      "right_transform": "start_plus_1",
+      "use_strand": false,
+      "observed_overlap": 124,
+      "published_overlap": 192,
+      "absolute_error": 68
+    },
+    {
+      "anchor": "BID_HEK_vs_ELAP_HEK",
+      "left_transform": "pos",
+      "right_transform": "end",
+      "use_strand": true,
+      "observed_overlap": 124,
+      "published_overlap": 192,
+      "absolute_error": 68
+    },
+    {
+      "anchor": "BID_HEK_vs_ELAP_HEK",
+      "left_transform": "pos",
+      "right_transform": "end",
+      "use_strand": false,
+      "observed_overlap": 124,
+      "published_overlap": 192,
+      "absolute_error": 68
+    },
+    {
+      "anchor": "BID_HEK_vs_ELAP_HEK",
+      "left_transform": "pos_plus_1",
+      "right_transform": "end_plus_1",
+      "use_strand": true,
+      "observed_overlap": 124,
+      "published_overlap": 192,
+      "absolute_error": 68
+    },
+    {
+      "anchor": "BID_HEK_vs_ELAP_HEK",
+      "left_transform": "pos_plus_1",
+      "right_transform": "end_plus_1",
+      "use_strand": false,
+      "observed_overlap": 124,
+      "published_overlap": 192,
+      "absolute_error": 68
+    }
+  ]
+}
+
+ BID_HELA_vs_BACS_HELA
+{
+  "minimum_absolute_error": 52,
+  "candidate_hypotheses": [
+    {
+      "anchor": "BID_HELA_vs_BACS_HELA",
+      "left_transform": "pos_minus_1",
+      "right_transform": "pos_minus_1",
+      "use_strand": true,
+      "observed_overlap": 178,
+      "published_overlap": 230,
+      "absolute_error": 52
+    },
+    {
+      "anchor": "BID_HELA_vs_BACS_HELA",
+      "left_transform": "pos_minus_1",
+      "right_transform": "pos_minus_1",
+      "use_strand": false,
+      "observed_overlap": 178,
+      "published_overlap": 230,
+      "absolute_error": 52
+    },
+    {
+      "anchor": "BID_HELA_vs_BACS_HELA",
+      "left_transform": "pos",
+      "right_transform": "pos",
+      "use_strand": true,
+      "observed_overlap": 178,
+      "published_overlap": 230,
+      "absolute_error": 52
+    },
+    {
+      "anchor": "BID_HELA_vs_BACS_HELA",
+      "left_transform": "pos",
+      "right_transform": "pos",
+      "use_strand": false,
+      "observed_overlap": 178,
+      "published_overlap": 230,
+      "absolute_error": 52
+    },
+    {
+      "anchor": "BID_HELA_vs_BACS_HELA",
+      "left_transform": "pos_plus_1",
+      "right_transform": "pos_plus_1",
+      "use_strand": true,
+      "observed_overlap": 178,
+      "published_overlap": 230,
+      "absolute_error": 52
+    },
+    {
+      "anchor": "BID_HELA_vs_BACS_HELA",
+      "left_transform": "pos_plus_1",
+      "right_transform": "pos_plus_1",
+      "use_strand": false,
+      "observed_overlap": 178,
+      "published_overlap": 230,
+      "absolute_error": 52
+    }
+  ]
+}
+
+==========================================================================================
+BEST PRAISE INTERVAL HYPOTHESES
+{
+  "minimum_absolute_error": 20,
+  "best": [
+    {
+      "anchor": "PRAISE_HEK_vs_ELAP_HEK",
+      "praise_shift": -1,
+      "elap_transform": "start",
+      "observed_supported_PRAISE_records": 941,
+      "published_overlap": 961,
+      "absolute_error": 20
+    },
+    {
+      "anchor": "PRAISE_HEK_vs_ELAP_HEK",
+      "praise_shift": 0,
+      "elap_transform": "start_plus_1",
+      "observed_supported_PRAISE_records": 941,
+      "published_overlap": 961,
+      "absolute_error": 20
+    },
+    {
+      "anchor": "PRAISE_HEK_vs_ELAP_HEK",
+      "praise_shift": -1,
+      "elap_transform": "end_minus_1",
+      "observed_supported_PRAISE_records": 941,
+      "published_overlap": 961,
+      "absolute_error": 20
+    },
+    {
+      "anchor": "PRAISE_HEK_vs_ELAP_HEK",
+      "praise_shift": 0,
+      "elap_transform": "end",
+      "observed_supported_PRAISE_records": 941,
+      "published_overlap": 961,
+      "absolute_error": 20
+    },
+    {
+      "anchor": "PRAISE_HEK_vs_ELAP_HEK",
+      "praise_shift": 1,
+      "elap_transform": "end_plus_1",
+      "observed_supported_PRAISE_records": 941,
+      "published_overlap": 961,
+      "absolute_error": 20
+    }
+  ]
+}
+
+==========================================================================================
+COORDINATE GATE: COORDINATE_SYSTEM_UNRESOLVED
+
+STAGE0 PROGRAM 05 COMPLETE

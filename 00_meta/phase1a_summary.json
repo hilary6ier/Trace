@@ -1,0 +1,175 @@
+{
+  "status": "AIM1A_RESULT_READY_FOR_SCIENTIFIC_INTERPRETATION",
+  "calibration_resolution": [
+    {
+      "assay": "BID",
+      "status": "RESOLVED",
+      "layout": "rowwise",
+      "sheet": "Supplementary Table 1",
+      "response_source": "fit_R",
+      "n_motifs": 256,
+      "notes": "Frozen from published BID model: R = BID-seq induced deletion ratio; A=dropout, B=background."
+    },
+    {
+      "assay": "BACS",
+      "status": "UNRESOLVED",
+      "layout": "",
+      "sheet": "",
+      "response_source": "",
+      "n_motifs": 0,
+      "notes": "No robust 256-context representation recovered."
+    },
+    {
+      "assay": "ELAP",
+      "status": "RESOLVED",
+      "layout": "matrix16",
+      "sheet": "Figure 2",
+      "response_source": "16x16 heatmap; orientation=row_upstream",
+      "n_motifs": 256,
+      "plus1U_log1p_median_effect": 1.7396584188522108,
+      "notes": "Axis orientation chosen by the paper's independently reported +1U preference; no human outcome used."
+    }
+  ],
+  "praise_parser": {
+    "status": "RESOLVED",
+    "dash_interval_count": 1348,
+    "old_strict_interval_count": 1270,
+    "greedy_chr_interval_count": 1348,
+    "historical_stage0_interval_count": 1357,
+    "n_patterns_missed_by_old_regex": 78,
+    "interpretation": "The old Phase0C regex did not allow chromosome/contig names containing underscores. Greedy parsing preserves the coordinate suffix while retaining the full chromosome token."
+  },
+  "human_context_QC": [
+    {
+      "cell_line": "HEK293T",
+      "bid": {
+        "source": "motif_5mer_reported",
+        "n_rows": 543,
+        "n_usable_5mer": 543,
+        "n_single_u": 344
+      },
+      "elap": {
+        "columns": [
+          "raw__-2",
+          "raw__-1",
+          "raw__0",
+          "raw__1",
+          "raw__1__dup2"
+        ],
+        "base_fraction_each": [
+          0.9987785726749259,
+          0.9987785726749259,
+          0.9987785726749259,
+          0.9987785726749259,
+          0.9987785726749259
+        ],
+        "center_U_fraction": 0.9987785726749259,
+        "source": "five consecutive raw sequence columns",
+        "n_rows": 5731,
+        "n_usable_5mer": 5724,
+        "n_single_u": 787
+      },
+      "n_bid_single_u": 344,
+      "n_elap_single_u": 787,
+      "n_shared_single_u": 69,
+      "shared_motif_agreement": 1.0,
+      "class_counts": {
+        "ELAP_exclusive_reported": 718,
+        "BID_exclusive_reported": 275,
+        "shared": 69
+      },
+      "n_with_calibration_contrast": 1062
+    },
+    {
+      "cell_line": "HeLa",
+      "bid": {
+        "source": "motif_5mer_reported",
+        "n_rows": 575,
+        "n_usable_5mer": 575,
+        "n_single_u": 400
+      },
+      "elap": {
+        "columns": [
+          "raw__-2",
+          "raw__-1",
+          "raw__0",
+          "raw__1",
+          "raw__1__dup2"
+        ],
+        "base_fraction_each": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "center_U_fraction": 1.0,
+        "source": "five consecutive raw sequence columns",
+        "n_rows": 5367,
+        "n_usable_5mer": 5367,
+        "n_single_u": 613
+      },
+      "n_bid_single_u": 400,
+      "n_elap_single_u": 613,
+      "n_shared_single_u": 71,
+      "shared_motif_agreement": 1.0,
+      "class_counts": {
+        "ELAP_exclusive_reported": 542,
+        "BID_exclusive_reported": 329,
+        "shared": 71
+      },
+      "n_with_calibration_contrast": 942
+    }
+  ],
+  "cell_results": [
+    {
+      "cell_line": "HEK293T",
+      "n": 993,
+      "n_BID_exclusive": 275,
+      "n_ELAP_exclusive": 718,
+      "n_unique_motifs": 133,
+      "AUC_calibration_contrast": 0.6204836667510762,
+      "AUC_cluster_boot_CI_low": 0.4687643605503583,
+      "AUC_cluster_boot_CI_high": 0.7360273947484107,
+      "motif_permutation_p_one_sided": 0.0691861627674465,
+      "motif_permutation_p_two_sided": 0.1357728454309138,
+      "logOR_per_0.1_contrast": 0.13492062251588705,
+      "cluster_robust_SE": 0.08630993997937936,
+      "OR_per_0.1_contrast": 1.1444459375065426,
+      "OR_CI_low": 0.9663329263958557,
+      "OR_CI_high": 1.3553884671613592,
+      "wald_p": 0.11800304195678893
+    },
+    {
+      "cell_line": "HeLa",
+      "n": 871,
+      "n_BID_exclusive": 329,
+      "n_ELAP_exclusive": 542,
+      "n_unique_motifs": 132,
+      "AUC_calibration_contrast": 0.5929238775670431,
+      "AUC_cluster_boot_CI_low": 0.4707257344470074,
+      "AUC_cluster_boot_CI_high": 0.7125649583265335,
+      "motif_permutation_p_one_sided": 0.10157968406318736,
+      "motif_permutation_p_two_sided": 0.21235752849430115,
+      "logOR_per_0.1_contrast": 0.11887856526150269,
+      "cluster_robust_SE": 0.07526210386622768,
+      "OR_per_0.1_contrast": 1.1262331461564865,
+      "OR_CI_low": 0.9717709423452923,
+      "OR_CI_high": 1.305246992095022,
+      "wald_p": 0.11421510630532947
+    }
+  ],
+  "pooled_interaction": {
+    "term": "contrast_x_HeLa",
+    "beta": -0.01604205725438432,
+    "cluster_robust_SE": 0.035811739837086895,
+    "z": -0.44795526068719654,
+    "p": 0.6541854853695658,
+    "OR": 0.9840859312325952,
+    "OR_CI_low": 0.9173803948980995,
+    "OR_CI_high": 1.055641831279264
+  },
+  "direction_consistent": true,
+  "both_cluster_bootstrap_CI_above_0.5": false,
+  "next_step": "If Aim1A supports calibration transfer, proceed directly to chemistry-aware canonical U-run construction and Aim1B HEK<->HeLa sequence-fingerprint transfer. If not, do not model-hunt; interpret the calibration result before expanding."
+}

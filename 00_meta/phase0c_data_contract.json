@@ -1,0 +1,107 @@
+{
+  "project": "Trace",
+  "phase": "0C",
+  "scientific_story": "Calibration -> Measurement -> Evidence -> Inference",
+  "estimand_boundary": "Published reported sites are observations conditioned on assay/calling pipeline. Absence from another published call table is NOT a biological negative.",
+  "chemistry_families": {
+    "BID": "bisulfite_deletion",
+    "PRAISE": "bisulfite_deletion",
+    "BACS": "cyclization_conversion",
+    "ELAP": "enzymatic_labeling_RT_stop",
+    "DRS": "native_direct_RNA"
+  },
+  "coordinate_contract": {
+    "BID": {
+      "assembly": "GRCh38/hg38",
+      "source_semantics": "1-based genomic nucleotide",
+      "normalized_pos1": "source pos",
+      "status": "validated_in_Stage0"
+    },
+    "BACS": {
+      "assembly": "GRCh38/hg38",
+      "source_semantics": "1-based genomic nucleotide",
+      "normalized_pos1": "source pos",
+      "status": "validated_in_Stage0"
+    },
+    "ELAP": {
+      "assembly": "GRCh38/hg38",
+      "source_semantics": "one-base BED-like [start,end)",
+      "normalized_pos1": "end",
+      "status": "validated_in_Stage0"
+    },
+    "PRAISE": {
+      "assembly": "GRCh38/hg38",
+      "source_semantics": "published chr_site may be a nucleotide or interval",
+      "normalized_pos1": "NOT_FORCED",
+      "status": "interval/equivalence handling required"
+    },
+    "DRS": {
+      "assembly": "to_be_read_from_published_table",
+      "source_semantics": "preserve published coordinate fields verbatim in Phase0C",
+      "normalized_pos1": "NOT_FORCED",
+      "status": "held-out platform; exact mapping deferred until table semantics validated"
+    }
+  },
+  "primary_site_tables": {
+    "BID_HEK293T": {
+      "expected_rows": 543,
+      "normalized_file": "D:\\RNA\\Trace\\03_harmonized\\normalized_sources\\BID_HEK293T.tsv"
+    },
+    "BID_HeLa": {
+      "expected_rows": 575,
+      "normalized_file": "D:\\RNA\\Trace\\03_harmonized\\normalized_sources\\BID_HeLa.tsv"
+    },
+    "BID_A549": {
+      "expected_rows": 922,
+      "normalized_file": "D:\\RNA\\Trace\\03_harmonized\\normalized_sources\\BID_A549.tsv"
+    },
+    "ELAP_HEK293T": {
+      "expected_rows": 5731,
+      "normalized_file": "D:\\RNA\\Trace\\03_harmonized\\normalized_sources\\ELAP_HEK293T.tsv"
+    },
+    "ELAP_HeLa": {
+      "expected_rows": 5367,
+      "normalized_file": "D:\\RNA\\Trace\\03_harmonized\\normalized_sources\\ELAP_HeLa.tsv"
+    },
+    "BACS_HeLa": {
+      "expected_rows": 1335,
+      "normalized_file": "D:\\RNA\\Trace\\03_harmonized\\normalized_sources\\BACS_HeLa.tsv"
+    },
+    "PRAISE_HEK293T": {
+      "expected_rows": 2209,
+      "normalized_file": "D:\\RNA\\Trace\\03_harmonized\\normalized_sources\\PRAISE_HEK293T.tsv"
+    }
+  },
+  "aim1_primary_pair": {
+    "cells": [
+      "HEK293T",
+      "HeLa"
+    ],
+    "assays": [
+      "BID",
+      "ELAP"
+    ],
+    "training_labels_not_created_in_phase0c": true
+  },
+  "aim1_second_platform": {
+    "matched_cells": [
+      "HeLa",
+      "A549"
+    ],
+    "assays": [
+      "BID",
+      "DRS"
+    ],
+    "DRS_is_ground_truth": false
+  },
+  "synthetic_calibration_policy": {
+    "compare_raw_units_across_assays": false,
+    "within_assay_percentile_normalization": true,
+    "response_selection_basis": "published chemistry / source-data semantics, never downstream model performance"
+  },
+  "locus_policy": {
+    "base_locus_id": "exact nucleotide only when published coordinate semantics support it",
+    "equivalence_locus_id": "deferred until chemistry-aware U-run reconstruction",
+    "arbitrary_plusminus_k_matching": false
+  }
+}

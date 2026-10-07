@@ -1,0 +1,43 @@
+
+LOCAL ASSETS
+            asset_id                                                                 path  exists  size_bytes                                                           sha256
+PRAISE_supplementary                    D:\RNA\phase0\psi\41589_2023_1304_MOESM3_ESM.xlsx    True      413897 283c24e702c358b749ebbde024fb9c4edc7a9b134ca198678f170330d4bafcb5
+      m6A_GLORI_rep1 D:\RNA\phase0\m6A\GSM6432590_293T-mRNA-1_35bp_m2.totalm6A.FDR.csv.gz    True     8031589 1fae5354e18b660046ab5c1841fdfaf059e213e1cf2542f597b60d994da85911
+      m6A_GLORI_rep2 D:\RNA\phase0\m6A\GSM6432591_293T-mRNA-2_35bp_m2.totalm6A.FDR.csv.gz    True     8062076 7a9b0dd69d9d6e2db737387f87d18ef3fc8050a7ec575e8c0c566024f4dba638
+   stability_HEK293T             D:\RNA\phase0\stability\GSE273217_HLs_HEK293T_STM.txt.gz    True      621505 03dc4f52c5d5a724a87e1b070b3f9d430ad227d8e3c09839ac1533a1175b42cd
+
+PRAISE WORKBOOK
+                  sheet  n_rows_raw  n_columns_raw  first_nonempty_row
+Supplementary Dataset 1         108              4                   0
+Supplementary Dataset 2        2212             15                   0
+Supplementary Dataset 3        1024             17                   0
+Supplementary Dataset 4         535              4                   0
+Supplementary Dataset 5          16             14                   0
+Supplementary Dataset 6          47             13                   0
+
+PRAISE DATASET 2 QC
+{
+  "n_records": 2209,
+  "n_unique_chr_site": 2201,
+  "n_unique_transcripts": 1753,
+  "n_unique_genes": 1704,
+  "n_interval_sites": 1357,
+  "missing_chr_site": 0,
+  "missing_gene": 0,
+  "replicate_spearman": 0.9022072619627991
+}
+
+PRAISE DATASET 3 QC
+{
+  "n_records": 1021,
+  "n_unique_chr_site": 1017,
+  "n_unique_genes": 892,
+  "writer_counts": {
+    "DKC1": 473,
+    "TRUB1": 346,
+    "PUS7": 165,
+    "PUS1": 37
+  }
+}
+
+STAGE0 PROGRAM 01 COMPLETE

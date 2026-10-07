@@ -1,0 +1,71 @@
+Download [1/4] ELAP_supplementary_data.xlsx
+Download [1/4] ELAP_source_data.xlsx
+Download [1/4] ELAP-seq-v4.zip
+Download [1/4] bacs.zip
+
+ASSET MANIFEST
+               asset_id kind                                                              path     status  valid validation                                                                                                                                     source_url  size_bytes                                                           sha256
+ELAP_supplementary_data xlsx D:\RNA\Stage0\raw\published_evidence\ELAP_supplementary_data.xlsx downloaded   True         ok https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-70597-8/MediaObjects/41467_2026_70597_MOESM3_ESM.xlsx     5797336 c799d971d8bfab758d6028706e03ab6eb5dabc6f4a3f10cfbe63465d029730fc
+       ELAP_source_data xlsx        D:\RNA\Stage0\raw\published_evidence\ELAP_source_data.xlsx downloaded   True         ok https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-70597-8/MediaObjects/41467_2026_70597_MOESM6_ESM.xlsx     5210176 a956b8ae54064b8f9b4107c45c814551a2dc13aa808d9f5e229d0634ff14f33e
+              ELAP_code  zip                      D:\RNA\Stage0\reference_code\ELAP-seq-v4.zip downloaded   True         ok                                                                         https://codeload.github.com/yuruwang26/ELAP-seq-v4/zip/refs/heads/main       24543 9a34b3e8ab644848af002a50c70bb470e2098e7c8905f687491c4e4848be0f78
+              BACS_code  zip                             D:\RNA\Stage0\reference_code\bacs.zip downloaded   True         ok                                                                                  https://codeload.github.com/lkong888/bacs/zip/refs/heads/main       63787 9ffd41175b219994b4d6cec4d6d03e67d6b9ff6c4cb15e29053ee6053e9b464f
+
+==========================================================================================
+XLSX INVENTORY
+               asset_id                   sheet  rows  columns
+ELAP_supplementary_data    Supplementary Data 1  5734       40
+ELAP_supplementary_data    Supplementary Data 2  5371       40
+ELAP_supplementary_data    Supplementary Data 3    67        9
+ELAP_supplementary_data    Supplementary Data 4    64        9
+ELAP_supplementary_data    Supplementary Data 5    88       26
+ELAP_supplementary_data    Supplementary Data 6  5736       29
+ELAP_supplementary_data    Supplementary Data 7    71        2
+ELAP_supplementary_data    Supplementary Data 8     6        2
+       ELAP_source_data                Figure 1   149       12
+       ELAP_source_data                Figure 2   288       17
+       ELAP_source_data                Figure 3  6895        3
+       ELAP_source_data                Figure 4  5755       17
+       ELAP_source_data                 Figure5    17        7
+       ELAP_source_data  Supplementary Figure 2    28       16
+       ELAP_source_data  Supplementary Figure 4     0        0
+       ELAP_source_data  Supplementary Figure 7  1857        5
+       ELAP_source_data  Supplementary Figure 9     6        5
+       ELAP_source_data Supplementary Figure 10  5833       12
+       ELAP_source_data Supplementary Figure 11     5        2
+       ELAP_source_data Supplementary Figure 12 26499       17
+       ELAP_source_data Supplementary Figure 13    19        7
+       ELAP_source_data Supplementary Figure 14 10279       12
+       ELAP_source_data Supplementary Figure 15  1900       20
+       ELAP_source_data Supplementary Figure 16 18730       38
+       ELAP_source_data Supplementary Figure 18     9        5
+
+==========================================================================================
+REPOSITORY SPECIAL FILES
+ asset_id                         member  size_bytes
+BACS_code bacs-main/comparision_method.r        4043
+
+==========================================================================================
+RECOVERY SUMMARY
+{
+  "project": "PsiTrust",
+  "stage": "Stage0",
+  "program": "06A_recover_published_comparison_evidence",
+  "asset_success": {
+    "ELAP_supplementary_data": true,
+    "ELAP_source_data": true,
+    "ELAP_code": true,
+    "BACS_code": true
+  },
+  "ELAP": {
+    "supplement_or_source_mentions_BID": true,
+    "supplement_or_source_mentions_PRAISE": false,
+    "code_contains_cross_method_logic": false
+  },
+  "BACS": {
+    "repo_contains_bid_per_site_intermediate": false,
+    "repo_contains_praise_per_site_intermediate": false
+  },
+  "interpretation_rule": "Published aggregate non-call categories are useful evidence, but ΨTrust training requires site-level target-assay evidence. Aggregate counts alone must never be converted into individual labels."
+}
+
+STAGE0 PROGRAM 06A COMPLETE

@@ -1,0 +1,68 @@
+{
+  "phase": "4B_v2",
+  "purpose": "TRACE-Ψ development model selection before A549 lockbox",
+  "estimand": "Ranking of source-positive loci by re-observation propensity on another profiling technology; not biological truth probability.",
+  "models": {
+    "P0_breadth": [
+      "source_breadth"
+    ],
+    "P1_provenance": [
+      "source_breadth",
+      "source_BID",
+      "source_BACS"
+    ],
+    "P2_TRACEpsi": [
+      "source_breadth",
+      "source_BID",
+      "source_BACS",
+      "fp_crosscell_ELAPvsBID",
+      "fp_abs",
+      "fp_source_alignment",
+      "fp_seen_in_HEK",
+      "motif_-2_A",
+      "motif_-2_C",
+      "motif_-2_G",
+      "motif_-1_A",
+      "motif_-1_C",
+      "motif_-1_G",
+      "motif_+1_A",
+      "motif_+1_C",
+      "motif_+1_G",
+      "motif_+2_A",
+      "motif_+2_C",
+      "motif_+2_G"
+    ],
+    "A_context_only": [
+      "source_breadth",
+      "source_BID",
+      "source_BACS",
+      "motif_-2_A",
+      "motif_-2_C",
+      "motif_-2_G",
+      "motif_-1_A",
+      "motif_-1_C",
+      "motif_-1_G",
+      "motif_+1_A",
+      "motif_+1_C",
+      "motif_+1_G",
+      "motif_+2_A",
+      "motif_+2_C",
+      "motif_+2_G"
+    ]
+  },
+  "redundancy_fix": "ELAP is provenance reference; U is flanking-base reference.",
+  "training_weight": "Each unique locus contributes equal total weight across its target-task rows.",
+  "hyperparameter_selection": "5-fold GroupKFold by locus_id; select C by mean target-specific AUROC across validation targets.",
+  "HeLa_internal_interpretation": "held-target-role transport, not novel-locus external validation",
+  "DRS_policy": "HeLa DRS used only after models are fitted/tuned on HeLa LOTO; DRS labels do not affect model coefficients or C.",
+  "development_selection_rule": {
+    "P2_minimum_utility": "breadth1 DRS AUROC>=0.58, bootstrap lower CI>0.50, Lift10>=1.15",
+    "P2_clear_gain_over_P1": "delta AUROC>=0.02 and bootstrap P(delta>0)>=0.80",
+    "note": "These are practical development criteria; independent A549 lockbox is the final validation."
+  },
+  "A549_DRS_lockbox": {
+    "status": "UNTOUCHED",
+    "read": false,
+    "used_for_selection": false
+  }
+}

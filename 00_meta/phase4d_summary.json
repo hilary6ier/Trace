@@ -1,0 +1,52 @@
+{
+  "status": "TRACEPSI_V1_FROZEN_AND_PACKAGED",
+  "tool_dir": "D:\\RNA\\Trace\\08_tool\\TRACEpsi",
+  "external_motif_robustness": [
+    {
+      "subset": "all_A549",
+      "n": 761,
+      "DRS_positive_n": 42,
+      "prevalence": 0.05519053876478318,
+      "AUROC": 0.7634942711437844,
+      "average_precision": 0.2897929111560993,
+      "CI_low": 0.67242494368546,
+      "CI_high": 0.8430567851445918,
+      "bootstrap_support_AUC_gt_0.5": 1.0,
+      "n_boot": 5000
+    },
+    {
+      "subset": "A549_excluding_PUS7_like",
+      "n": 727,
+      "DRS_positive_n": 28,
+      "prevalence": 0.03851444291609354,
+      "AUROC": 0.6661557326793378,
+      "average_precision": 0.1515515805893004,
+      "CI_low": 0.5591990837265445,
+      "CI_high": 0.7692915902452279,
+      "bootstrap_support_AUC_gt_0.5": 0.9978,
+      "n_boot": 5000
+    },
+    {
+      "subset": "A549_PUS7_like_only",
+      "n": 34,
+      "DRS_positive_n": 14,
+      "prevalence": 0.4117647058823529,
+      "AUROC": 0.6321428571428571,
+      "average_precision": 0.4876847290640394,
+      "CI_low": 0.4723320158102766,
+      "CI_high": 0.7839326298701298,
+      "bootstrap_support_AUC_gt_0.5": 0.9454,
+      "n_boot": 5000
+    }
+  ],
+  "non_PUS7_external_signal_supported": true,
+  "frozen_assets": [
+    "D:\\RNA\\Trace\\08_tool\\TRACEpsi\\TRACEpsi_frozen_model.joblib",
+    "D:\\RNA\\Trace\\08_tool\\TRACEpsi\\TRACEpsi_fingerprint_HEK.tsv",
+    "D:\\RNA\\Trace\\08_tool\\TRACEpsi\\TRACEpsi_reference_scores.tsv.gz",
+    "D:\\RNA\\Trace\\08_tool\\TRACEpsi\\tracepsi_score.py",
+    "D:\\RNA\\Trace\\08_tool\\TRACEpsi\\MODEL_CARD.json",
+    "D:\\RNA\\Trace\\08_tool\\TRACEpsi\\README.txt"
+  ],
+  "next_step": "Do not tune the model further. Next work should be manuscript figures, a small example input/output, and optional Inference Audit packaging using already-completed Aim3 results."
+}

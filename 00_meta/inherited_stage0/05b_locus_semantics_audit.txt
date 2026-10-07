@@ -1,0 +1,143 @@
+
+==========================================================================================
+DISTANCE LADDER
+               anchor  radius_nt  supported_source_sites  published_overlap  absolute_error
+  BID_HEK_vs_ELAP_HEK          0                     124                192              68
+  BID_HEK_vs_ELAP_HEK          1                     184                192               8
+  BID_HEK_vs_ELAP_HEK          2                     187                192               5
+  BID_HEK_vs_ELAP_HEK          3                     190                192               2
+  BID_HEK_vs_ELAP_HEK          4                     191                192               1
+  BID_HEK_vs_ELAP_HEK          5                     191                192               1
+BID_HELA_vs_BACS_HELA          0                     178                230              52
+BID_HELA_vs_BACS_HELA          1                     222                230               8
+BID_HELA_vs_BACS_HELA          2                     227                230               3
+BID_HELA_vs_BACS_HELA          3                     230                230               0
+BID_HELA_vs_BACS_HELA          4                     230                230               0
+BID_HELA_vs_BACS_HELA          5                     230                230               0
+
+==========================================================================================
+BACS U-RUN EQUIVALENCE
+{
+  "valid_centered_motifs": 1335,
+  "invalid_or_unusable_motifs": 0,
+  "run_size_distribution": {
+    "1": 595,
+    "2": 468,
+    "3": 220,
+    "4": 35,
+    "5": 17
+  },
+  "BID_HeLa_supported": 227,
+  "published": 230,
+  "absolute_error": 3
+}
+
+==========================================================================================
+BID MOTIF DIAGNOSTIC
+{
+  "BID_HEK": {
+    "Motif_1": {
+      "n_nonmissing": 543,
+      "length_distribution": {
+        "5": 543
+      },
+      "centered_T_fraction": 1.0,
+      "examples": [
+        "GTTCC",
+        "GTTCT",
+        "GTTCG",
+        "GTTCA",
+        "TGTAG",
+        "GTTGC",
+        "TATGC",
+        "GTTGA",
+        "TGTGA",
+        "GATGC",
+        "AGTGA",
+        "GTTAG",
+        "GTTAC",
+        "GTTTT",
+        "GTTAA",
+        "TTTTT",
+        "GGTGT",
+        "ATTCT",
+        "GTTAT",
+        "GTTTC"
+      ]
+    },
+    "Motif_2": {
+      "n_nonmissing": 11,
+      "length_distribution": {
+        "5": 11
+      },
+      "centered_T_fraction": 1.0,
+      "examples": [
+        "TTTTA",
+        "TTTTC"
+      ]
+    }
+  },
+  "BID_HELA": {
+    "Motif_1": {
+      "n_nonmissing": 575,
+      "length_distribution": {
+        "5": 575
+      },
+      "centered_T_fraction": 1.0,
+      "examples": [
+        "GTTCA",
+        "GTTCC",
+        "GTTCG",
+        "AATGC",
+        "TATGC",
+        "GTTGC",
+        "GTTCT",
+        "TGTGA",
+        "TGTAG",
+        "TCTAG",
+        "CTTTG",
+        "CTTTT",
+        "AGTCT",
+        "GGTGT",
+        "TTTTT",
+        "GCTGT",
+        "CGTGC",
+        "CTTCC",
+        "GTTAT",
+        "CGTAC"
+      ]
+    },
+    "Motif_2": {
+      "n_nonmissing": 15,
+      "length_distribution": {
+        "5": 15
+      },
+      "centered_T_fraction": 1.0,
+      "examples": [
+        "TTTTA",
+        "TTTTG",
+        "TTTTC"
+      ]
+    }
+  }
+}
+
+==========================================================================================
+PRAISE INTERVAL EQUIVALENCE
+{
+  "parse_fraction": 0.9379809868718877,
+  "supported_records": 941,
+  "published": 961,
+  "absolute_error": 20
+}
+
+AUTHOR CODE SNAPSHOT:
+{
+  "downloaded": true,
+  "bytes": 4043,
+  "sha256": "d87d88097408bb8a8038561efa95b6b1e618cd262bc6fd6d82e5f25849bbdc9a"
+}
+
+STATUS: LOCUS_EQUIVALENCE_STRONGLY_SUPPORTED
+
+STAGE0 PROGRAM 05B COMPLETE

@@ -1,0 +1,4 @@
+assay	status	layout	sheet	response_source	n_motifs	notes	plus1U_log1p_median_effect
+BID	RESOLVED	rowwise	Supplementary Table 1	fit_R	256	Frozen from published BID model: R = BID-seq induced deletion ratio; A=dropout, B=background.	
+BACS	UNRESOLVED				0	No robust 256-context representation recovered.	
+ELAP	RESOLVED	matrix16	Figure 2	16x16 heatmap; orientation=row_upstream	256	Axis orientation chosen by the paper's independently reported +1U preference; no human outcome used.	1.7396584188522108

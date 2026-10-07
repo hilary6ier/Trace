@@ -1,0 +1,9 @@
+{
+  "status": "RESOLVED",
+  "dash_interval_count": 1348,
+  "old_strict_interval_count": 1270,
+  "greedy_chr_interval_count": 1348,
+  "historical_stage0_interval_count": 1357,
+  "n_patterns_missed_by_old_regex": 78,
+  "interpretation": "The old Phase0C regex did not allow chromosome/contig names containing underscores. Greedy parsing preserves the coordinate suffix while retaining the full chromosome token."
+}

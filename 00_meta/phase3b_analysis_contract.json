@@ -1,0 +1,22 @@
+{
+  "phase": "3B_final",
+  "scientific_story": "Calibration -> Measurement -> Evidence -> Inference",
+  "primary_question": "Does Ψ burden add held-out TE predictive information beyond sequence, and does cross-technology confirmation add further information beyond total Ψ burden?",
+  "TE_policy": "Five HeLa TE datasets analyzed independently because Phase3A showed strong study-context heterogeneity for several maps.",
+  "fold_policy": "One deterministic five-fold gene assignment shared across every TE dataset and M0/M1/M2.",
+  "model": "Ridge regression with StandardScaler; alpha selected by inner CV using only outer-training genes.",
+  "M0": "MANE sequence-derived features only",
+  "M1": "M0 + log1p(unique BID/BACS/ELAP single-U union burden)",
+  "M2": "M1 + log1p(extra assay confirmations = breadth_sum - unique burden)",
+  "primary_metric": "out-of-fold R2",
+  "primary_increments": [
+    "delta_R2_M1_minus_M0",
+    "delta_R2_M2_minus_M1"
+  ],
+  "macro_summary": "unweighted mean across the five TE datasets with hierarchical study+gene bootstrap CI; per-dataset results remain primary context.",
+  "positive_increment_rule": "macro delta > 0, hierarchical 95% CI lower bound > 0, and positive delta in at least 3/5 TE datasets",
+  "interpretation_boundary": "Predictive increment is sequence-independent information conditional on this classical sequence baseline; it is not causal evidence that pseudouridylation changes TE.",
+  "no_DRS_in_M1_M2": true,
+  "no_raw_sequencing": true,
+  "final_primary_analysis": true
+}

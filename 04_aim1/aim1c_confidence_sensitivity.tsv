@@ -1,0 +1,5 @@
+n_train	n_test	AUC	CI_low	CI_high	permutation_p	train_cell	test_cell	analysis	rank_threshold
+68	70					HEK293T	HeLa	assay_internal_signal_rank_ge_0.50	0.5
+70	68					HeLa	HEK293T	assay_internal_signal_rank_ge_0.50	0.5
+31	28					HEK293T	HeLa	assay_internal_signal_rank_ge_0.75	0.75
+28	31					HeLa	HEK293T	assay_internal_signal_rank_ge_0.75	0.75

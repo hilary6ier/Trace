@@ -1,0 +1,26 @@
+{
+  "reference_file": "D:\\RNA\\Trace\\02_reference\\MANE.GRCh38.v1.5.refseq_genomic.gtf.gz",
+  "feature_counts_top": {
+    "exon": 204815,
+    "CDS": 194202,
+    "transcript": 19437,
+    "start_codon": 19400,
+    "stop_codon": 19388,
+    "gene": 19363
+  },
+  "exon_rows_total": 204815,
+  "exon_rows_with_MANE_Select_tag": 203083,
+  "exon_rows_missing_gene_after_select": 0,
+  "exon_rows_missing_transcript_after_select": 0,
+  "exon_rows_bad_coordinate_after_select": 0,
+  "top_exon_attribute_keys": {
+    "gene_id": 204815,
+    "transcript_id": 204815,
+    "db_xref": 204815,
+    "gene": 204815,
+    "product": 204815,
+    "tag": 204815,
+    "transcript_biotype": 204815,
+    "exon_number": 204815
+  }
+}

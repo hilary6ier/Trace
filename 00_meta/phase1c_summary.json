@@ -1,0 +1,295 @@
+{
+  "status": "AIM1C_RESULTS_READY_FOR_INTERPRETATION",
+  "annotation_QC": {
+    "n_site_rows": 2004,
+    "n_unique_loci": 1577,
+    "n_exact_cross_cell_loci_removed": 427,
+    "mane_gene_annotation_fraction": 0.779441117764471,
+    "mane_unique_gene_fraction": 0.7759481037924152,
+    "mane_region_counts": {
+      "CDS": 1000,
+      "EXON_OTHER": 562,
+      "UNANNOTATED": 442
+    },
+    "source_signal_mapping": {
+      "HEK293T_BID": {
+        "n_site_rows": 1062,
+        "n_signal_mapped": 344,
+        "signal_mapping_fraction": 0.3239171374764595
+      },
+      "HEK293T_ELAP": {
+        "n_site_rows": 1062,
+        "n_signal_mapped": 0,
+        "signal_mapping_fraction": 0.0
+      },
+      "HeLa_BID": {
+        "n_site_rows": 942,
+        "n_signal_mapped": 400,
+        "signal_mapping_fraction": 0.42462845010615713
+      },
+      "HeLa_ELAP": {
+        "n_site_rows": 942,
+        "n_signal_mapped": 0,
+        "signal_mapping_fraction": 0.0
+      }
+    }
+  },
+  "known_motif_diagnostic": {
+    "n_rows": 1150,
+    "n_pus7_like_UNUAR": 134,
+    "n_pus7_strict_USUAG": 116,
+    "n_trub1_local_GUUCN": 0,
+    "n_plus1U": 0,
+    "n_minus1U": 0,
+    "scientific_note": "The primary single-U universe should contain zero +/-1U contexts, therefore it structurally excludes ELAP +1U preference, consecutive-U localization ambiguity, and the canonical local TRUB1 GUΨCN context."
+  },
+  "gene_disjoint": [
+    {
+      "n_train": 450,
+      "n_test": 361,
+      "n_train_BID": 154,
+      "n_train_ELAP": 296,
+      "n_test_BID": 176,
+      "n_test_ELAP": 185,
+      "n_train_motifs": 116,
+      "n_test_motifs": 102,
+      "n_test_unseen_motif_loci": 18,
+      "AUC": 0.7289465601965602,
+      "CI_low": 0.6171057462965777,
+      "CI_high": 0.8160486748291221,
+      "permutation_p": 0.0001999600079984003,
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa",
+      "analysis": "heldout_test_genes_absent_from_training",
+      "n_train_unique_gene_loci": 450,
+      "n_test_unique_gene_loci_before_filter": 416,
+      "n_test_gene_novel_loci": 361,
+      "n_training_genes": 395,
+      "n_test_gene_novel_genes": 293
+    },
+    {
+      "n_train": 416,
+      "n_test": 403,
+      "n_train_BID": 185,
+      "n_train_ELAP": 231,
+      "n_test_BID": 150,
+      "n_test_ELAP": 253,
+      "n_train_motifs": 108,
+      "n_test_motifs": 112,
+      "n_test_unseen_motif_loci": 43,
+      "AUC": 0.8025955204216074,
+      "CI_low": 0.6695587076438141,
+      "CI_high": 0.8897819151603923,
+      "permutation_p": 0.0001999600079984003,
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T",
+      "analysis": "heldout_test_genes_absent_from_training",
+      "n_train_unique_gene_loci": 416,
+      "n_test_unique_gene_loci_before_filter": 450,
+      "n_test_gene_novel_loci": 403,
+      "n_training_genes": 332,
+      "n_test_gene_novel_genes": 356
+    }
+  ],
+  "region_only_AUC": {
+    "HEK293T->HeLa": 0.6454248366013072,
+    "HeLa->HEK293T": 0.7154833550206029
+  },
+  "major_within_region_results": [
+    {
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa",
+      "analysis": "fixed_5mer_within_region",
+      "region": "CDS",
+      "n_test": 286,
+      "n_BID": 118,
+      "n_ELAP": 168,
+      "AUC": 0.6863902340597255
+    },
+    {
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa",
+      "analysis": "fixed_5mer_within_region",
+      "region": "EXON_OTHER",
+      "n_test": 133,
+      "n_BID": 67,
+      "n_ELAP": 66,
+      "AUC": 0.7793984622342831
+    },
+    {
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa",
+      "analysis": "fixed_5mer_within_region",
+      "region": "UNANNOTATED",
+      "n_test": 73,
+      "n_BID": 1,
+      "n_ELAP": 72,
+      "AUC": 0.7708333333333334
+    },
+    {
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T",
+      "analysis": "fixed_5mer_within_region",
+      "region": "CDS",
+      "n_test": 282,
+      "n_BID": 81,
+      "n_ELAP": 201,
+      "AUC": 0.7864688901173147
+    },
+    {
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T",
+      "analysis": "fixed_5mer_within_region",
+      "region": "EXON_OTHER",
+      "n_test": 170,
+      "n_BID": 74,
+      "n_ELAP": 96,
+      "AUC": 0.8462837837837838
+    },
+    {
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T",
+      "analysis": "fixed_5mer_within_region",
+      "region": "UNANNOTATED",
+      "n_test": 171,
+      "n_BID": 4,
+      "n_ELAP": 167,
+      "AUC": 0.8473053892215568
+    }
+  ],
+  "confidence_sensitivity": [
+    {
+      "n_train": 68,
+      "n_test": 70,
+      "AUC": NaN,
+      "CI_low": NaN,
+      "CI_high": NaN,
+      "permutation_p": NaN,
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa",
+      "analysis": "assay_internal_signal_rank_ge_0.50",
+      "rank_threshold": 0.5
+    },
+    {
+      "n_train": 70,
+      "n_test": 68,
+      "AUC": NaN,
+      "CI_low": NaN,
+      "CI_high": NaN,
+      "permutation_p": NaN,
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T",
+      "analysis": "assay_internal_signal_rank_ge_0.50",
+      "rank_threshold": 0.5
+    },
+    {
+      "n_train": 31,
+      "n_test": 28,
+      "AUC": NaN,
+      "CI_low": NaN,
+      "CI_high": NaN,
+      "permutation_p": NaN,
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa",
+      "analysis": "assay_internal_signal_rank_ge_0.75",
+      "rank_threshold": 0.75
+    },
+    {
+      "n_train": 28,
+      "n_test": 31,
+      "AUC": NaN,
+      "CI_low": NaN,
+      "CI_high": NaN,
+      "permutation_p": NaN,
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T",
+      "analysis": "assay_internal_signal_rank_ge_0.75",
+      "rank_threshold": 0.75
+    }
+  ],
+  "writer_motif_sensitivity": [
+    {
+      "n_train": 558,
+      "n_test": 436,
+      "n_train_BID": 144,
+      "n_train_ELAP": 414,
+      "n_test_BID": 156,
+      "n_test_ELAP": 280,
+      "n_train_motifs": 119,
+      "n_test_motifs": 110,
+      "n_test_unseen_motif_loci": 20,
+      "AUC": 0.7353136446886447,
+      "CI_low": 0.6078416717700944,
+      "CI_high": 0.8271049806654118,
+      "permutation_p": 0.0001999600079984003,
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa",
+      "analysis": "remove_PUS7_like_UNUAR",
+      "n_removed_total": 134
+    },
+    {
+      "n_train": 436,
+      "n_test": 558,
+      "n_train_BID": 156,
+      "n_train_ELAP": 280,
+      "n_test_BID": 144,
+      "n_test_ELAP": 414,
+      "n_train_motifs": 110,
+      "n_test_motifs": 119,
+      "n_test_unseen_motif_loci": 52,
+      "AUC": 0.834633319914117,
+      "CI_low": 0.707234792298865,
+      "CI_high": 0.9088083589399378,
+      "permutation_p": 0.0001999600079984003,
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T",
+      "analysis": "remove_PUS7_like_UNUAR",
+      "n_removed_total": 134
+    },
+    {
+      "n_train": 570,
+      "n_test": 442,
+      "n_train_BID": 144,
+      "n_train_ELAP": 426,
+      "n_test_BID": 156,
+      "n_test_ELAP": 286,
+      "n_train_motifs": 122,
+      "n_test_motifs": 113,
+      "n_test_unseen_motif_loci": 20,
+      "AUC": 0.7399811726734804,
+      "CI_low": 0.6165874811463047,
+      "CI_high": 0.8333660915422383,
+      "permutation_p": 0.0001999600079984003,
+      "train_cell": "HEK293T",
+      "test_cell": "HeLa",
+      "analysis": "remove_strict_PUS7_USUAG",
+      "n_removed_total": 116
+    },
+    {
+      "n_train": 442,
+      "n_test": 570,
+      "n_train_BID": 156,
+      "n_train_ELAP": 286,
+      "n_test_BID": 144,
+      "n_test_ELAP": 426,
+      "n_train_motifs": 113,
+      "n_test_motifs": 122,
+      "n_test_unseen_motif_loci": 52,
+      "AUC": 0.838892149191445,
+      "CI_low": 0.7153584155338464,
+      "CI_high": 0.9130606630162448,
+      "permutation_p": 0.0001999600079984003,
+      "train_cell": "HeLa",
+      "test_cell": "HEK293T",
+      "analysis": "remove_strict_PUS7_USUAG",
+      "n_removed_total": 116
+    }
+  ],
+  "robustness_flags": {
+    "gene_disjoint_both_CI_above_0.5": true,
+    "top50_signal_both_CI_above_0.5": false,
+    "remove_PUS7_like_both_CI_above_0.5": true,
+    "all_major_within_region_AUC_above_0.5": true
+  },
+  "next_gate": "If the fingerprint remains robust, freeze Aim1 as a completed result and move to Aim2 orthogonal biological evidence (PUS perturbation + held-out DRS). Only add GRCh38 +/-10-nt elastic-net if Phase1C exposes an unresolved sequence mechanism that 5-mer cannot localize; do not add it merely to increase AUROC."
+}

@@ -1,0 +1,188 @@
+{
+  "status": "AIM2A_RESULT_READY_FOR_INTERPRETATION",
+  "source_QC": {
+    "records": 2209,
+    "unique_chr_site": 2201,
+    "replicate_spearman": 0.9022072619627992,
+    "coordinate_usable_unique_loci": 2200,
+    "coordinate_unusable_unique_loci": 1,
+    "coordinate_parse_fraction_unique": 0.9995456610631531,
+    "parser_mode_counts": {
+      "tail_pattern_1": 2200,
+      "unparsed": 1
+    },
+    "interval_loci_among_usable": 1344,
+    "point_loci_among_usable": 856,
+    "duplicated_record_loci": 1
+  },
+  "writer_QC": {
+    "records": 1021,
+    "unique_chr_site": 1017,
+    "writer_counts": {
+      "DKC1": 473,
+      "TRUB1": 346,
+      "PUS7": 165,
+      "PUS1": 37
+    },
+    "multi_writer_sites": 1
+  },
+  "external_QC": {
+    "BID_HEK293T": {
+      "n_calls": 543,
+      "n_unique_exact": 543
+    },
+    "ELAP_HEK293T": {
+      "n_calls": 5731,
+      "n_unique_exact": 5731
+    }
+  },
+  "n_source_unique_published": 2201,
+  "n_source_analyzable": 2200,
+  "n_coordinate_unknown_excluded": 1,
+  "n_writer_assigned": 1017,
+  "BID_support_n_analyzable": 291,
+  "ELAP_support_n_analyzable": 941,
+  "support_pattern_counts": {
+    "PRAISE_only": 1152,
+    "PRAISE+ELAP_cross_chemistry": 757,
+    "PRAISE+BID+ELAP": 184,
+    "PRAISE+BID_same_family": 107,
+    "coordinate_unknown_excluded": 1
+  },
+  "coordinate_attrition_outcome_check": {
+    "writer_assignment_rate_included": 0.4618181818181818,
+    "writer_assignment_rate_excluded": 1.0
+  },
+  "support_pattern_rates": [
+    {
+      "support_pattern": "PRAISE+BID+ELAP",
+      "n": 184,
+      "writer_assigned_n": 118,
+      "writer_assignment_rate": 0.6413043478260869,
+      "wilson95_low": 0.5697658482280896,
+      "wilson95_high": 0.7070633476611794
+    },
+    {
+      "support_pattern": "PRAISE+BID_same_family",
+      "n": 107,
+      "writer_assigned_n": 66,
+      "writer_assignment_rate": 0.616822429906542,
+      "wilson95_low": 0.5221772310609086,
+      "wilson95_high": 0.7033701432337761
+    },
+    {
+      "support_pattern": "PRAISE+ELAP_cross_chemistry",
+      "n": 757,
+      "writer_assigned_n": 325,
+      "writer_assignment_rate": 0.42932628797886396,
+      "wilson95_low": 0.39450998571815693,
+      "wilson95_high": 0.46485624786505203
+    },
+    {
+      "support_pattern": "PRAISE_only",
+      "n": 1152,
+      "writer_assigned_n": 507,
+      "writer_assignment_rate": 0.4401041666666667,
+      "wilson95_low": 0.4116851298561466,
+      "wilson95_high": 0.4689213331264138
+    }
+  ],
+  "primary_ELAP_effect": {
+    "term": "ELAP_support",
+    "beta": -0.1677539836475644,
+    "SE_gene_cluster": 0.09707321457538262,
+    "z": -1.7281181465078022,
+    "p": 0.08396704474460663,
+    "OR": 0.8455618311358004,
+    "OR_CI_low": 0.6990608523692138,
+    "OR_CI_high": 1.0227647676887919,
+    "n": 2200,
+    "n_gene_clusters": 1700,
+    "analysis": "primary_full_interval_aware"
+  },
+  "primary_BID_effect": {
+    "term": "BID_support",
+    "beta": 0.22263011625217305,
+    "SE_gene_cluster": 0.15183585054256069,
+    "z": 1.4662552714437374,
+    "p": 0.14257875597740072,
+    "OR": 1.2493583709039868,
+    "OR_CI_low": 0.9277730346765073,
+    "OR_CI_high": 1.6824118406201705,
+    "n": 2200,
+    "n_gene_clusters": 1700,
+    "analysis": "primary_full_interval_aware"
+  },
+  "ELAP_minus_BID_contrast": {
+    "contrast": "ELAP_support_minus_BID_support",
+    "beta_difference": -0.39038409989973744,
+    "SE": 0.19384327898021925,
+    "z": -2.0139160973415757,
+    "p": 0.044018343181356064,
+    "ratio_of_ORs": 0.6767968669581851,
+    "CI_low": 0.46286635035763013,
+    "CI_high": 0.9896031516883943
+  },
+  "sensitivity_direction_consistent_for_ELAP": false,
+  "primary_ELAP_CI_above_1": false,
+  "primary_BID_CI_above_1": false,
+  "writer_specific_ELAP_effects": [
+    {
+      "term": "ELAP_support",
+      "beta": 0.21736033779356537,
+      "SE_gene_cluster": 0.11247650673960861,
+      "z": 1.932495452554999,
+      "p": 0.05329838279223225,
+      "OR": 1.2427918463351106,
+      "OR_CI_low": 0.9969111648813659,
+      "OR_CI_high": 1.5493171585663152,
+      "n": 2200,
+      "n_gene_clusters": 1700,
+      "writer": "DKC1",
+      "q_BH_ELAP_across_writers": 0.1065967655844645
+    },
+    {
+      "term": "ELAP_support",
+      "beta": -0.14702000038155807,
+      "SE_gene_cluster": 0.14917337238567097,
+      "z": -0.9855646354997889,
+      "p": 0.3243467991190363,
+      "OR": 0.8632767113800386,
+      "OR_CI_low": 0.6444230811599879,
+      "OR_CI_high": 1.156455599122334,
+      "n": 2200,
+      "n_gene_clusters": 1700,
+      "writer": "TRUB1",
+      "q_BH_ELAP_across_writers": 0.3243467991190363
+    },
+    {
+      "term": "ELAP_support",
+      "beta": -0.9977552865886595,
+      "SE_gene_cluster": 0.2477930893918529,
+      "z": -4.026566233293286,
+      "p": 5.6597302147469297e-05,
+      "OR": 0.3687061526047853,
+      "OR_CI_low": 0.22685828722584073,
+      "OR_CI_high": 0.5992473478973628,
+      "n": 2200,
+      "n_gene_clusters": 1700,
+      "writer": "PUS7",
+      "q_BH_ELAP_across_writers": 0.00022638920858987719
+    },
+    {
+      "term": "ELAP_support",
+      "beta": -0.49971182037279743,
+      "SE_gene_cluster": 0.4170442045917947,
+      "z": -1.1982226700930139,
+      "p": 0.230830342066666,
+      "OR": 0.6067054746798826,
+      "OR_CI_low": 0.26790617277078166,
+      "OR_CI_high": 1.373956893936437,
+      "n": 2200,
+      "n_gene_clusters": 1700,
+      "writer": "PUS1",
+      "q_BH_ELAP_across_writers": 0.30777378942222133
+    }
+  ],
+  "next_gate": "If orthogonal ELAP support shows a robust positive association with PUS dependency, freeze this as Aim2 biological validation and proceed to Aim2B held-out native-DRS support in matched HeLa/A549 evidence strata. If null, do not tune thresholds; interpret same-family vs cross-chemistry effects and proceed to the held-out platform test."
+}

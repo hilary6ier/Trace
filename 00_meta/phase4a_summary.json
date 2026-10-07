@@ -1,0 +1,126 @@
+{
+  "status": "PHASE4A_PORTABILITY_BENCHMARK_FROZEN",
+  "HeLa_frozen_union_n": 1331,
+  "HeLa_BID_ELAP_reconstruction": {
+    "cell_line": "HeLa",
+    "BID_singleU": 400,
+    "ELAP_singleU": 613,
+    "shared_exact": 71,
+    "union_exact": 942,
+    "shared_motif_agreement": 1.0,
+    "BID_motif_source": "motif_5mer_reported",
+    "ELAP_motif_source": "raw__-2|raw__-1|raw__0|raw__1|raw__1__dup2"
+  },
+  "HEK_BID_ELAP_reconstruction": {
+    "cell_line": "HEK293T",
+    "BID_singleU": 344,
+    "ELAP_singleU": 787,
+    "shared_exact": 69,
+    "union_exact": 1062,
+    "shared_motif_agreement": 1.0,
+    "BID_motif_source": "motif_5mer_reported",
+    "ELAP_motif_source": "raw__-2|raw__-1|raw__0|raw__1|raw__1__dup2"
+  },
+  "Aim1B_reconstruction": {
+    "cross_cell_exact_loci_removed": 427,
+    "HEK293T": {
+      "n": 623,
+      "BID": 159,
+      "ELAP": 464,
+      "motifs": 124
+    },
+    "HeLa": {
+      "n": 492,
+      "BID": 186,
+      "ELAP": 306,
+      "motifs": 115
+    }
+  },
+  "fingerprint_QC": {
+    "crosscell_checks": [
+      {
+        "train_cell": "HEK293T",
+        "test_cell": "HeLa",
+        "AUC": 0.7432444303886429,
+        "expected_Aim1B_AUC": 0.7335020029517183,
+        "abs_difference": 0.00974242743692455,
+        "test_n": 492,
+        "test_unseen_motif_n": 20
+      },
+      {
+        "train_cell": "HeLa",
+        "test_cell": "HEK293T",
+        "AUC": 0.819683908045977,
+        "expected_Aim1B_AUC": 0.8203887443070917,
+        "abs_difference": 0.0007048362611147274,
+        "test_n": 623,
+        "test_unseen_motif_n": 52
+      }
+    ]
+  },
+  "HeLa_LOTO_rows": 2890,
+  "HeLa_LOTO_target_QC": [
+    {
+      "target_assay": "BACS",
+      "n": 942,
+      "target_reported_n": 206,
+      "target_reported_rate": 0.21868365180467092,
+      "source_breadth_counts": {
+        "1": 871,
+        "2": 71
+      },
+      "unique_loci": 942
+    },
+    {
+      "target_assay": "BID",
+      "n": 1084,
+      "target_reported_n": 153,
+      "target_reported_rate": 0.1411439114391144,
+      "source_breadth_counts": {
+        "1": 960,
+        "2": 124
+      },
+      "unique_loci": 1084
+    },
+    {
+      "target_assay": "ELAP",
+      "n": 864,
+      "target_reported_n": 146,
+      "target_reported_rate": 0.16898148148148148,
+      "source_breadth_counts": {
+        "1": 733,
+        "2": 131
+      },
+      "unique_loci": 864
+    }
+  ],
+  "HeLa_DRS_development_QC": {
+    "n": 1331,
+    "DRS_reported_n": 279,
+    "DRS_reported_rate": 0.2096168294515402,
+    "breadth_counts": {
+      "1": 1103,
+      "2": 179,
+      "3": 49
+    },
+    "breadth1_n": 1103,
+    "breadth1_DRS_reported_n": 159
+  },
+  "HEK_secondary_rows": 1131,
+  "HEK_secondary_target_QC": [
+    {
+      "target_assay": "BID",
+      "n": 787,
+      "target_reported_n": 69,
+      "target_reported_rate": 0.08767471410419314
+    },
+    {
+      "target_assay": "ELAP",
+      "n": 344,
+      "target_reported_n": 69,
+      "target_reported_rate": 0.2005813953488372
+    }
+  ],
+  "feature_contract_file": "D:\\RNA\\Trace\\00_meta\\phase4a_feature_contract.json",
+  "next_gate": "Run Phase4B exactly once: target-held-out P0/P1/P2 + HeLa DRS development benchmark + breadth=1 challenge. Do not inspect A549 DRS."
+}

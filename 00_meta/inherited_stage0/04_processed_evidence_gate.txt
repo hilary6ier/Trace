@@ -1,0 +1,89 @@
+
+==========================================================================================
+PRAISE_HEK293T
+rows: 2209
+unique coordinate keys: 2201
+duplicate coordinate rows: 8
+coordinate missing: 0
+
+==========================================================================================
+BID_HEK293T
+rows: 543
+unique coordinate keys: 543
+duplicate coordinate rows: 0
+coordinate missing: 0
+
+==========================================================================================
+BID_HELA
+rows: 575
+unique coordinate keys: 575
+duplicate coordinate rows: 0
+coordinate missing: 0
+
+==========================================================================================
+ELAP_HEK293T
+rows: 5731
+unique coordinate keys: 5731
+duplicate coordinate rows: 0
+coordinate missing: 0
+
+==========================================================================================
+ELAP_HELA
+rows: 5367
+unique coordinate keys: 5367
+duplicate coordinate rows: 0
+coordinate missing: 0
+
+==========================================================================================
+BACS_HELA
+rows: 1335
+unique coordinate keys: 1335
+duplicate coordinate rows: 0
+coordinate missing: 0
+
+==========================================================================================
+DATASET PROFILE
+    dataset_id    assay    cell  n_rows  n_unique_coordinate_keys  n_duplicate_coordinate_rows  n_missing_coordinate_rows  has_strand strand_values  has_source_signal  has_coverage_like_evidence  has_background_evidence  has_replicate_evidence  has_confidence_field             processed_scope  arbitrary_external_locus_evaluable  qualified_non_support_from_processed_only
+PRAISE_HEK293T   PRAISE HEK293T    2209                      2201                            8                          0       False                             True                        True                     True                    True                 False reported_or_candidate_sites                               False                                      False
+   BID_HEK293T  BID-seq HEK293T     543                       543                            0                          0        True           +;-               True                        True                    False                    True                 False reported_or_candidate_sites                               False                                      False
+      BID_HELA  BID-seq    HeLa     575                       575                            0                          0        True           +;-               True                        True                    False                    True                 False reported_or_candidate_sites                               False                                      False
+  ELAP_HEK293T ELAP-seq HEK293T    5731                      5731                            0                          0        True           +;-               True                        True                     True                    True                  True reported_or_candidate_sites                               False                                      False
+     ELAP_HELA ELAP-seq    HeLa    5367                      5367                            0                          0        True           +;-               True                        True                     True                    True                  True reported_or_candidate_sites                               False                                      False
+     BACS_HELA     BACS    HeLa    1335                      1335                            0                          0        True           +;-               True                        True                     True                   False                  True reported_or_candidate_sites                               False                                      False
+
+==========================================================================================
+CALLABILITY
+    dataset_id    assay    cell  can_define_positive_call  can_rank_source_call_strength  processed_table_has_local_coverage  can_query_arbitrary_source_locus  can_define_qualified_non_support current_noncall_interpretation                                                  next_requirement
+PRAISE_HEK293T   PRAISE HEK293T                      True                           True                                True                             False                             False           unknown_not_negative targeted raw/intermediate evidence at source-assay candidate loci
+   BID_HEK293T  BID-seq HEK293T                      True                           True                                True                             False                             False           unknown_not_negative targeted raw/intermediate evidence at source-assay candidate loci
+      BID_HELA  BID-seq    HeLa                      True                           True                                True                             False                             False           unknown_not_negative targeted raw/intermediate evidence at source-assay candidate loci
+  ELAP_HEK293T ELAP-seq HEK293T                      True                           True                                True                             False                             False           unknown_not_negative targeted raw/intermediate evidence at source-assay candidate loci
+     ELAP_HELA ELAP-seq    HeLa                      True                           True                                True                             False                             False           unknown_not_negative targeted raw/intermediate evidence at source-assay candidate loci
+     BACS_HELA     BACS    HeLa                      True                           True                                True                             False                             False           unknown_not_negative targeted raw/intermediate evidence at source-assay candidate loci
+
+==========================================================================================
+STAGE0 GATES
+{
+  "project": "PsiTrust",
+  "stage": "Stage0",
+  "program": "04_processed_evidence_gate",
+  "scientific_question": "Can cross-assay disagreement in pseudouridine mapping be separated into biological evidence and assay-specific detectability?",
+  "gates": {
+    "gate_1_two_multiassay_cell_contexts": true,
+    "gate_2_at_least_three_assay_types": true,
+    "gate_3_qualified_non_support_available": false,
+    "gate_4_heldout_assay_possible": true,
+    "gate_5_coordinate_harmonization_verified": false
+  },
+  "status": "CONDITIONAL_GO_CALLABILITY_AND_COORDINATE_RESOLUTION_REQUIRED",
+  "critical_interpretation": "Absence from another assay's processed call table must remain UNKNOWN, not NEGATIVE, until target-assay measurement opportunity at that locus is established.",
+  "next_step": "Acquire targeted denominator / below-threshold evidence before constructing any cross-assay labels.",
+  "forbidden_next_actions": [
+    "naive exact-coordinate set-difference labels",
+    "treating target-assay no-call as unmodified",
+    "training PsiTrust before qualified non-support exists",
+    "cross-assay overlap before coordinate convention audit"
+  ]
+}
+
+STAGE0 PROGRAM 04 COMPLETE

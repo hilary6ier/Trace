@@ -1,0 +1,13 @@
+{
+  "project_root": "D:\\RNA\\Trace",
+  "n_assets_expected": 13,
+  "n_assets_found_or_copied": 12,
+  "n_assets_not_found_local": 1,
+  "n_required_now_missing": 0,
+  "n_reference_candidates": 2,
+  "required_missing_asset_ids": [],
+  "all_missing_asset_ids": [
+    "BID_A549_WT"
+  ],
+  "status": "LOCAL_AUDIT_COMPLETE"
+}

@@ -1,0 +1,3 @@
+n_train	n_test	n_train_BID	n_train_ELAP	n_test_BID	n_test_ELAP	n_train_motifs	n_test_motifs	n_test_unseen_motif_loci	AUC	CI_low	CI_high	permutation_p	train_cell	test_cell	analysis	n_train_unique_gene_loci	n_test_unique_gene_loci_before_filter	n_test_gene_novel_loci	n_training_genes	n_test_gene_novel_genes
+450	361	154	296	176	185	116	102	18	0.7289465601965602	0.6171057462965777	0.8160486748291221	0.0001999600079984003	HEK293T	HeLa	heldout_test_genes_absent_from_training	450	416	361	395	293
+416	403	185	231	150	253	108	112	43	0.8025955204216074	0.6695587076438141	0.8897819151603923	0.0001999600079984003	HeLa	HEK293T	heldout_test_genes_absent_from_training	416	450	403	332	356

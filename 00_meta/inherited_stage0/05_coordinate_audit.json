@@ -1,0 +1,218 @@
+{
+  "project": "PsiTrust",
+  "stage": "Stage0",
+  "program": "05_coordinate_convention_audit",
+  "published_anchors": {
+    "BID_HEK_vs_ELAP_HEK": 192,
+    "BID_HELA_vs_BACS_HELA": 230,
+    "PRAISE_HEK_vs_ELAP_HEK": 961
+  },
+  "praise_chr_site_parse_success": 0.9633318243549117,
+  "best_exact_anchors": {
+    "BID_HEK_vs_ELAP_HEK": {
+      "minimum_absolute_error": 68,
+      "candidate_hypotheses": [
+        {
+          "anchor": "BID_HEK_vs_ELAP_HEK",
+          "left_transform": "pos_minus_1",
+          "right_transform": "start",
+          "use_strand": true,
+          "observed_overlap": 124,
+          "published_overlap": 192,
+          "absolute_error": 68
+        },
+        {
+          "anchor": "BID_HEK_vs_ELAP_HEK",
+          "left_transform": "pos_minus_1",
+          "right_transform": "start",
+          "use_strand": false,
+          "observed_overlap": 124,
+          "published_overlap": 192,
+          "absolute_error": 68
+        },
+        {
+          "anchor": "BID_HEK_vs_ELAP_HEK",
+          "left_transform": "pos_minus_1",
+          "right_transform": "end_minus_1",
+          "use_strand": true,
+          "observed_overlap": 124,
+          "published_overlap": 192,
+          "absolute_error": 68
+        },
+        {
+          "anchor": "BID_HEK_vs_ELAP_HEK",
+          "left_transform": "pos_minus_1",
+          "right_transform": "end_minus_1",
+          "use_strand": false,
+          "observed_overlap": 124,
+          "published_overlap": 192,
+          "absolute_error": 68
+        },
+        {
+          "anchor": "BID_HEK_vs_ELAP_HEK",
+          "left_transform": "pos",
+          "right_transform": "start_plus_1",
+          "use_strand": true,
+          "observed_overlap": 124,
+          "published_overlap": 192,
+          "absolute_error": 68
+        },
+        {
+          "anchor": "BID_HEK_vs_ELAP_HEK",
+          "left_transform": "pos",
+          "right_transform": "start_plus_1",
+          "use_strand": false,
+          "observed_overlap": 124,
+          "published_overlap": 192,
+          "absolute_error": 68
+        },
+        {
+          "anchor": "BID_HEK_vs_ELAP_HEK",
+          "left_transform": "pos",
+          "right_transform": "end",
+          "use_strand": true,
+          "observed_overlap": 124,
+          "published_overlap": 192,
+          "absolute_error": 68
+        },
+        {
+          "anchor": "BID_HEK_vs_ELAP_HEK",
+          "left_transform": "pos",
+          "right_transform": "end",
+          "use_strand": false,
+          "observed_overlap": 124,
+          "published_overlap": 192,
+          "absolute_error": 68
+        },
+        {
+          "anchor": "BID_HEK_vs_ELAP_HEK",
+          "left_transform": "pos_plus_1",
+          "right_transform": "end_plus_1",
+          "use_strand": true,
+          "observed_overlap": 124,
+          "published_overlap": 192,
+          "absolute_error": 68
+        },
+        {
+          "anchor": "BID_HEK_vs_ELAP_HEK",
+          "left_transform": "pos_plus_1",
+          "right_transform": "end_plus_1",
+          "use_strand": false,
+          "observed_overlap": 124,
+          "published_overlap": 192,
+          "absolute_error": 68
+        }
+      ]
+    },
+    "BID_HELA_vs_BACS_HELA": {
+      "minimum_absolute_error": 52,
+      "candidate_hypotheses": [
+        {
+          "anchor": "BID_HELA_vs_BACS_HELA",
+          "left_transform": "pos_minus_1",
+          "right_transform": "pos_minus_1",
+          "use_strand": true,
+          "observed_overlap": 178,
+          "published_overlap": 230,
+          "absolute_error": 52
+        },
+        {
+          "anchor": "BID_HELA_vs_BACS_HELA",
+          "left_transform": "pos_minus_1",
+          "right_transform": "pos_minus_1",
+          "use_strand": false,
+          "observed_overlap": 178,
+          "published_overlap": 230,
+          "absolute_error": 52
+        },
+        {
+          "anchor": "BID_HELA_vs_BACS_HELA",
+          "left_transform": "pos",
+          "right_transform": "pos",
+          "use_strand": true,
+          "observed_overlap": 178,
+          "published_overlap": 230,
+          "absolute_error": 52
+        },
+        {
+          "anchor": "BID_HELA_vs_BACS_HELA",
+          "left_transform": "pos",
+          "right_transform": "pos",
+          "use_strand": false,
+          "observed_overlap": 178,
+          "published_overlap": 230,
+          "absolute_error": 52
+        },
+        {
+          "anchor": "BID_HELA_vs_BACS_HELA",
+          "left_transform": "pos_plus_1",
+          "right_transform": "pos_plus_1",
+          "use_strand": true,
+          "observed_overlap": 178,
+          "published_overlap": 230,
+          "absolute_error": 52
+        },
+        {
+          "anchor": "BID_HELA_vs_BACS_HELA",
+          "left_transform": "pos_plus_1",
+          "right_transform": "pos_plus_1",
+          "use_strand": false,
+          "observed_overlap": 178,
+          "published_overlap": 230,
+          "absolute_error": 52
+        }
+      ]
+    }
+  },
+  "best_praise_interval_anchor": {
+    "minimum_absolute_error": 20,
+    "candidate_hypotheses": [
+      {
+        "anchor": "PRAISE_HEK_vs_ELAP_HEK",
+        "praise_shift": -1,
+        "elap_transform": "start",
+        "observed_supported_PRAISE_records": 941,
+        "published_overlap": 961,
+        "absolute_error": 20
+      },
+      {
+        "anchor": "PRAISE_HEK_vs_ELAP_HEK",
+        "praise_shift": 0,
+        "elap_transform": "start_plus_1",
+        "observed_supported_PRAISE_records": 941,
+        "published_overlap": 961,
+        "absolute_error": 20
+      },
+      {
+        "anchor": "PRAISE_HEK_vs_ELAP_HEK",
+        "praise_shift": -1,
+        "elap_transform": "end_minus_1",
+        "observed_supported_PRAISE_records": 941,
+        "published_overlap": 961,
+        "absolute_error": 20
+      },
+      {
+        "anchor": "PRAISE_HEK_vs_ELAP_HEK",
+        "praise_shift": 0,
+        "elap_transform": "end",
+        "observed_supported_PRAISE_records": 941,
+        "published_overlap": 961,
+        "absolute_error": 20
+      },
+      {
+        "anchor": "PRAISE_HEK_vs_ELAP_HEK",
+        "praise_shift": 1,
+        "elap_transform": "end_plus_1",
+        "observed_supported_PRAISE_records": 941,
+        "published_overlap": 961,
+        "absolute_error": 20
+      }
+    ],
+    "secondary_gate_pass": true
+  },
+  "primary_coordinate_gate": false,
+  "status": "COORDINATE_SYSTEM_UNRESOLVED",
+  "interpretation": "Coordinate convention is considered verified only from positive-positive published overlap anchors. No non-overlap has been interpreted as a negative.",
+  "next_step_if_pass": "Recover below-threshold / denominator evidence at harmonized loci.",
+  "next_step_if_fail": "Inspect reference build, filtering scope, transcript class, and coordinate semantics before any cross-assay integration."
+}

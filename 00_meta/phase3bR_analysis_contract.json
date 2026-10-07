@@ -1,0 +1,25 @@
+{
+  "phase": "3B_R_final_robustness_closure",
+  "scientific_story": "Calibration -> Measurement -> Evidence -> Inference",
+  "frozen_primary_result": "Original Phase3B remains the registered primary run; this closure addresses alpha-boundary, partition stability, and shared-penalty sensitivity.",
+  "unchanged_biology": {
+    "M0": "same frozen MANE sequence features",
+    "M1": "M0 + same naive BID/BACS/ELAP single-U union burden",
+    "M2": "M1 + same extra cross-assay confirmation count",
+    "DRS_in_M1_M2": false,
+    "new_outcomes": false,
+    "new_Psi_thresholds": false
+  },
+  "alpha_grid": "1e-4 through 1e16 in decade steps plus explicit intercept-only alpha=INF",
+  "repeated_nested_CV": {
+    "repeats": 5,
+    "outer_folds": 5,
+    "same_gene_folds_across_models_and_TE_datasets_within_repeat": true,
+    "repeat_partitions_not_treated_as_independent_samples": true
+  },
+  "partialling_sensitivity": "cross-fitted sequence-only residuals on outer-training genes; unpenalized low-dimensional OLS residual addition for naive Ψ and confirmation",
+  "uncertainty": "average each gene's OOF predictions across repeats, then dataset-level gene bootstrap and hierarchical TE-study+gene bootstrap",
+  "frozen_positive_rule": "macro delta R2 > 0, hierarchical 95% CI lower > 0, and positive delta in >=3/5 TE datasets",
+  "interpretation_boundary": "This is predictive incremental information conditional on the frozen sequence baseline, not causal evidence for Ψ effects on translation.",
+  "final_primary_analysis_after_this": false
+}

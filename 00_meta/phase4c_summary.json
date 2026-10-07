@@ -1,0 +1,186 @@
+{
+  "status": "TRACEPSI_EXTERNALLY_VALIDATED_A549",
+  "A549_BID_source_rows_total": 922,
+  "A549_BID_locally_singleU_exact_n": 761,
+  "A549_DRS_QC": {
+    "normalized_DRS_rows_total": 109220,
+    "A549_row_detection": {
+      "mode": "source_sheet",
+      "column": "source_sheet",
+      "rows": 9739
+    },
+    "A549_rows_schema_resolved": 9739,
+    "A549_singleU_rows": 4114,
+    "A549_singleU_psi_positive_unique_pairs": 3840,
+    "schema": {
+      "chr": "raw__chr",
+      "position": "raw__position",
+      "kmer": "raw__kmer",
+      "psi": "raw__psi"
+    }
+  },
+  "coordinate_motif_conflicts_excluded": 0,
+  "evaluable_source_loci": 761,
+  "DRS_reobserved_n": 42,
+  "DRS_reobservation_rate": 0.05519053876478318,
+  "lockbox_metrics": [
+    {
+      "score": "P2_TRACEpsi_frozen",
+      "n": 761,
+      "positives": 42,
+      "prevalence": 0.05519053876478318,
+      "AUROC": 0.7634942711437844,
+      "average_precision": 0.2897929111560993,
+      "AUROC_CI_low": 0.6765042020165268,
+      "AUROC_CI_high": 0.8460747782094489,
+      "AUROC_bootstrap_support_fraction_AUC_gt_0.5": 1.0,
+      "AUROC_bootstrap_replicates": 5000,
+      "Lift10_tieaware": 5.045810729355033,
+      "Precision10_tieaware": 0.27848101265822783,
+      "K10_nominal": 77,
+      "K10_tie_inclusive": 79,
+      "Lift20_tieaware": 1.6764955092357228,
+      "Precision20_tieaware": 0.09252669039145907,
+      "K20_nominal": 153,
+      "K20_tie_inclusive": 281,
+      "budget50_expected_positives": 18.324324324324323,
+      "budget50_expected_precision": 0.36648648648648646,
+      "budget50_expected_lift": 6.6403861003861,
+      "budget100_expected_positives": 25.0,
+      "budget100_expected_precision": 0.25,
+      "budget100_expected_lift": 4.529761904761905,
+      "budget200_expected_positives": 25.47741935483871,
+      "budget200_expected_precision": 0.12738709677419355,
+      "budget200_expected_lift": 2.3081328725038404
+    },
+    {
+      "score": "A_context_only_frozen",
+      "n": 761,
+      "positives": 42,
+      "prevalence": 0.05519053876478318,
+      "AUROC": 0.7687098483343268,
+      "average_precision": 0.22398313375432405,
+      "AUROC_CI_low": 0.685111858004411,
+      "AUROC_CI_high": 0.8455118711684689,
+      "AUROC_bootstrap_support_fraction_AUC_gt_0.5": 1.0,
+      "AUROC_bootstrap_replicates": 5000,
+      "Lift10_tieaware": 3.397321428571429,
+      "Precision10_tieaware": 0.1875,
+      "K10_nominal": 77,
+      "K10_tie_inclusive": 96,
+      "Lift20_tieaware": 3.039324116743472,
+      "Precision20_tieaware": 0.16774193548387098,
+      "K20_nominal": 153,
+      "K20_tie_inclusive": 155,
+      "budget50_expected_positives": 17.0,
+      "budget50_expected_precision": 0.34,
+      "budget50_expected_lift": 6.160476190476191,
+      "budget100_expected_positives": 18.25,
+      "budget100_expected_precision": 0.1825,
+      "budget100_expected_lift": 3.3067261904761907,
+      "budget200_expected_positives": 28.076923076923077,
+      "budget200_expected_precision": 0.14038461538461539,
+      "budget200_expected_lift": 2.543635531135531
+    },
+    {
+      "score": "minus_source_alignment_predefined",
+      "n": 761,
+      "positives": 42,
+      "prevalence": 0.05519053876478318,
+      "AUROC": 0.6284025432147824,
+      "average_precision": 0.10556218081523952,
+      "AUROC_CI_low": 0.5539873570689232,
+      "AUROC_CI_high": 0.7041926840366668,
+      "AUROC_bootstrap_support_fraction_AUC_gt_0.5": 0.9996,
+      "AUROC_bootstrap_replicates": 5000,
+      "Lift10_tieaware": 0.7877846790890269,
+      "Precision10_tieaware": 0.043478260869565216,
+      "K10_nominal": 77,
+      "K10_tie_inclusive": 230,
+      "Lift20_tieaware": 0.7877846790890269,
+      "Precision20_tieaware": 0.043478260869565216,
+      "K20_nominal": 153,
+      "K20_tie_inclusive": 230,
+      "budget50_expected_positives": 7.95,
+      "budget50_expected_precision": 0.159,
+      "budget50_expected_lift": 2.8809285714285715,
+      "budget100_expected_positives": 9.166666666666666,
+      "budget100_expected_precision": 0.09166666666666666,
+      "budget100_expected_lift": 1.6609126984126983,
+      "budget200_expected_positives": 9.807692307692308,
+      "budget200_expected_precision": 0.049038461538461545,
+      "budget200_expected_lift": 0.88853021978022
+    }
+  ],
+  "lockbox_delta_AUC": [
+    {
+      "delta_AUROC": -0.005215577190542331,
+      "CI_low": -0.07791961619614976,
+      "CI_high": 0.06744833974748744,
+      "bootstrap_support_fraction_delta_gt_0": 0.4402,
+      "bootstrap_replicates": 5000,
+      "model_A": "P2_TRACEpsi_frozen",
+      "model_B": "A_context_only_frozen"
+    },
+    {
+      "delta_AUROC": 0.13509172792900204,
+      "CI_low": 0.06915123375946623,
+      "CI_high": 0.20216045390376525,
+      "bootstrap_support_fraction_delta_gt_0": 1.0,
+      "bootstrap_replicates": 5000,
+      "model_A": "P2_TRACEpsi_frozen",
+      "model_B": "minus_source_alignment_predefined"
+    }
+  ],
+  "TRACEpsi_quintile_gradient": [
+    {
+      "quintile": 1,
+      "n": 154,
+      "DRS_reported_n": 2,
+      "DRS_reobservation_rate": 0.012987012987012988,
+      "score_min": -4.0913452558427235,
+      "score_max": -3.4260677100059667
+    },
+    {
+      "quintile": 2,
+      "n": 107,
+      "DRS_reported_n": 4,
+      "DRS_reobservation_rate": 0.037383177570093455,
+      "score_min": -3.225900582851918,
+      "score_max": -2.5008967830459863
+    },
+    {
+      "quintile": 3,
+      "n": 196,
+      "DRS_reported_n": 8,
+      "DRS_reobservation_rate": 0.04081632653061224,
+      "score_min": -2.4486913707128233,
+      "score_max": -1.6785992803564178
+    },
+    {
+      "quintile": 4,
+      "n": 178,
+      "DRS_reported_n": 3,
+      "DRS_reobservation_rate": 0.016853932584269662,
+      "score_min": -1.6732382373286905,
+      "score_max": -1.5635019281956848
+    },
+    {
+      "quintile": 5,
+      "n": 126,
+      "DRS_reported_n": 25,
+      "DRS_reobservation_rate": 0.1984126984126984,
+      "score_min": -1.5595811980294918,
+      "score_max": -1.177333502904918
+    }
+  ],
+  "fingerprint_external_gain": {
+    "delta_AUROC_P2_minus_context": -0.005215577190542331,
+    "CI_low": -0.07791961619614976,
+    "CI_high": 0.06744833974748744,
+    "bootstrap_support_fraction_delta_gt_0": 0.4402,
+    "interpretation": "Secondary evidence for transfer of the learned technology-aware fingerprint beyond generic local sequence context."
+  },
+  "final_tool_interpretation": "TRACE-Ψ ranks evidence portability, not biological truth. A549 provides an external cell+native-platform transfer test.",
+  "next_gate": "If externally supported/validated, Phase4D should package the frozen scorer + scorecard + inference-audit interface. No further model tuning."
+}

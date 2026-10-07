@@ -1,0 +1,4 @@
+﻿assay	source_file	status	sheet	header_row_1based	motif_column_index_1based	unique_motifs	selected_response	candidate_numeric_columns	notes
+BID	BID_supplementary_tables.xlsx	RESPONSE_UNRESOLVED	Supplementary Table 1	4	1	256		fit_R[semantic=0,n=256] | fit_B[semantic=0,n=256] | fit_A[semantic=0,n=256]	Response selection is based on assay chemistry/header semantics only, never downstream performance.
+BACS	BACS_source_data_fig1.xlsx	NO_5MER_BLOCK				0			
+ELAP	ELAP_source_data.xlsx	NO_5MER_BLOCK				0			

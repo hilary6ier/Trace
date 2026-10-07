@@ -1,0 +1,3 @@
+gene_name	transcript_id	reason
+DDX17	NM_006386.5	noncanonical_or_misaligned_start=CTG
+EIF4G2	NM_001418.4	noncanonical_or_misaligned_start=GTG

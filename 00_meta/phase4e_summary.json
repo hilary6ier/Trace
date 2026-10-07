@@ -1,0 +1,17 @@
+{
+  "status": "TRACEPSI_V1_1_RELEASE_HARDENED",
+  "model_changed": false,
+  "scientific_result_changed": false,
+  "improvements": [
+    "validated-domain guard for locally-single-U motifs",
+    "same-source-pattern reference percentile",
+    "explicit evidence layer: multi-technology-supported vs single-source-ranked",
+    "deprecated arbitrary fixed priority bands",
+    "example input/output and deterministic self-test",
+    "compact validation summary",
+    "model card claim hierarchy tightened"
+  ],
+  "tool_dir": "D:\\RNA\\Trace\\08_tool\\TRACEpsi",
+  "final_method_status": "Model development closed. TRACE-Ψ v1.1 is the release candidate for manuscript/tool dissemination.",
+  "next_step": "No further model fitting. Build manuscript figures/results and, if desired, a lightweight UI around the same frozen scorer."
+}

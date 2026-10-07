@@ -1,0 +1,23 @@
+{
+  "phase": "4C_A549_lockbox",
+  "tool": "TRACE-Ψ",
+  "frozen_model": "Phase4B-v2 P2_TRACEpsi",
+  "source": "A549 BID locally-single-U exact calls",
+  "target": "A549 DRS/Mod-p ID Supplementary Table S6 positive calls",
+  "matching": "exact chromosome + position + identical 5-mer; coordinate/motif conflicts excluded; no +/-k matching",
+  "no_retraining": true,
+  "no_recalibration": true,
+  "no_feature_change": true,
+  "primary_metric": "AUROC",
+  "utility_metrics": [
+    "average_precision",
+    "tie-aware Lift@10%",
+    "tie-aware Lift@20%",
+    "expected precision/lift at K=50/100/200",
+    "score quintile re-observation gradient"
+  ],
+  "strong_gate": ">=15 positives; AUROC>=0.60; bootstrap CI lower>0.50; Lift20>=1.20",
+  "supportive_gate": ">=10 positives; AUROC>=0.55; bootstrap support(AUC>0.5)>=0.90; Lift10>=1.15 or Lift20>=1.15",
+  "outcome_boundary": "DRS non-report is not biological absence and TRACE-Ψ score is not P(true Ψ).",
+  "after_lockbox": "Do not retune on A549. If strong/supportive, freeze method and package the user-facing TRACE-Ψ scorer. If not confirmed, qualify domain transfer rather than re-optimizing on this lockbox."
+}

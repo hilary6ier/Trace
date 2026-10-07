@@ -1,0 +1,73 @@
+{
+  "phase": "4A",
+  "framework": "TRACE-Ψ / leave-one-technology-out evidence portability",
+  "estimand": "Probability/ranking of re-observation by a held-out profiling technology conditional on prior source-positive evidence. It is NOT P(true Ψ).",
+  "primary_universe": "Frozen Phase2B HeLa locally-single-U exact genomic source union (BID/BACS/ELAP).",
+  "development_targets": [
+    "BID",
+    "BACS",
+    "ELAP"
+  ],
+  "development_external_platform": "HeLa DRS labels already frozen in Aim2B; used only as development benchmark.",
+  "secondary_cross_cell": "HEK293T BID<->ELAP task table",
+  "feature_hierarchy": {
+    "P0_breadth": [
+      "source_breadth"
+    ],
+    "P1_provenance": [
+      "source_breadth",
+      "source_BID",
+      "source_BACS",
+      "source_ELAP"
+    ],
+    "P2_TRACEpsi": [
+      "source_breadth",
+      "source_BID",
+      "source_BACS",
+      "source_ELAP",
+      "fp_crosscell_ELAPvsBID",
+      "fp_abs",
+      "fp_source_alignment",
+      "fp_seen_in_HEK",
+      "motif_-2_A",
+      "motif_-2_C",
+      "motif_-2_G",
+      "motif_-2_U",
+      "motif_-1_A",
+      "motif_-1_C",
+      "motif_-1_G",
+      "motif_-1_U",
+      "motif_+1_A",
+      "motif_+1_C",
+      "motif_+1_G",
+      "motif_+1_U",
+      "motif_+2_A",
+      "motif_+2_C",
+      "motif_+2_G",
+      "motif_+2_U"
+    ],
+    "metadata_not_features": [
+      "locus_id",
+      "chrom",
+      "pos1",
+      "strand",
+      "motif",
+      "cell_line",
+      "target_assay",
+      "source_pattern"
+    ],
+    "outcome": "target_reported",
+    "target_assay_is_feature": false,
+    "source_confidence_in_primary_v1": false,
+    "source_confidence_reason": "Published assays expose heterogeneous, non-equivalent signal definitions; no uniformly comparable source-strength feature was frozen across BID/BACS/ELAP."
+  },
+  "fingerprint_policy": "Primary HeLa fingerprint is trained only in HEK293T after reproducing the frozen Aim1B cross-cell-disjoint universe; HEK secondary uses HeLa-trained fingerprint.",
+  "coordinate_policy": "Exact locally-single-U loci only; no arbitrary +/-k matching; consecutive-U ambiguity is excluded from the primary portability benchmark.",
+  "noncall_interpretation": "target_reported=0 means absent from target published positive-call table, not biological absence.",
+  "A549_DRS_lockbox": {
+    "status": "UNTOUCHED_IN_PHASE4A",
+    "A549_DRS_read": false,
+    "A549_DRS_matched": false,
+    "A549_DRS_metrics_computed": false
+  }
+}

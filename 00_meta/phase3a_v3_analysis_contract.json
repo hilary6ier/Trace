@@ -1,0 +1,14 @@
+{
+  "phase": "3A_v3_closure",
+  "reason": "Phase3A v2 per-dataset results showed potential TE-study slope heterogeneity, so the common stacked slope is formally audited before the final sequence-baseline analysis.",
+  "frozen_data": "Same Phase3A functional cohort, same four maps, same five HeLa TE datasets, same transcript-length covariate.",
+  "heterogeneity_tests": [
+    "burden x TE-dataset joint Wald test with gene-cluster robust covariance",
+    "Cochran Q and I2 across five per-dataset slopes",
+    "REML random-effects meta-analysis with modified Hartung-Knapp CI",
+    "leave-one-TE-dataset-out influence analysis"
+  ],
+  "interpretation_rule": "When substantial heterogeneity is present, random-effects and per-dataset estimates supersede the common stacked slope as the generalizable functional-effect summary.",
+  "technology_aware_secondary": "The same heterogeneity audit is applied to naive union, orthogonal, triple, and breadth-sum burdens; no positive secondary result is carried into Phase3B without this audit.",
+  "next_step": "After closure, Phase3B must evaluate M0/M1/M2 separately within each TE dataset with common gene folds, then aggregate predictive increments across datasets. It must not fit one universal TE slope."
+}

@@ -1,0 +1,24 @@
+{
+  "phase": "1B",
+  "primary_question": "Does a BID-vs-ELAP 5-mer sequence fingerprint learned in one cell line transfer to the other after exact genomic-locus leakage removal?",
+  "primary_universe": "Aim1A locally single-U exact loci",
+  "cross_cell_exact_locus_overlap_removed_from_both_cells": true,
+  "n_exact_loci_removed": 427,
+  "training_classes": [
+    "BID_exclusive_reported",
+    "ELAP_exclusive_reported"
+  ],
+  "shared_sites_used_for_training": false,
+  "primary_score": "Jeffreys-smoothed 5-mer log relative-frequency ratio; alpha=0.5; 256-motif universe",
+  "primary_metric": "held-out-cell AUROC",
+  "confidence_interval": "motif-cluster bootstrap",
+  "null_test": "permute learned motif-score assignments across motif identities before application to held-out cell",
+  "alpha_sensitivity": [
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "secondary_calibration_decomposition": "training-cell motif log-ratio ~ fixed synthetic calibration contrast, weighted by training motif counts; test calibration component and residual fingerprint on held-out cell",
+  "interpretation_boundary": "Cross-cell transfer supports a stable technology-associated sequence fingerprint, not proof that the fingerprint is entirely assay-caused. Stable biological sequence preferences may contribute and are addressed in subsequent biological/annotation controls."
+}
